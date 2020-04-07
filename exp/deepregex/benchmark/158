@@ -1,0 +1,23 @@
+// natural language
+lines with string "!" before either string "@" , capital letter , or letter
+
+// examples
+"!@",+
+"!A",+
+"!B",+
+"!a",+
+"!b",+
+"!@a",+
+"!@1",+
+"",-
+" ",-
+"a",-
+"b",-
+"1",-
+",",-
+"!1",-
+
+
+
+// gt
+concat(<m0>,contain(or(or(<m1>,<cap>),<let>)))

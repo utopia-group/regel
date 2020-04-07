@@ -1,0 +1,23 @@
+// natural language
+lines with at least 6 numbers or vowels
+
+// examples
+"000000",+
+"0000000",+
+"aaaaaa",+
+"aaaaaaa",+
+"a0a0a0",+
+"a0a0a0a",+
+"1111111",+
+"",-
+"0",-
+"a",-
+"00",-
+"aa",-
+"000",-
+"aaa",-
+
+
+
+// gt
+repeatatleast(or(<num>,<vow>),6)

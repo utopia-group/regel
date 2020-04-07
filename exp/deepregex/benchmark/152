@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" before a lower case letter then by a capital letter .
+
+// examples
+"!aA",+
+"!bF",+
+"!cF",+
+"!tF",+
+"!rH",+
+"!gJ",+
+"!vF",+
+"!Aa",-
+"!BFf",-
+"!235",-
+"!h",-
+"!JK",-
+"123",-
+"aFe",-
+
+
+
+// gt
+concat(<m0>,contain(concat(<low>,contain(<cap>))))

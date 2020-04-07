@@ -1,0 +1,7 @@
+Sketch,"concat(concat(R1,R2),concat(R3,concat(R4,concat(<_>,concat(R5,concat(<_>,concat(R6,concat(<.>,concat(<e>,concat(<x>,<e>))))))))))"
+R1,"compulsory, it must be a ""A""","?{<A>}"
+R2,"compulsory, it is a natural number","?{<num>}"
+R3,"compulsory, it must be a ""B""","?{<B>}"
+R4,"compulsory, it is range from 1 -> 6","null"
+R5,"compulsory, it must be a natural number","?{<num>}"
+R6,"optional, it is a natural number","?{optional(<num>)}"

@@ -1,0 +1,16 @@
+// natural language
+it doesn't start with a space, doesn't contain a space, and doesn't end with a space.
+
+// examples
+"HELLO",+
+"H",+
+"",+
+"HE LLO",-
+" HELLO",-
+"HELLO ",-
+" ",-
+
+
+
+// gt
+not(contain(< >))

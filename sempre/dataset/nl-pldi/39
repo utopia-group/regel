@@ -1,0 +1,1 @@
+R0,"I am trying to use a regular expression to validate decimal values. Rules : It should allow positive numbers; It should allow max 13 numbers before decimal point; It should allow max two number after decimal; It should allow .(dot) with number like a .5 It should not allow the .0","sep(?{repeatrange(<num>,1,13),repeatrange(<num>,1,2)},<.>)"

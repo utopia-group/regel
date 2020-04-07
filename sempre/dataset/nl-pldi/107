@@ -1,0 +1,1 @@
+R0,"What is the regular expression for a decimal with a precision of 2? The decimal point may be optional, and integers may also be included","sep(?{<num>},<.>)"

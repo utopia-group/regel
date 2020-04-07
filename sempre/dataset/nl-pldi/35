@@ -1,0 +1,4 @@
+Sketch,"concat(R1,concat(R2,R3))"
+R1,"""*"" or nothing","?{optional(<*>)}"
+R2,"at least two characters","?{repeatatleast(<let>,2)}"
+R3,"""*"" or nothing","?{optional(<*>)}"

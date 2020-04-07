@@ -1,0 +1,21 @@
+// natural language
+I need to validate a string that contains underscore(_) in between the numbers. Underscore character is an optional. Only condition is, it should be between the numbers.
+
+// examples
+"123",+
+"1_23",+
+"123_4567_89_312_575",+
+"12",+
+"1_1_1",+
+"123_",-
+"_123",-
+"123__12",-
+"_",-
+"abc",-
+"3_____4",-
+"1__1",-
+
+
+
+// gt
+concat(repeatatleast(<num>,1),star(concat(<_>,repeatatleast(<num>,1))))

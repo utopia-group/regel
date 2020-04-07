@@ -1,0 +1,23 @@
+// natural language
+lines with a number or lower-case letter before character
+
+// examples
+"1a",+
+"aa",+
+"1,",+
+"b,",+
+"4'",+
+"g;",+
+"gG",+
+"1",-
+"a",-
+",",-
+"'",-
+"Aa",-
+"B2",-
+"CC",-
+
+
+
+// gt
+concat(or(<num>,<low>),contain(<any>))

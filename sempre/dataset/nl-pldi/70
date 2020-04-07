@@ -1,0 +1,1 @@
+R0,"I need a regular expression to validate single digit within range of [1-5] followed by alphabet [A-C] and followed by optional alphabet [X-Z]","?{<num>,<let>}"

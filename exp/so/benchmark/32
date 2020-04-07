@@ -1,0 +1,24 @@
+// natural language
+I'm trying to devise a regular expression which will accept decimal number up to 4 digits.
+
+// examples
+"4.1",+
+"421.11",+
+"467.111",+
+"438904.1111",+
+"0.1",+
+".",-
+"123.",-
+".123",-
+"44.aaaa",-
+"44.1aaa",-
+"1234.a",-
+"489.a",-
+"435.aaa",-
+"412.1aaaa",-
+"1567.11a",-
+
+
+
+// gt
+concat(repeatatleast(<num>,1),concat(<.>,repeatrange(<num>,1,4)))

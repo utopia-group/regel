@@ -1,0 +1,23 @@
+// natural language
+lines that contain a vowel before a number
+
+// examples
+"a4",+
+"a992388ew",+
+"u5",+
+"o1",+
+"i5",+
+"we9w",+
+"a5oo2",+
+"s1",-
+"5",-
+"tik",-
+"",-
+"too",-
+"slackvariabl ",-
+"slack variable",-
+
+
+
+// gt
+contain(concat(<vow>,contain(<num>)))

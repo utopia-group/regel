@@ -1,0 +1,23 @@
+// natural language
+lines with words and ending in a number or lower-case letter
+
+// examples
+"9",+
+"k",+
+"a",+
+"b",+
+"c",+
+"av@c2",+
+"99999",+
+"jhgfd",-
+"nbvcx",-
+"rtyu",-
+"fghj",-
+"",-
+"jhgfd",-
+"xcfghjk",-
+
+
+
+// gt
+or(endwith(<num>),<low>)

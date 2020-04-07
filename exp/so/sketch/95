@@ -1,0 +1,25 @@
+1 ?{repeat(<any>,6),repeatrange(<num>,1,3),repeatrange(<any>,1,2)}
+2 ?{repeat(<any>,6),repeatrange(<num>,1,3),repeat(<any>,2)}
+3 ?{repeat(<any>,6),repeat(<num>,3),repeatrange(<any>,1,2)}
+4 ?{repeat(<any>,6),repeatrange(<num>,1,3),repeatrange(<any>,1,2),< >}
+5 ?{repeat(<any>,6),repeat(<num>,3),repeat(<any>,2)}
+6 ?{repeat(<any>,6),repeatrange(<num>,1,3),repeat(<any>,2),< >}
+7 ?{repeat(<any>,6),repeat(<num>,3),repeatrange(<any>,1,2),< >}
+8 ?{repeat(<any>,6),repeat(<num>,3),repeat(<any>,2),< >}
+9 ?{repeat(<let>,6),repeatrange(<num>,1,3),repeatrange(<any>,1,2)}
+10 ?{repeat(<any>,6),repeatrange(<any>,1,2)}
+11 ?{repeat(<num>,6),repeatrange(<any>,1,2)}
+12 ?{repeat(<num>,3),repeatrange(<any>,1,2)}
+13 ?{repeat(<let>,6),repeatrange(<num>,1,3),repeat(<any>,2)}
+14 ?{repeat(<let>,6),repeat(<num>,3),repeatrange(<any>,1,2)}
+15 ?{repeat(<let>,6),repeatrange(<num>,1,3),repeatrange(<any>,1,2),< >}
+16 ?{repeat(<any>,6),repeat(<any>,2)}
+17 ?{repeat(<num>,6),repeat(<any>,2)}
+18 ?{repeat(<num>,3),repeat(<any>,2)}
+19 ?{repeat(<let>,6),repeat(<num>,3),repeat(<any>,2)}
+20 ?{repeat(<any>,6),repeatrange(<any>,1,2),< >}
+21 ?{repeat(<num>,6),repeatrange(<any>,1,2),< >}
+22 ?{repeat(<num>,3),repeatrange(<any>,1,2),< >}
+23 ?{repeat(<any>,6),repeatrange(<any>,1,3),repeatrange(<any>,1,2)}
+24 ?{repeat(<let>,6),repeatrange(<num>,1,3),repeat(<any>,2),< >}
+25 ?{repeat(<let>,6),repeat(<num>,3),repeatrange(<any>,1,2),< >}

@@ -1,0 +1,14 @@
+// natural language
+I need a regular expression that only validates UK mobile numbers. A UK mobile number can be between 10-14 digits and either starts with "07", or omits the "0" and starts with "447". Importantly, if the user adds "+44" it should be rejected.
+
+// examples
+"07111111111",+
+"447111111111",+
+"+4471111111111",-
+"021929182711",-
+"00701029182",-
+
+
+
+// gt
+and(repeatrange(<num>,10,14),or(startwith(concat(<0>,<7>)),startwith(concat(<4>,concat(<4>,<7>)))))

@@ -1,0 +1,13 @@
+// natural language
+match strings which do not contain two consecutive underscores, i.e., ""__""
+
+// example
+"abcd",+
+"ab_cd",+
+"a_b_cd",+
+"%*##_@+",+
+"ab__cd",-
+"a_b__Cd",-
+
+// gt
+not(contain(repeat(<_>,2)))

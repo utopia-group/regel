@@ -1,0 +1,4 @@
+Sketch,"and(concat(R1,R2),R3)"
+R1,"1 - 6 characters long. Upper case only","?{repeatrange(<cap>,1,6)}"
+R2,"Exactly two characters long but ""00"" is not accepted.","?{repeat(<any>,2),concat(<0>,<0>)}"
+R3,"3 - 8 characters long",?{repeatrange(<any>,3,8)}

@@ -1,0 +1,5 @@
+1 ?{< >}
+2 ?{not(contain(< >))}
+3 not(contain(?{< >}))
+4 ?{not(< >)}
+5 not(?{< >})

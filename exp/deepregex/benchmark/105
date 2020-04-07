@@ -1,0 +1,23 @@
+// natural language
+items with a character and a letter preceding a numeral .
+
+// examples
+"a 123",+
+"a1",+
+"Letter 2 #",+
+"c 5",+
+"d 7 !#",+
+"PCP b 33",+
+"x32",+
+"No numeral",-
+"###",-
+"123",-
+"567 plus a",-
+"items",-
+"a character",-
+"!! 47",-
+
+
+
+// gt
+concat(and(<let>,<any>),contain(<num>))

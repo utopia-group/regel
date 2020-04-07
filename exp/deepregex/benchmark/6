@@ -1,0 +1,23 @@
+// natural language
+lines that do not contain a character , a vowel , or a letter
+
+// examples
+"",+
+"",+
+"",+
+"",+
+"",+
+"",+
+"",+
+"a",-
+"1",-
+"e",-
+"i",-
+"O",-
+",",-
+"@",-
+
+
+
+// gt
+not(or(or(<vow>,<any>),<let>))

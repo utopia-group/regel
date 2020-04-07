@@ -1,0 +1,11 @@
+// natural language
+An identifier must begin with either an alphabet or underscore (""_""), it can not begin with a digit or any other special character, moreover, digits can come after.
+
+// example
+"gfg",+
+"_abc12",+
+"123",-
+"#abc",-
+
+// gt
+and(startwith(or(<let>,<_>)),repeatatleast(or(<alphanum>,<_>),1))

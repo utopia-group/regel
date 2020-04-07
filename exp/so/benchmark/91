@@ -1,0 +1,29 @@
+// natural language
+R1: 10 - 15 total characters in length
+R2: Can contain ""("", "")"" ,space , ""."", or ""-"" delimiters within the string.
+
+// visual format
+and(R1,concat(concat(R2,repeat(<num>,3)),concat(concat(R2,repeat(<num>,3)),concat(R2,repeat(<num>,4)))))
+
+// example
+"(501) 555 1234",+
+"(501)-555.1234",+
+"501-555-1234",+
+"501.555.1234",+
+"501 555 1234",+
+"501) 343-2233",+
+"(501 343-2233",+
+"(501. 343-2233",+
+"5013432233",+
+"800-..555-1234",+
+"-(.8005551234",+
+"*-(.8005551234",-
+"501*555-1234",-
+"-(.80055512 41",-
+"501_555_1234",-
+"555-1234",-
+"800-...........555-1234",-
+"013432233",-
+
+// gt
+and(repeatrange(<any>,10,15),concat(star(or(<(>,or(<)>,or(< >,or(<.>,<->))))),concat(repeat(<num>,3),concat(star(or(<(>,or(<)>,or(< >,or(<.>,<->))))),concat(repeat(<num>,3),concat(star(or(<(>,or(<)>,or(< >,or(<.>,<->))))),repeat(<num>,4)))))))

@@ -1,0 +1,23 @@
+// natural language
+lines with a number before string "!" or "@" or a character
+
+// examples
+"1!",+
+"2@",+
+"1a",+
+"42",+
+"5!",+
+"23!",+
+"45@",+
+"",-
+" ",-
+"",-
+"1",-
+"2",-
+"a",-
+"!",-
+
+
+
+// gt
+concat(<num>,contain(or(or(<m0>,<any>),<m1>)))

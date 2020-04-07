@@ -1,0 +1,23 @@
+// natural language
+lines starting with a letter or a lower-case letter
+
+// examples
+"a",+
+"A",+
+"B",+
+"b",+
+"a1",+
+"B2",+
+"abc",+
+"",-
+" ",-
+"1",-
+"12",-
+"!",-
+",",-
+"1a",-
+
+
+
+// gt
+startwith(or(<let>,<low>))

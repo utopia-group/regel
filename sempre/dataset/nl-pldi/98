@@ -1,0 +1,2 @@
+Sketch,"concat(R1,concat(<->,R1))"
+R1,"It cannot start with ""0"". It can be 1 digit to 6 digits in length.","?{not(startwith(<0>)),repeatrange(<num>,1,6)}"

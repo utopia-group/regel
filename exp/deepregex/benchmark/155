@@ -1,0 +1,23 @@
+// natural language
+lines containing lower-case letter and not string "!"
+
+// examples
+"a",+
+"76543f",+
+"@s",+
+"RgfdE",+
+"dgT5YGq",+
+"45g678",+
+"!d!",+
+"!",-
+"12",-
+"1",-
+"4",-
+"GFD2J",-
+"",-
+"!!",-
+
+
+
+// gt
+and(contain(<low>),not(<m0>))

@@ -1,0 +1,15 @@
+1 sep(?{<num>,repeatrange(<num>,1,3)},<.>)
+2 sep(?{<num>},<.>)
+3 sep(?{<num>,repeat(<num>,3)},<.>)
+4 sep(?{repeatrange(<num>,1,3),<num>},<.>)
+5 ?{repeatrange(<num>,1,3),<num>}
+6 ?{repeat(<num>,3),<num>}
+7 ?{repeatrange(<num>,1,3)}
+8 ?{repeatrange(<num>,1,12)}
+9 ?{repeatrange(<num>,1,2147483647)}
+10 ?{repeatrange(<num>,1,2)}
+11 ?{<num>,repeat(<num>,3)}
+12 ?{repeat(<num>,3)}
+13 ?{<num>,repeatrange(<num>,1,3)}
+14 ?{<num>}
+15 sep(?{repeat(<num>,3),<num>},<.>)

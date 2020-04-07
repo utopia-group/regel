@@ -1,0 +1,23 @@
+// natural language
+lines ending with a lower-case letter followed by a number in them
+
+// examples
+"a0",+
+"!b1",+
+"a100",+
+"b1000",+
+"aa1000",+
+"ab0",+
+"ab1",+
+"0",-
+"",-
+"1",-
+"100",-
+"1a",-
+"2b",-
+"3c",-
+
+
+
+// gt
+endwith(concat(<low>,contain(<num>)))

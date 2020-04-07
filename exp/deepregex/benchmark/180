@@ -1,0 +1,23 @@
+// natural language
+lines beginning with the string "!" followed by the string "@"
+
+// examples
+"!@",+
+"!2@",+
+"!2@3",+
+"!@34",+
+"!@a!@",+
+"!@ !",+
+"!@a",+
+"",-
+" ",-
+"!",-
+"@",-
+"a",-
+"!a",-
+"!2",-
+
+
+
+// gt
+startwith(concat(<m0>,contain(<m1>)))

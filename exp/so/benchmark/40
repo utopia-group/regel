@@ -1,0 +1,16 @@
+// natural language
+i need regular expression for : one or two digits then "." and one or two digits.
+
+// examples
+"1",+
+"1.5",+
+"11.5",+
+"0..",-
+"0.",-
+"11.",-
+"12.",-
+
+
+
+// gt
+concat(repeatrange(<num>,1,2),optional(concat(<.>,repeatrange(<num>,1,2))))

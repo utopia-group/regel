@@ -1,0 +1,23 @@
+// natural language
+lines with a character before a letter and lower-case letter
+
+// examples
+";a",+
+"1a",+
+"@k",+
+"*m",+
+"(p",+
+"'z",+
+"[m",+
+"",-
+";A",-
+"mM",-
+"kM",-
+"NP",-
+"!P",-
+"Z",-
+
+
+
+// gt
+concat(<any>,contain(and(<let>,<low>)))

@@ -1,0 +1,5 @@
+1 concat(sketch(?{not(startwith(<0>)),<num>,repeat(<num>,6)},1),concat(<->,sketch(?{not(startwith(<0>)),<num>,repeat(<num>,6)},1)))
+2 concat(sketch(?{not(startwith(<0>)),<num>,repeatrange(<num>,1,6)},1),concat(<->,sketch(?{not(startwith(<0>)),<num>,repeatrange(<num>,1,6)},1)))
+3 concat(sketch(?{not(startwith(<0>)),repeat(<num>,6)},1),concat(<->,sketch(?{not(startwith(<0>)),repeat(<num>,6)},1)))
+4 concat(sketch(?{not(startwith(<0>)),repeatrange(<num>,1,6)},1),concat(<->,sketch(?{not(startwith(<0>)),repeatrange(<num>,1,6)},1)))
+5 concat(sketch(?{not(startwith(<0>)),<num>},1),concat(<->,sketch(?{not(startwith(<0>)),<num>},1)))

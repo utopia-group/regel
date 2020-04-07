@@ -1,0 +1,15 @@
+// natural language
+I am trying to create a regular expression in javascript with the following rules: At least 2 characters. Should have at least 1 letter as a prefix and end with a ""."" or have "" "" or ""-"" and then have more letters.
+
+// example
+"aa",+
+"aaaaa",+
+"a.",+
+"a-a",+
+"a a",+
+"a",-
+"aa.aa.",-
+"aa-",-
+
+// gt
+and(repeatatleast(<any>,2),concat(repeatatleast(<let>,1),or(endwith(<.>),concat(optional(or(< >,<->)),repeatatleast(<let>,1)))))

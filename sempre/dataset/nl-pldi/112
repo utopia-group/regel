@@ -1,0 +1,1 @@
+R0,"Starting with alphabet word and then followed by any alphabet or number","?{concat(<let>,repeatatleast(<alphanum>,1))}"

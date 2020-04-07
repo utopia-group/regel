@@ -1,0 +1,23 @@
+// natural language
+lines starting with a vowel or string "!"
+
+// examples
+"a!",+
+"a",+
+"!",+
+"u and something",+
+"! and ##",+
+"e plus PLUS",+
+"! N!",+
+"",-
+"not",-
+"#others",-
+"123",-
+"start a !",-
+"before ! and",-
+"@bla",-
+
+
+
+// gt
+startwith(or(<vow>,<m0>))

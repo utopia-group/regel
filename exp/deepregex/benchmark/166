@@ -1,0 +1,23 @@
+// natural language
+lines without only a character before string "!"
+
+// examples
+"",+
+" ",+
+"a",+
+"1",+
+"b",+
+"A",+
+"!",+
+"a!",-
+"b!",-
+"A!",-
+"1!",-
+"a!b",-
+"a!1",-
+"a!!",-
+
+
+
+// gt
+not(concat(<any>,contain(<m0>)))

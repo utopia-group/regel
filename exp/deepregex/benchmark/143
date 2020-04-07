@@ -1,0 +1,23 @@
+// natural language
+items with an upper case letter at least 1 time preceding a small letter .
+
+// examples
+"BCDAa",+
+"Ds",+
+"Q23d",+
+"Eg2",+
+"FdFVs",+
+"RE2d4",+
+"Cr2",+
+"a",-
+"cc",-
+"1Aw",-
+"fQf",-
+"2A3",-
+"LLL",-
+"K89",-
+
+
+
+// gt
+concat(repeatatleast(<cap>,1),contain(<low>))

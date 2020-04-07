@@ -1,0 +1,23 @@
+// natural language
+lines with zero or more characters before a number
+
+// examples
+"1",+
+"a1",+
+"ab1",+
+"A2",+
+"AB2",+
+"Ab2",+
+"   123",+
+"",-
+" ",-
+"!",-
+"a",-
+"b",-
+"abcde",-
+"AB#$",-
+
+
+
+// gt
+concat(contain(star(<any>)),contain(<num>))

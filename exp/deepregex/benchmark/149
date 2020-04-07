@@ -1,0 +1,23 @@
+// natural language
+lines that have a character preceding a letter , or containing a number
+
+// examples
+"2D",+
+"ae",+
+"4",+
+"fe4G",+
+"123",+
+"!!f^",+
+"ds",+
+"s",-
+"G",-
+"a",-
+"!",-
+"@#",-
+"",-
+"e",-
+
+
+
+// gt
+or(concat(<any>,contain(<let>)),contain(<num>))

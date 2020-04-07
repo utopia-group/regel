@@ -1,0 +1,23 @@
+// natural language
+lines with 7 or more letters before a vowel
+
+// examples
+"BBBBBBBa",+
+"BBBBBBBBe",+
+"cklmnopqrtu",+
+"zzzzzzzzzzzei",+
+"zzzzzzzzzzzoz",+
+"mmmmmmmmmmmmmi;",+
+"zzzzzzzzzzzzzzo!!",+
+"za",-
+"zza",-
+"zzza",-
+"zzzzu",-
+"zzzzzi",-
+"kkkkkko",-
+"mmmmmmm",-
+
+
+
+// gt
+concat(repeatatleast(<let>,7),contain(<vow>))

@@ -1,0 +1,23 @@
+// natural language
+lines that contain a letter , 2 times or more before a vowel
+
+// examples
+"aaa",+
+"bBA",+
+"aaaaaaaaaaaaaaaaaaaaaaAaaaaaghjaytr",+
+"bBbbbbbbbbbbbbbbbbbbb56i6",+
+"baba",+
+"bfkdjfkdeibidfdasdre",+
+"here i am",+
+"",-
+"aa",-
+"ee",-
+"ce",-
+"#@a",-
+"!!o",-
+"fff",-
+
+
+
+// gt
+concat(repeatatleast(<let>,2),contain(<vow>))

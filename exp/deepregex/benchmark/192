@@ -1,0 +1,23 @@
+// natural language
+lines starting with a lower-case letter or string "!" , 4 or more times
+
+// examples
+"aaaa",+
+"bbbb",+
+"!!!!",+
+"!!!!!",+
+"bbbbb",+
+"aaaaa",+
+"bbbbb12",+
+"",-
+" ",-
+"!",-
+"!!",-
+"!!!",-
+"abc",-
+"ab",-
+
+
+
+// gt
+repeatatleast(or(startwith(<low>),<m0>),4)

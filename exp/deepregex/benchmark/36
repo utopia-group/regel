@@ -1,0 +1,23 @@
+// natural language
+lines that don't have a vowel , number , or letter .
+
+// examples
+"",+
+"!",+
+"@",+
+"!!",+
+"@@",+
+"!@",+
+"!!!",+
+"a",-
+"b",-
+"0",-
+"1",-
+"c",-
+"2",-
+"3",-
+
+
+
+// gt
+not(or(or(<vow>,<num>),<let>))

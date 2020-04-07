@@ -1,0 +1,12 @@
+// natural language
+at least 6 characters. no space. at least one digit. at least one upper case letter. at least one lower case letter. at least one special character ""!"",""@"",""#"",""$"",""%"",""^"",""&"",""*"",""("","")"",""_"".
+
+// example
+"FooBar123!",+
+"foobar123!",-
+"FooBar123",-
+"F0bar! F0bar!",-
+"Fo0*",-
+
+// gt
+and(repeatatleast(<any>,6),and(not(contain(< >)),and(contain(<num>),and(contain(<cap>),and(contain(<low>),contain(or(<!>,or(<@>,or(<#>,or(<$>,or(<%>,or(<^>,or(<&>,or(<*>,or(<(>,or(<)>,or(<_>,<.>)))))))))))))))))

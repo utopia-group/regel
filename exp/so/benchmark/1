@@ -1,0 +1,17 @@
+// natural language
+write a regular expression that only matches strings, no numbers, no special character, just letters from A - Z.
+
+// examples
+"peter",+
+"alex",+
+"ramon",+
+"thomas",+
+"pe<.?ter",-
+"ale8",-
+"?ramon",-
+"tho<>?mass",-
+
+
+
+// gt
+repeatatleast(<let>,1)

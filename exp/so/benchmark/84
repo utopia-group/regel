@@ -1,0 +1,16 @@
+// natural language
+I am trying to make a regular expression that validates letters, numbers and spaces ONLY.
+
+// examples
+"John Stevens 12",+
+"james stevens",+
+"willcall12",+
+"12cell space",+
+"12cell space!",-
+"John@Stevens",-
+"james 12 Fall#",-
+
+
+
+// gt
+repeatatleast(or(<let>,or(<num>,< >)),1)

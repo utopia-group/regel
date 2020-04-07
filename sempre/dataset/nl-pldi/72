@@ -1,0 +1,7 @@
+Sketch,"and(R1,and(R2,and(R3,and(R4,and(R5,R6)))))"
+R1,"at least 6 characters","?{repeatatleast(<any>,6)}"
+R2,"no space","?{<space>)}"
+R3,"at least one digit","?{repeatatleast(<num>,1)}"
+R4,"at least one upper case letter","?{repeatatleast(<cap>,1)}"
+R5,"at least one lower case letter","?{repeatatleast(<low>,1)}"
+R6,"at least one special character ""!"",""@"",""#"",""$"",""%"",""^"",""&"",""*"",""("","")"",""_"".", ?{or(<!>,or(<@>,or(<#>,or(<$>,or(<%>,or(<^>,or(<&>,or(<*>,or(<(>,or(<)>,or(<_),<.>))))))))))}

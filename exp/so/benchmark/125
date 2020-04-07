@@ -1,0 +1,9 @@
+// natural language
+Find sequences of one upper case letter followed by lower case letters.
+
+// example
+"Geeks",+
+"geeksforgeeks",-
+
+// gt
+contain(concat(<cap>,<low>))

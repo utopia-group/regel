@@ -1,0 +1,23 @@
+// natural language
+lines with words and a lower-case letter
+
+// examples
+"a",+
+"adfa",+
+"wW",+
+"akfjas",+
+"afjlsf",+
+"#?a",+
+"a!!",+
+"A",-
+"AA",-
+"",-
+"BS",-
+"WWWWWWW",-
+"AJKALJLAJKJL",-
+"!@#!@#!@#!@#",-
+
+
+
+// gt
+startwith(contain(<low>))

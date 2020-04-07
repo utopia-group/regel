@@ -1,0 +1,23 @@
+// natural language
+items with words containing a letter preceding a small letter .
+
+// examples
+"Oo",+
+"words",+
+"many words",+
+"what has happened",+
+"No big numbers",+
+"I gues not",+
+"fake",+
+"TESTING",-
+"ALL CAPS",-
+"#$@#$",-
+"!!!!!!",-
+")(ASDFA*)",-
+"80943584",-
+"324@#$@WERWE",-
+
+
+
+// gt
+concat(<let>,contain(<low>))

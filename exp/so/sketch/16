@@ -1,0 +1,5 @@
+1 concat(concat(?{<num>},<@>),concat(?{repeat(<num>,3),<num>},<%>))
+2 concat(concat(?{<num>},<@>),concat(?{repeat(<num>,3)},<%>))
+3 concat(concat(?{<num>},<@>),concat(?{<num>},<%>))
+4 concat(concat(?{<num>},<@>),concat(?{repeatrange(<num>,1,3)},<%>))
+5 concat(concat(?{<num>},<@>),concat(?{repeatrange(<num>,1,3),<num>},<%>))

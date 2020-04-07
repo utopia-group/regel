@@ -1,0 +1,4 @@
+Sketch,"concat(and(R1,R2),R3)"
+R1,"there is at least one digit. (could be zero)","?{repeatatleast(<num>,1)}"
+R2,"can not begin with more than one ""0"".","not(startwith(?{<0>}))"
+R3,"the number has precisely two decimal places","?{repeat(<num>,2),<.>}"

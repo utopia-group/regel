@@ -1,0 +1,14 @@
+// natural language
+I need to validate the next pattern: starts with "C0" and finish with 4 digits exactly
+
+// examples
+"C01245",+
+"C04751",+
+"C15821",-
+"C0412",-
+"C0a457",-
+
+
+
+// gt
+concat(startwith(concat(<C>,<0>)),endwith(repeat(<num>,4)))

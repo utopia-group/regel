@@ -1,0 +1,23 @@
+// natural language
+lines with lower-case letter or character , 5 or more times
+
+// examples
+"aaaaa",+
+"abcde",+
+"bbbbb",+
+"11111",+
+"12345",+
+"abc12",+
+"123456",+
+"",-
+" ",-
+"1",-
+"a",-
+"12",-
+"123",-
+"1234",-
+
+
+
+// gt
+repeatatleast(or(<low>,<any>),5)

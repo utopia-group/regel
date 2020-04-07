@@ -1,0 +1,23 @@
+// natural language
+lines that have words with a character or a capital letter
+
+// examples
+"a",+
+"C",+
+"Q",+
+"1",+
+"@",+
+"O",+
+"P",+
+"12",-
+"",-
+"ac",-
+"CD",-
+"4D",-
+"@#",-
+"d1D",-
+
+
+
+// gt
+or(<cap>,<any>)

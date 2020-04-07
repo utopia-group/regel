@@ -1,0 +1,23 @@
+// natural language
+lines with lower-case letter , before capital letter or character
+
+// examples
+"aA",+
+"bR",+
+"b12A",+
+"o1",+
+"o,",+
+"o ",+
+"abdcedA0",+
+"1A",-
+",B",-
+",,",-
+" ",-
+" .",-
+"6ABd3",-
+"",-
+
+
+
+// gt
+concat(<low>,contain(or(<cap>,<any>)))

@@ -1,0 +1,14 @@
+// natural language
+R1: I want to validate a 10 digit USA style phone number using a Regular Expression in Javascript
+
+// visual format
+concat(concat(repeat(R1,3),<->),concat(repeat(R1,3),concat(<->,repeat(R1,4))))
+
+// example
+"215-121-1247",+
+"8059311142",-
+"805 931 42ab",-
+"105 931 4288",-
+
+// gt
+concat(concat(repeat(<num>,3),<->),concat(repeat(<num>,3),concat(<->,repeat(<num>,4))))

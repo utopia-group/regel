@@ -1,0 +1,23 @@
+// natural language
+lines ending with 3 or more words with a character .
+
+// examples
+"1abc",+
+"abc",+
+"efg",+
+",abc",+
+"123abc",+
+"1a4rtgy",+
+" abc",+
+"ab",-
+"a",-
+"1",-
+"12",-
+",2",-
+"",-
+" d",-
+
+
+
+// gt
+endwith(repeatatleast(<any>,3))

@@ -1,0 +1,23 @@
+// natural language
+lines with words that include a letter , the string "!" , or a lower-case letter
+
+// examples
+"a",+
+"A",+
+"!",+
+"e",+
+"G",+
+"y",+
+"q",+
+"!!",-
+"aa",-
+"Aa",-
+"dS",-
+"",-
+"12",-
+"3",-
+
+
+
+// gt
+or(or(<m0>,<low>),<let>)

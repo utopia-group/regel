@@ -1,0 +1,1 @@
+R0,"The strings are accepted if they start with the substring ""aa"" or end with the substring ""bb"".","?{startwith(concat(<a>,<a>)),endwith(concat(<b>,<b>))}"

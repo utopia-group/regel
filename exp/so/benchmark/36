@@ -1,0 +1,13 @@
+// natural language
+I'm trying to validate a value and that value cannot have a zero and then a number in front of it
+
+// examples
+"0.2lb",+
+"1.2lb",+
+"2lb",+
+"05lb",-
+
+
+
+// gt
+not(startwith(concat(<0>,<num>)))

@@ -1,0 +1,18 @@
+// natural language
+User allowed to enter two characters after "%"
+
+// examples
+"%ab",+
+"%ab%",+
+"%abcde",+
+"%abcde%",+
+"%abcdef%",+
+"%",-
+"%%",-
+"%%%",-
+"%a%",-
+
+
+
+// gt
+concat(<%>,startwith(repeat(<let>,2)))

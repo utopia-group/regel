@@ -1,0 +1,23 @@
+// natural language
+lines with at least capital letter followed by letter
+
+// examples
+"Aa",+
+"Bb",+
+"AAAaaa",+
+"BBBbbb",+
+"Aa and other",+
+"Start with caps",+
+"Hello,",+
+"other Aa and",-
+"",-
+"bB",-
+",,,",-
+"something!",-
+"aA",-
+"n0",-
+
+
+
+// gt
+repeatatleast(concat(<cap>,contain(<let>)),1)

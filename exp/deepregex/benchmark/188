@@ -1,0 +1,23 @@
+// natural language
+lines with at least 7 of  the string "!" or a vowel
+
+// examples
+"!!!!!!!",+
+"!!!!!!!!",+
+"aaaaaaaa",+
+"aaaaaaa",+
+"a!e!iou!",+
+"aeiou!!",+
+"AEIOU!ae",+
+"",-
+" ",-
+"a",-
+"1",-
+"!!!!!!",-
+"aeioua",-
+"AEIOU!",-
+
+
+
+// gt
+repeatatleast(or(<vow>,<m0>),7)

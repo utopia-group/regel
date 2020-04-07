@@ -1,0 +1,23 @@
+// natural language
+lines starting in capital letter with a character
+
+// examples
+"Fake",+
+"Nope",+
+"Not sure",+
+"I think this will work",+
+"S8",+
+"E%",+
+"M.",+
+"S",-
+"",-
+"about",-
+"%S",-
+"(L",-
+"fore#F",-
+"foreF#",-
+
+
+
+// gt
+repeatatleast(startwith(concat(<cap>,contain(<any>))),1)

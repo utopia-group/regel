@@ -1,0 +1,23 @@
+// natural language
+lines with words with string "!" or string "@" , 4 or more times
+
+// examples
+"!!!!",+
+"@@@@",+
+"!@!@",+
+"!!@@",+
+"!!!!!",+
+"@@@@@",+
+"@@@!!!",+
+"",-
+" ",-
+"1",-
+"a",-
+"!",-
+"!!",-
+"!@!",-
+
+
+
+// gt
+repeatatleast(or(<m0>,<m1>),4)

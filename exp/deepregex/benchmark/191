@@ -1,0 +1,23 @@
+// natural language
+lines containing the string "!" or a letter after a character
+
+// examples
+"a!",+
+"aa",+
+"1!",+
+"1a",+
+"1b",+
+"1b1",+
+"1bbb",+
+"",-
+" ",-
+"1",-
+"a",-
+"b",-
+"!",-
+"a1",-
+
+
+
+// gt
+concat(<any>,contain(or(<let>,<m0>)))

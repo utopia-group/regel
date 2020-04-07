@@ -1,0 +1,17 @@
+// natural language
+Allows only the following characters: Letters, numbers, spaces and any of the following characters "_" "-" "+" "(" ")" "/" "\"
+
+// examples
+"test",+
+"test1",+
+"test1_",+
+"t(e_ s)t1 i/s \good+-",+
+"t,test",-
+"t.test",-
+"test!",-
+"te!@#$%st",-
+
+
+
+// gt
+repeatatleast(or(<let>,or(<num>,or(<_>,or(< >,or(<->,or(<+>,or(</>,or(<\>,or(<(>,<)>))))))))),1)

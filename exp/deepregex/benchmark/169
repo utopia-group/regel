@@ -1,0 +1,23 @@
+// natural language
+lines with a capital before ending with vowel
+
+// examples
+"A111a",+
+"Ae",+
+"Ba",+
+"B1122e",+
+"B1122oo",+
+"M    u",+
+"R1234O",+
+"",-
+" ",-
+"a",-
+"1",-
+"!",-
+"AR",-
+"A12",-
+
+
+
+// gt
+concat(<cap>,contain(endwith(<vow>)))

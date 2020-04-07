@@ -1,0 +1,23 @@
+// natural language
+lines with a lower-case or capital letter
+
+// examples
+"a",+
+"A",+
+"B",+
+"b",+
+"a",+
+"a",+
+"a",+
+"",-
+"1",-
+"10",-
+"AB",-
+"ab",-
+"Ab",-
+",",-
+
+
+
+// gt
+or(or(<let>,<low>),<cap>)

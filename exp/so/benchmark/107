@@ -1,0 +1,16 @@
+// natural language
+What is the regular expression for a decimal with a precision of 2? The decimal point may be optional, and integers may also be included
+
+// example
+"123.12",+
+"2",+
+"56754",+
+"92929292929292.12",+
+"0.21",+
+"3.1",+
+"12.1232",-
+"2.23332",-
+"e666.76",-
+
+// gt
+concat(repeatatleast(<num>,1),optional(concat(<.>,repeatrange(<num>,1,2))))

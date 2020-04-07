@@ -1,0 +1,23 @@
+// natural language
+lines containing words wherein the string "!" precedes a letter
+
+// examples
+"!a",+
+"!b",+
+"!!a",+
+"!a!a",+
+"!!b!!b",+
+"!ba",+
+"!a",+
+"b",-
+"",-
+"words containing",-
+"start!",-
+",,,",-
+"!,",-
+"lol",-
+
+
+
+// gt
+concat(<m0>,contain(<let>))

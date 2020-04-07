@@ -1,0 +1,19 @@
+// natural language
+R1: ""*"" or nothing
+R2: at least two characters
+R3: ""*"" or nothing
+
+// visual format
+concat(R1,concat(R2,R3))
+
+// example
+"Mu*",+
+"*pa",+
+"*pa*",+
+"*e*",-
+"*e*t",-
+"*e*t*",-
+"pa**",-
+
+// gt
+concat(optional(<*>),concat(repeatatleast(<let>,2),optional(<*>)))

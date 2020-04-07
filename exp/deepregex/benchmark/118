@@ -1,0 +1,23 @@
+// natural language
+lines starting with a number before the string "!"
+
+// examples
+"3!h",+
+"86!gj",+
+"79!dgA",+
+"87!24",+
+"97!34Dgc",+
+"9!2a",+
+"87!sg",+
+"asd!sd",-
+"B!sd",-
+"S12",-
+"Bunrs",-
+"123",-
+"!sda",-
+"!12SD",-
+
+
+
+// gt
+concat(repeatatleast(startwith(<num>),1),contain(<m0>))

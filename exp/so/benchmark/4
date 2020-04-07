@@ -1,0 +1,14 @@
+// natural language
+validate a textbox with decimal number. I need the exact digit like this two digit.single digit. The final single digit is 5 only.
+
+// example
+"10.5",+
+"12.5",+
+"12",-
+"-1.0",-
+"12.0",-
+"1.0",-
+"12.4",-
+
+// gt
+concat(repeat(<num>,2),concat(<.>,<5>))

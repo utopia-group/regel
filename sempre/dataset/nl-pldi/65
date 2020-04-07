@@ -1,0 +1,1 @@
+R0,"I'm trying to make a regular expression that validates positive natural numbers from three digits to 9 digits and separates the thousand unit and the million unit with a point","?{repeatrange(<num>,3,9)}"

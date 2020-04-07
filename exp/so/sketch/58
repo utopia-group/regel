@@ -1,0 +1,25 @@
+1 not(contain(?{endwith(< >)}))
+2 not(contain(?{< >}))
+3 ?{endwith(< >)}
+4 not(contain(?{< >,endwith(< >)}))
+5 ?{< >}
+6 ?{< >,endwith(< >)}
+7 ?{not(contain(endwith(< >)))}
+8 not(contain(not(?{endwith(< >)})))
+9 ?{not(contain(< >))}
+10 not(contain(?{not(endwith(< >))}))
+11 ?{startwith(endwith(< >))}
+12 ?{< >,not(contain(endwith(< >)))}
+13 ?{not(contain(< >)),endwith(< >)}
+14 not(?{endwith(< >)})
+15 ?{not(endwith(< >))}
+16 ?{startwith(< >)}
+17 ?{< >,not(contain(< >))}
+18 ?{not(contain(< >)),< >}
+19 not(contain(?{< >,not(endwith(< >))}))
+20 ?{startwith(< >),endwith(< >)}
+21 not(not(contain(?{endwith(< >)})))
+22 ?{< >,not(contain(< >)),endwith(< >)}
+23 ?{< >,not(endwith(< >))}
+24 ?{startwith(< >),< >}
+25 ?{startwith(not(contain(endwith(< >))))}

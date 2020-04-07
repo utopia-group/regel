@@ -1,0 +1,23 @@
+// natural language
+lines ending in a letter and vowel or string "!"
+
+// examples
+"aa",+
+"aa!",+
+"b!",+
+"testo",+
+"roberto",+
+"fake",+
+"fakE",+
+"testing",-
+"no more tests",-
+"Will no9",-
+"Will work?",-
+"Not likely%",-
+"How's this",-
+"working well",-
+
+
+
+// gt
+endwith(or(and(<let>,<vow>),<m0>))

@@ -1,0 +1,23 @@
+// natural language
+lines which are not starting with the string "!" or a number
+
+// examples
+"",+
+"@f15",+
+"gcaro",+
+"Ciro211",+
+"Z2i3",+
+" !jdfkj",+
+"F!2i3r",+
+"!",-
+"1erfa2",-
+"5afAfjw!",-
+"9!isfoK",-
+"!!fja22",-
+"2",-
+"9",-
+
+
+
+// gt
+not(startwith(or(<m0>,<num>)))

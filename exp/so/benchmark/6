@@ -1,0 +1,19 @@
+// natural language
+The input will be in the form a colon (:) separated tuple of three values. The first value will be an integer (potentially a long in terms of size/length), with the other two values being either numeric or a string.
+
+// examples
+"1:x:456",+
+"2:2:3",+
+"3:abc:123",+
+"333:abc:123456",+
+"x:1:2",-
+"1::2",-
+"1:3::x",-
+"1:2",-
+"fyz::2:1",-
+"1:3::3",-
+
+
+
+// gt
+concat(repeatatleast(<num>,1),repeat(concat(<:>,or(repeatatleast(<let>,1),repeatatleast(<num>,1))),2))

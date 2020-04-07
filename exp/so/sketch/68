@@ -1,0 +1,25 @@
+1 ?{repeat(<let>,3)}
+2 ?{< >,repeat(<let>,3)}
+3 ?{repeat(<any>,3)}
+4 ?{< >,repeat(<any>,3)}
+5 ?{<let>,repeat(<let>,3)}
+6 ?{<num>,repeat(<let>,3)}
+7 ?{<let>,< >,repeat(<let>,3)}
+8 ?{<num>,< >,repeat(<let>,3)}
+9 ?{<let>,repeat(<any>,3)}
+10 ?{<num>,repeat(<any>,3)}
+11 ?{<let>,< >,repeat(<any>,3)}
+12 ?{<num>,< >,repeat(<any>,3)}
+13 ?{<let>,<num>,repeat(<let>,3)}
+14 ?{<let>,<num>,< >,repeat(<let>,3)}
+15 ?{<let>,<num>,repeat(<any>,3)}
+16 ?{not(repeat(<let>,3))}
+17 ?{repeat(<let>,3),<let>}
+18 ?{repeat(<num>,3),<let>}
+19 ?{repeat(<num>,3)}
+20 ?{<let>,<num>,< >,repeat(<any>,3)}
+21 ?{< >,not(repeat(<let>,3))}
+22 ?{not(repeat(<any>,3))}
+23 ?{repeat(<let>,3),<any>}
+24 ?{repeat(<num>,3),<any>}
+25 ?{or(<let>,<num>),repeat(<let>,3)}

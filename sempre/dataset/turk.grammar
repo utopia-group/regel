@@ -1,0 +1,214 @@
+# Root 
+(rule $ROOT ($SKETCH) (IdentityFn)) 
+(rule $ROOT ($Skip $SKETCH) (SelectFn 1))
+
+# Comosition of Program
+(rule $PROGRAM ($CC) (IdentityFn))
+(rule $PROGRAM ($CONST) (IdentityFn))
+
+# SKETCH only supports common spec rules, 
+
+# Composition of Program SKETCH OPT
+(rule $SKETCH ($LIST_PROGRAM) (sketch.UnarySketchFn))
+(rule $LIST_PROGRAM ($PROGRAM) (IdentityFn))
+(rule $LIST_PROGRAM ($PROGRAM $LIST_PROGRAM) (sketch.SketchJoinFn))
+# rule opt
+
+# sep
+(rule $SKETCH ($SKETCH $PROGRAM $MARKER_SEP) (sketch.SepFn 0 1))
+(rule $PROGRAM ($PROGRAM $PROGRAM $MARKER_SEP) (sketch.SepFn 0 1))
+
+
+(rule $SKETCH ($PROGRAM $MARKER_BETWEEN $SKETCH) (sketch.SepFn 2 0))
+(rule $PROGRAM ($PROGRAM $MARKER_BETWEEN $PROGRAM) (sketch.SepFn 2 0))
+
+(rule $SKETCH ($SKETCH $MARKER_SPLITBY $PROGRAM) (sketch.SepFn 0 2))
+
+(rule $SKETCH ($MARKER_NOTCONTAIN $SKETCH) (sketch.NotContainFn 1))
+(rule $PROGRAM ($MARKER_NOTCONTAIN $PROGRAM) (sketch.NotContainFn 1))
+
+(rule $SKETCH ($MARKER_NOT $SKETCH) (sketch.NotFn 1))
+(rule $PROGRAM ($MARKER_NOT $PROGRAM) (sketch.NotFn 1))
+
+(rule $PROGRAM ($MARKER_STARTWITH $PROGRAM) (sketch.StartwithFn 1))
+(rule $PROGRAM ($MARKER_ENDWITH $PROGRAM) (sketch.EndwithFn 1))
+(rule $PROGRAM ($PROGRAM $MARKER_INEND) (sketch.EndwithFn 0))
+
+(rule $PROGRAM ($PROGRAM $MARKER_FOLLOWBY $PROGRAM) (sketch.ConcatFn 0 2))
+(rule $SKETCH ($PROGRAM $MARKER_FOLLOWBY $SKETCH) (sketch.ConcatFn 0 2))
+(rule $SKETCH ($SKETCH $MARKER_FOLLOWBY $PROGRAM) (sketch.ConcatFn 0 2))
+(rule $SKETCH ($SKETCH $MARKER_FOLLOWBY $SKETCH) (sketch.ConcatFn 0 2))
+
+# decimal
+(rule $SKETCH ($PROGRAM $MARKER_DECIMAL $PROGRAM) (sketch.DecimalFn 0 2))
+
+# only
+(rule $PROGRAM ($MARKER_ONLY1 $CC) (sketch.RepeatatleastFn 1 (arg 1)))
+(rule $PROGRAM ($CC1 $MARKER_ONLY) (sketch.RepeatatleastFn 0 (arg 1)))
+(rule $PROGRAM ($MARKER_OPTIONAL1 $CC) (sketch.RepeatatleastFn 1 (arg 0)))
+
+# non
+(rule $PROGRAM ($MARKER_NON1 $CONST) (sketch.NotccFn 1))
+
+# dealing skip
+
+(rule $CC ($CC1) (IdentityFn)) 
+(rule $CC ($CC1 $Skip) (SelectFn 0))
+
+(rule $CONST ($CONST1) (IdentityFn))
+(rule $CONST ($CONST1 $Skip) (SelectFn 0))
+
+(rule $INT ($INT1) (IdentityFn))
+(rule $INT ($INT1 $Skip) (SelectFn 0))
+
+# sep
+(rule $MARKER_SEP ($MARKER_SEP1) (IdentityFn)) 
+(rule $MARKER_SEP ($MARKER_SEP1 $Skip) (SelectFn 0))
+
+(rule $MARKER_BETWEEN ($MARKER_BETWEEN1) (IdentityFn)) 
+(rule $MARKER_BETWEEN ($MARKER_BETWEEN1 $Skip) (SelectFn 0))
+
+(rule $MARKER_SPLITBY ($MARKER_SPLITBY1) (IdentityFn)) 
+(rule $MARKER_SPLITBY ($MARKER_SPLITBY1 $Skip) (SelectFn 0))
+
+# contain
+(rule $MARKER_NOTCONTAIN ($MARKER_NOTCONTAIN1) (IdentityFn)) 
+(rule $MARKER_NOTCONTAIN ($MARKER_NOTCONTAIN1 $Skip) (SelectFn 0))
+
+# not
+(rule $MARKER_NOT ($MARKER_NOT1) (IdentityFn)) 
+(rule $MARKER_NOT ($MARKER_NOT1 $Skip) (SelectFn 0))
+
+(rule $MARKER_LENGTH ($MARKER_LENGTH1) (IdentityFn)) 
+(rule $MARKER_LENGTH ($MARKER_LENGTH1 $Skip) (SelectFn 0))
+
+# startend
+(rule $MARKER_STARTWITH ($MARKER_STARTWITH1) (IdentityFn)) 
+(rule $MARKER_STARTWITH ($MARKER_STARTWITH1 $Skip) (SelectFn 0))
+
+(rule $MARKER_ENDWITH ($MARKER_ENDWITH1) (IdentityFn)) 
+(rule $MARKER_ENDWITH ($MARKER_ENDWITH1 $Skip) (SelectFn 0))
+(rule $MARKER_INEND ($MARKER_INEND1) (IdentityFn)) 
+(rule $MARKER_INEND ($MARKER_INEND1 $Skip) (SelectFn 0))
+
+(rule $Skip ($LEMMA_PHRASE) (ConstantFn null))
+
+# and or concat
+(rule $MARKER_AND ($MARKER_AND1) (IdentityFn))
+(rule $MARKER_AND ($MARKER_AND1 $Skip) (SelectFn 0))
+(rule $MARKER_OR ($MARKER_OR1) (IdentityFn))
+(rule $MARKER_OR ($MARKER_OR1 $Skip) (SelectFn 0))
+
+# concat
+(rule $MARKER_CONCAT ($MARKER_CONCAT1) (IdentityFn))
+(rule $MARKER_CONCAT ($MARKER_CONCAT1 $Skip) (SelectFn 0))
+(rule $MARKER_FOLLOWBY ($MARKER_FOLLOWBY1) (IdentityFn))
+(rule $MARKER_FOLLOWBY ($MARKER_FOLLOWBY1 $Skip) (SelectFn 0))
+
+(rule $MARKER_ONLY ($MARKER_ONLY1) (IdentityFn))
+(rule $MARKER_ONLY ($MARKER_ONLY1 $Skip) (SelectFn 0))
+
+(rule $MARKER_DECIMAL ($MARKER_DECIMAL1) (IdentityFn))
+(rule $MARKER_DECIMAL ($MARKER_DECIMAL1 $Skip) (SelectFn 0))
+
+# lexicon mapping
+(rule $CC1 ($CCPHRASE1) (IdentityFn))
+(rule $CCPHRASE1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.cc)))
+(rule $CONST1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.const)))
+
+(rule $MARKER_SEP1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.sep)))
+(rule $MARKER_BETWEEN1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.between)))
+(rule $MARKER_SPLITBY1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.splitby)))
+(rule $MARKER_NOTCONTAIN1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.notcontain)))
+(rule $MARKER_NOT1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.not)))
+(rule $MARKER_NON1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.non)))
+(rule $MARKER_AND1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.and)))
+(rule $MARKER_OR1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.or)))
+(rule $MARKER_CONCAT1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.concat)))
+(rule $MARKER_COMMA1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.comma)))
+(rule $MARKER_STARTWITH1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.startwith)))
+(rule $MARKER_ENDWITH1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.endwith)))
+(rule $MARKER_INEND1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.inend)))
+(rule $MARKER_FOLLOWBY1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.followby)))
+(rule $MARKER_LENGTH1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.length)))
+(rule $MARKER_ATMAX1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.atmax)))
+(rule $MARKER_ONLY1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.only)))
+(rule $MARKER_DECIMAL1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.decimal)))
+(rule $MARKER_DOUBLENUM1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.doublenum)))
+(rule $MARKER_OPTIONAL1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.optional)))
+
+# things like x, x, x, and x  x, x, x, or x
+(rule $CC1 ($CONST_SET) (IdentityFn))
+(rule $MAKRKER_CONSTSETUNION1 (,) (ConstantFn fb:en.marker.constsetunion fb:type.marker.constsetunion))
+(rule $MAKRKER_CONSTSETUNION1 ((, optional) or) (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion))
+(rule $MAKRKER_CONSTSETUNION1 ((, optional) and) (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion))
+
+(rule $CONST_SET ($CONST1 $CONST_SET) (sketch.ConstUnionFn 0 1))
+(rule $CONST_SET ($CONST1 $CONST1) (sketch.ConstUnionFn 0 1))
+
+(rule $CONST_SET ($CCPHRASE1 $MAKRKER_CONSTSETUNION1 $CONST_SET) (sketch.ConstUnionFn 0 2))
+(rule $CONST_SET ($CONST1 $MAKRKER_CONSTSETUNION1 $CONST_SET) (sketch.ConstUnionFn 0 2))
+(rule $CONST_SET ($CONST1 $MAKRKER_CONSTSETUNION1 $CONST1) (sketch.ConstUnionFn 0 2))
+
+(rule $CONST_SET ($CCPHRASE1 $MAKRKER_CONSTSETUNION1 $CCPHRASE1) (sketch.ConstUnionFn 0 2))
+(rule $CONST_SET ($CCPHRASE1 $MAKRKER_CONSTSETUNION1 $CONST1) (sketch.ConstUnionFn 0 2))
+
+# string matching
+(rule $CONST1 (leftquoatation $PHRASE rightquoatation) (sketch.ConstFn))
+
+# number related
+(rule $INT1 ($LEMMA_PHRASE) (NumberFn NUMBER))
+
+(rule $PROGRAM ($MARKER_ATMAX1 $INT $CC) (sketch.RepeatrangeFn 2 (arg 1) (pos 1)))
+(rule $PROGRAM ($INT $CC) (sketch.RepeatFn 1 (pos 0)))
+(rule $PROGRAM ($CC $MARKER_LENGTH $INT) (sketch.RepeatFn 0 (pos 2)))
+(rule $PROGRAM ($MARKER_LENGTH $INT $CC) (sketch.RepeatFn 2 (pos 1)))
+
+# x or x
+(rule $PROGRAM ($INT1 $MARKER_OR1 $INT1 $CC) (sketch.RepeatintorintFn 3 (pos 0) (pos 2)))
+
+# x or more, more than x
+(rule $MARKER_ORMORE1 (or more) (ConstantFn fb:en.marker.ormore fb:type.marker.ormore))
+(rule $PROGRAM ($INT1 $MARKER_ORMORE1 $CC) (sketch.RepeatatleastFn 2 (pos 0)))
+(rule $PROGRAM ($CC $MARKER_LENGTH $INT1 - $INT1) (sketch.RepeatrangeFn 0 (pos 2)  (pos 3)))
+
+(rule $CC1 (string) (ConstantFn <any> fb:type.cc))
+(rule $CC1 (character) (ConstantFn <let> fb:type.cc))
+(rule $CC1 (characters) (ConstantFn <let> fb:type.cc))
+
+# MAX
+(rule $MARKER_MAX ($MARKER_MAX1) (IdentityFn))
+(rule $MARKER_MAX ($MARKER_MAX1 $Skip) (SelectFn 0))
+(rule $MARKER_MAX1 (max) (ConstantFn fb:en.marker.max fb:type.cc))
+
+(rule $PROGRAM ($MARKER_MAX $INT $CC) (sketch.RepeatrangeFn 2 (arg 1) (pos 1)))
+
+(rule $PROGRAM ($INT $CC) (sketch.RepeatrangeFn 1 (arg 1) (pos 0)))
+(rule $SKETCH ($MARKER_DECIMAL $PROGRAM $PROGRAM) (sketch.DecimalFn 1 2))
+(rule $SKETCH ($PROGRAM $PROGRAM $MARKER_DECIMAL ) (sketch.DecimalFn 0 1))
+
+(rule $MARKER_FOLLOWS1 ($LEMMA_PHRASE) (SimpleLexiconFn (type fb:type.marker.follows)))
+(rule $MARKER_FOLLOWS ($MARKER_FOLLOWS1) (IdentityFn))
+(rule $MARKER_FOLLOWS ($MARKER_FOLLOWS1 $Skip) (SelectFn 0))
+(rule $PROGRAM ($PROGRAM $MARKER_FOLLOWS $PROGRAM) (sketch.ConcatFn 2 0))
+(rule $SKETCH ($PROGRAM $MARKER_FOLLOWS $SKETCH) (sketch.ConcatFn 2 0))
+(rule $SKETCH ($SKETCH $MARKER_FOLLOWS $PROGRAM) (sketch.ConcatFn 2 0))
+(rule $SKETCH ($SKETCH $MARKER_FOLLOWS $SKETCH) (sketch.ConcatFn 2 0))
+
+(rule $PROGRAM ($PROGRAM $MARKER_AND $PROGRAM) (sketch.AndFn 0 2))
+(rule $SKETCH ($PROGRAM $MARKER_AND $SKETCH) (sketch.AndFn 0 2))
+(rule $SKETCH ($SKETCH $MARKER_AND $PROGRAM) (sketch.AndFn 0 2))
+(rule $SKETCH ($SKETCH $MARKER_AND $SKETCH) (sketch.AndFn 0 2))
+
+
+(rule $PROGRAM ($PROGRAM $MARKER_FOLLOWS $PROGRAM) (sketch.ConcatContainFn 2 0))
+(rule $SKETCH ($SKETCH $MARKER_FOLLOWS $PROGRAM) (sketch.ConcatContainFn 2 0))
+(rule $PROGRAM ($PROGRAM $MARKER_FOLLOWBY $PROGRAM) (sketch.ConcatContainFn 0 2))
+(rule $SKETCH ($SKETCH $MARKER_FOLLOWBY $PROGRAM) (sketch.ConcatContainFn 0 2))
+
+(rule $MARKER_ORMORETIME1 (or more times) (ConstantFn fb:en.marker.ormore fb:type.marker.ormoretimes))
+(rule $PROGRAM ($PROGRAM $INT1 $MARKER_ORMORETIME1) (sketch.RepeatatleastFn 0 (pos 1)))
+(rule $SKETCH ($MARKER_DOUBLENUM1 ($Skip optional)) (ConstantFn (name "sep(?{<num>},<.>)")))
+(rule $PROGRAM ($INT1 - $INT $CC $MARKER_LENGTH) (sketch.RepeatrangeFn 2 (pos 0) (pos 1)))
+(rule $MARKER_ORMORETIME1 (at least) (ConstantFn fb:en.marker.ormore fb:type.marker.ormoretimes))
+(rule $PROGRAM ($MARKER_ORMORETIME1 $INT1 $CC) (sketch.RepeatatleastFn 2 (pos 1)))

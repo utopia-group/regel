@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" before a non letter
+
+// examples
+"!",+
+"!2Afjsdf",+
+"!bcd",+
+"!345",+
+"!!!!!2342",+
+"!AAA234",+
+"!239CCC34",+
+"ajksdfj",-
+"23!",-
+"Z",-
+"xY234!!",-
+"abcd",-
+"2!",-
+" !",-
+
+
+
+// gt
+concat(<m0>,contain(not(<let>)))

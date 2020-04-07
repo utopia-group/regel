@@ -1,0 +1,1 @@
+R0,"Find sequences of one upper case letter followed by lower case letters.","?{concat(<cap>,<low>)}"

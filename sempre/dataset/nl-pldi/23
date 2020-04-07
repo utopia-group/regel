@@ -1,0 +1,1 @@
+R0,"I need a regular expression that can validate an input string to make sure it is a number between 1 - 30 and up to 2 decimal places","?{repeatrange(<num>,1,30),sep(?{repeatrange(<num>,1,2)},<.>)}"

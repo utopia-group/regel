@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" or lower-case letter before string "@"
+
+// examples
+"!@",+
+"a@",+
+"b@",+
+"!d@",+
+"ab@",+
+"a!@",+
+"cde@",+
+"",-
+" ",-
+"!",-
+"a",-
+"@",-
+"A@",-
+"!a",-
+
+
+
+// gt
+concat(or(<m0>,<low>),contain(<m1>))

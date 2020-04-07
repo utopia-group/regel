@@ -1,0 +1,11 @@
+// natural language
+Is it possible to match lines that do not contain a specific word, e.g. ""hede"", using regular expression?
+
+// examples
+"hoho",+
+"hihi",+
+"haha",+
+"hede",-
+
+// gt
+not(contain(concat(concat(<h>,<e>),concat(<d>,<e>))))

@@ -1,0 +1,10 @@
+// natural language
+I need a regular expression to validate single digit within range of [1-5] followed by alphabet [A-C] and followed by optional alphabet [X-Z]
+
+// example
+"1A",+
+"2BZ",+
+"7B",-
+
+// gt
+concat(or(<1>,or(<2>,or(<3>,or(<4>,<5>)))),or(<A>,or(<B>,<C>)),optional(or(<X>,or(<Y>,<Z>))))

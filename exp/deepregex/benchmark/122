@@ -1,0 +1,23 @@
+// natural language
+lines with 3 or more of the string "!" before a letter
+
+// examples
+"!S!N!S",+
+"!!!E",+
+"!!eaA",+
+"!S",+
+"abc",+
+"!sS!s",+
+"!s",+
+"no",-
+"no!",-
+"s!s!",-
+"everyt!",-
+"123!",-
+"eve!",-
+"",-
+
+
+
+// gt
+or(concat(<m0>,contain(<let>)),repeatatleast(<low>,3))

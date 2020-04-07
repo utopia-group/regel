@@ -1,0 +1,15 @@
+// natural language
+I need a regular expression that can validate that a string is an alphanumeric comma delimited string.
+
+// examples
+"123,4A67,GGG,767",+
+"test",+
+"test,test",+
+"test123,Test123,test",+
+"12333,78787&*,GH778",-
+"fghkjhfdg8797<",-
+
+
+
+// gt
+concat(repeatatleast(<alphanum>,1),star(concat(<,>,repeatatleast(or(<let>,<num>),1))))

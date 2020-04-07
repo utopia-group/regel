@@ -1,0 +1,9 @@
+1 ?{concat(<vow>,contain(<m0>))}
+2 ?{concat(<vow>,<m0>)}
+3 concat(?{<vow>},contain(<m0>))
+4 concat(?{<vow>},<m0>)
+5 concat(<vow>,?{<m0>})
+6 concat(?{<vow>},?{<m0>})
+7 ?{<vow>,<m0>}
+8 ?{<m0>}
+9 ?{<vow>}

@@ -1,0 +1,23 @@
+// natural language
+lines with a lower case letter or character
+
+// examples
+"a",+
+"1",+
+",",+
+"ab",+
+"a12",+
+"a',",+
+" ",+
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+
+
+
+// gt
+contain(or(<low>,<any>))

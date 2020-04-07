@@ -1,0 +1,16 @@
+// natural language
+Requirement is that total number of "-" with the string can only be one
+
+// examples
+"Test",+
+"Test-hello",+
+"Test-",+
+"-Test",+
+"Test--hello",-
+"-test-",-
+"test-hello--",-
+
+
+
+// gt
+concat(star(not(<->)),concat(optional(<->),star(not(<->))))

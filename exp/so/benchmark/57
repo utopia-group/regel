@@ -1,0 +1,17 @@
+// natural language
+allow only numbers, maxmium two decimals, max one comma (,) and one "-" symbol in front of the number (optional)
+
+// examples
+"0,25",+
+"10,2",+
+"-7000",+
+"-175,33",+
+"15555555555555,99",+
+"9,999",-
+"15.03",-
+"77,77,77",-
+
+
+
+// gt
+concat(concat(optional(<->),repeatatleast(<num>,1)),concat(optional(<,>),repeatrange(<num>,0,2)))

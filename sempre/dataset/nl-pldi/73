@@ -1,0 +1,1 @@
+R0,"I would like regex to be a whole number with thousands separated with a comma. No decimal. No ""$"".","?{<num>,<,>,<.>,<$>}"

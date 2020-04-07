@@ -1,0 +1,23 @@
+// natural language
+lines that end with a number then after has a character
+
+// examples
+"3a",+
+"2,",+
+"a2,",+
+"aaa3a",+
+"nobody33a33",+
+"when2a",+
+"nope2!",+
+"a2",-
+"2",-
+"aaaa",-
+"",-
+",",-
+",a",-
+"yes",-
+
+
+
+// gt
+endwith(concat(<num>,contain(<any>)))

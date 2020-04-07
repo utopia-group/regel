@@ -1,0 +1,23 @@
+// natural language
+lines ending with a capital letter preceding a vowel
+
+// examples
+" Wa",+
+"124Ae",+
+"123AE",+
+"AAAE",+
+"AE Ae",+
+"!!Ao",+
+"  !BBBeee",+
+" ",-
+"",-
+"1",-
+"a",-
+"A",-
+"!",-
+" Aw",-
+
+
+
+// gt
+endwith(concat(<cap>,contain(<vow>)))

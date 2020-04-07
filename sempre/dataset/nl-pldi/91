@@ -1,0 +1,3 @@
+Sketch,"and(R1,concat(concat(R2,repeat(<num>,3)),concat(concat(R2,repeat(<num>,3)),concat(R2,repeat(<num>,4)))))"
+R1,"10 - 15 total characters in length", "?{repeatrange(<any>,10,15)}"
+R2,"Can contain ""("", "")"" ,space , ""."", or ""-"" delimiters within the string.","?{or(<(>,or(<)>,or(< >,or(<.>,<->))))}"

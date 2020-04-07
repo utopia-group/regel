@@ -1,0 +1,23 @@
+// natural language
+lines having either a vowel , character , or number
+
+// examples
+"e",+
+"ghj",+
+"anythin",+
+"132fsd",+
+"jsd&s",+
+"eAe",+
+"hoadfan",+
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+
+
+
+// gt
+contain(or(or(<vow>,<any>),<num>))

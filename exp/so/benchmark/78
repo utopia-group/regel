@@ -1,0 +1,13 @@
+// natural language
+Should allow only alphanumeric with no space and no other characters including "_". It should not allow leading/trailing whitespace also.
+
+// examples
+"A4hgg5",+
+"A4_6hy",-
+"a@yb",-
+"_",-
+
+
+
+// gt
+repeatatleast(<alphanum>,1)

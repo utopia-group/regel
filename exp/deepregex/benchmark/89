@@ -1,0 +1,23 @@
+// natural language
+lines with a vowel before a number
+
+// examples
+"a7",+
+"e1!",+
+"!i8",+
+"o0",+
+"u5",+
+"uu6",+
+"ii1",+
+"jinwmf",-
+"wofjwoifj",-
+"ijfowjf",-
+"",-
+"hate",-
+"machien",-
+"learning",-
+
+
+
+// gt
+contain(concat(<vow>,contain(<num>)))

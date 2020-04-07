@@ -1,0 +1,23 @@
+// natural language
+lines with a number preceding a capital letter 2 or more times
+
+// examples
+"1A1A",+
+"12A1A",+
+"12A12A",+
+"0345BDE1A",+
+"1A2B3C",+
+"12A23B33DD",+
+"1A2B3C4D",+
+"",-
+" ",-
+"1A",-
+"1a",-
+"a1",-
+"1A2b",-
+"2b1A",-
+
+
+
+// gt
+repeatatleast(concat(<num>,contain(<cap>)),2)

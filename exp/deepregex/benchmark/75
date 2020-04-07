@@ -1,0 +1,23 @@
+// natural language
+lines containing a vowel followed by a character
+
+// examples
+"ab",+
+"a,",+
+"eb",+
+"e,",+
+"aeiou",+
+"a,e",+
+"eeeeeee",+
+"reeeeeee",-
+"",-
+"hHllH",-
+",,,",-
+"yyy!",-
+"y",-
+"no",-
+
+
+
+// gt
+concat(<vow>,contain(<any>))

@@ -1,0 +1,14 @@
+// natural language
+I need a regular expression that validates a decimal number which includes ""+"", ""-"" sign as well.
+
+// example
+"+.12",+
+"-0.13",+
+"0.+",+
+"45.-",+
+"+-0.12",-
+"+99.+2",-
+"0.-12",-
+
+// gt
+concat(optional(or(<+>,<->)),concat(concat(repeatatleast(<num>,1),concat(<.>,optional(repeatatleast(<num>,1)))),optional(or(<+>,<->))))

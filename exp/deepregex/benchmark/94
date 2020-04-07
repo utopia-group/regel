@@ -1,0 +1,23 @@
+// natural language
+lines starting in words with a number or letter
+
+// examples
+"words5",+
+"a",+
+"64",+
+"128",+
+"abc?",+
+"888",+
+"333",+
+"-200",-
+"*",-
+"",-
+"!",-
+"@",-
+"#",-
+"$",-
+
+
+
+// gt
+startwith(or(<num>,<let>))

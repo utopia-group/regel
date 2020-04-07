@@ -1,0 +1,23 @@
+// natural language
+lines with a capital letter , 2 or more times before a character in them
+
+// examples
+"AAabc",+
+"AB123",+
+"AC4f45",+
+"FGREDD23",+
+"GGabc",+
+"EEE1df2",+
+"RTa",+
+"Aa",-
+"Ebb",-
+"R123",-
+"123",-
+"fds",-
+"34bv",-
+"h78",-
+
+
+
+// gt
+concat(repeatatleast(<cap>,2),contain(<any>))

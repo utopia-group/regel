@@ -1,0 +1,23 @@
+// natural language
+lines that have a letter and then a lower-case letter
+
+// examples
+"aa",+
+"bb",+
+"cc",+
+"de",+
+"ef",+
+"ge",+
+"ze",+
+"Aa",-
+"AA",-
+"CC",-
+"DD",-
+"",-
+"E;",-
+"!;",-
+
+
+
+// gt
+concat(<low>,contain(contain(<let>)))

@@ -1,0 +1,21 @@
+// natural language
+R1: It cannot start with ""0"". It can be 1 digit to 6 digits in length.
+
+// visual format
+concat(R1,concat(<->,R1))
+
+//example
+"1-252",+
+"9823-10000",+
+"123456-123457",+
+"0-252",-
+"12345",-
+"498 8987",-
+"0023-002343",-
+"2-10-233",-
+
+// gt
+concat(and(not(startwith(<0>)),repeatrange(<num>,1,6)),concat(<->,and(not(startwith(<0>)),repeatrange(<num>,1,6))))
+
+// gt
+concat(and(not(startwith(<0>)),repeatrange(<num>,1,6)),concat(<->,and(not(startwith(<0>)),repeatrange(<num>,1,6))))

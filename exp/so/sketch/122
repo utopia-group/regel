@@ -1,0 +1,5 @@
+1 ?{<vow>}
+2 ?{startwith(<vow>)}
+3 ?{<any>,<vow>}
+4 ?{<any>,startwith(<vow>)}
+5 ?{<any>}

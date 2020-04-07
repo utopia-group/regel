@@ -1,0 +1,23 @@
+// natural language
+lines that end with a character or a vowel
+
+// examples
+"a",+
+"1a",+
+"1b",+
+"b",+
+"@...a",+
+",b",+
+"@@",+
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+
+
+
+// gt
+endwith(or(<any>,<vow>))

@@ -1,0 +1,23 @@
+// natural language
+lines with words with string "!" before character or capital letter
+
+// examples
+"!a",+
+"!1",+
+"!A",+
+"!B",+
+"!,",+
+"!!",+
+"!43ad",+
+"",-
+" ",-
+"!",-
+"a",-
+"1",-
+"b",-
+"A",-
+
+
+
+// gt
+concat(<m0>,contain(or(<any>,<cap>)))

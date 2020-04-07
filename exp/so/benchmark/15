@@ -1,0 +1,19 @@
+// natural language
+i need a Regular that validate Decimal (18,3) this mean max number of digits before comma is 15 and accept 3 numbers after comma . 18 precision 3 scale.
+
+// examples
+"123456789.123",+
+"123456789123456.12",+
+"12345.1",+
+"123456789123456",+
+"4",+
+"452",+
+"1234567891234567",-
+"123.1234",-
+"1.12345",-
+".1234",-
+
+
+
+// gt
+concat(repeatrange(<num>,1,15),optional(concat(<.>,repeatrange(<num>,1,3))))

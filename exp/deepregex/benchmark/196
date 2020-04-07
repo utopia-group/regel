@@ -1,0 +1,23 @@
+// natural language
+lines containing the string "!" preceding a character before a number
+
+// examples
+"!a1",+
+"!11",+
+"!1111111",+
+"!f12!",+
+"!bbbbb!!!!111",+
+"!b2",+
+"!c23",+
+"",-
+" ",-
+"1",-
+"a",-
+"!",-
+"!aa",-
+"!!!a",-
+
+
+
+// gt
+concat(concat(<m0>,contain(<any>)),contain(<num>))

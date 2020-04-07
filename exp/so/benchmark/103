@@ -1,0 +1,14 @@
+// natural language
+I am trying to implement regex validation for passport number. My requirement is bulletpoint Length should be minimum 3 characters to a maximum of 20 characters. bulletpoint Should not be only "0"
+
+// examples
+"00000001",+
+"101AE24",+
+"01234",+
+"00001",+
+"00",-
+
+
+
+// gt
+and(not(repeatatleast(<0>,1)),repeatrange(<alphanum>,3,20))

@@ -1,0 +1,19 @@
+// natural language
+The value should not contain only "%" and if there is a "%" the length should be more than 3 characters including "%". "%" can be anywhere in the string (dot is included)
+
+// examples
+"%123",+
+"%1234",+
+"12%3",+
+"abc%",+
+"abc",+
+"A",+
+"ABC",+
+"%",-
+"%12",-
+"%%%",-
+
+
+
+// gt
+or(not(contain(repeatatleast(<%>,1))),repeatatleast(<any>,4))

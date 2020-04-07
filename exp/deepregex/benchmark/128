@@ -1,0 +1,23 @@
+// natural language
+the lines that contain a letter coming before the string "!" at least 2 times
+
+// examples
+"ab!!",+
+"natural!!!",+
+"unta!!",+
+"bAb!!",+
+"cCa!!sd",+
+"jih!!sda",+
+"Cosda!s!!sd",+
+"s!",-
+"one!",-
+"no",-
+"cool",-
+"",-
+"befeo!sd",-
+"123!",-
+
+
+
+// gt
+concat(<let>,contain(repeatatleast(<m0>,2)))

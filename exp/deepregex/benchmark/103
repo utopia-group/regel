@@ -1,0 +1,23 @@
+// natural language
+lines with words starting with 4 or more lower-case letters
+
+// examples
+"abcd",+
+"abcde",+
+"aaaaa",+
+"aaaaaa",+
+"aaaaaaa",+
+"aaaaaaaa",+
+"aaaaaaaaaaa!",+
+"fa",-
+"a",-
+"aaa",-
+"",-
+"?4",-
+"??",-
+"?$AAA",-
+
+
+
+// gt
+startwith(repeatatleast(<low>,4))

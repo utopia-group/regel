@@ -1,0 +1,1 @@
+R0,"write a Regular Expression validator to accept numbers only with decimal part 0 or 5 only and in range 0-5. No matter how many 0 in front or behind the numbers it can be valid.","?{<num>,<.>,or(<0>,<5>),repeatrange(<num>,0,5)}"

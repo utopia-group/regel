@@ -1,0 +1,23 @@
+// natural language
+lines with 7 times a letter
+
+// examples
+"abcdefg",+
+"ABCDEFG",+
+"reGREte",+
+"ghjklfgh",+
+"HGFDkjhgG",+
+"tGFDdgff",+
+"HGFdfhgfd",+
+"abcdef",-
+"ABCDEF",-
+"avDFG",-
+"123457",-
+"1234567",-
+"ab1hgfD",-
+"hgfd 3s",-
+
+
+
+// gt
+repeatatleast(<let>,7)

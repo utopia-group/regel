@@ -1,0 +1,5 @@
+1 concat(concat(sketch(?{or(<=>,<;>)},1),concat(<=>,sketch(?{or(<=>,<;>)},1))),star(concat(<;>,concat(sketch(?{or(<=>,<;>)},1),concat(<=>,sketch(?{or(<=>,<;>)},1))))))
+2 concat(concat(sketch(?{or(<=>,<;>),< >},1),concat(<=>,sketch(?{or(<=>,<;>),< >},1))),star(concat(<;>,concat(sketch(?{or(<=>,<;>),< >},1),concat(<=>,sketch(?{or(<=>,<;>),< >},1))))))
+3 concat(concat(sketch(?{or(<=>,<;>),not(< >)},1),concat(<=>,sketch(?{or(<=>,<;>),not(< >)},1))),star(concat(<;>,concat(sketch(?{or(<=>,<;>),not(< >)},1),concat(<=>,sketch(?{or(<=>,<;>),not(< >)},1))))))
+4 concat(concat(sketch(?{<=>,<;>},1),concat(<=>,sketch(?{<=>,<;>},1))),star(concat(<;>,concat(sketch(?{<=>,<;>},1),concat(<=>,sketch(?{<=>,<;>},1))))))
+5 concat(concat(sketch(and(?{or(<=>,<;>)},< >),1),concat(<=>,sketch(and(?{or(<=>,<;>)},< >),1))),star(concat(<;>,concat(sketch(and(?{or(<=>,<;>)},< >),1),concat(<=>,sketch(and(?{or(<=>,<;>)},< >),1))))))

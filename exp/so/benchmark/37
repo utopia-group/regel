@@ -1,0 +1,17 @@
+// natural language
+Must contain at least one alphanumeric character [A-Za-z0-9]. Can contain allowed special character like [""@"" ""#""]. This is optional.Text length should be less than 8
+
+// example
+"A",+
+"A@",+
+"@A",+
+"A@a@",+
+"@@@a",+
+"@",-
+"@#",-
+"a:**",-
+"A@%",-
+“AAAAAAAAA",-
+
+// gt
+and(contain(<alphanum>),and(repeatatleast(or(<alphanum>,or(<@>,<#>)),1),repeatrange(<any>,1,8)))

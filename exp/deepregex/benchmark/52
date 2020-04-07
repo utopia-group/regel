@@ -1,0 +1,23 @@
+// natural language
+lines with words starting with string "!" , 6 or more times
+
+// examples
+"!!!!!!!!!",+
+"!!!!!!here",+
+"!!!!!!!!!!!!!!what about now",+
+"!!!!!!!!!$#@#%",+
+"!!!!!!!!!aFe35#",+
+"!!!!!!fS3DC#%",+
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",+
+"!",-
+"",-
+"!!!!!",-
+"!Why!doesnt!this!work!because!I!think!it!should",-
+"nothing here",-
+"!@$#@@#!!$#@#@$!#%@!#@Eer3234!",-
+"Done !",-
+
+
+
+// gt
+startwith(repeatatleast(<m0>,6))

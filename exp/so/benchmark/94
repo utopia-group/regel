@@ -1,0 +1,18 @@
+// natural language
+I'm trying to write a regular expression to validate a number that is either just a 0 OR at least 1000 and that also allows a comma for a thousand separator.
+
+// example
+"0",+
+"1000",+
+"50000",+
+"1,000",+
+"50,000",+
+"99,992,001",+
+"00",-
+"0001",-
+"999",-
+"1,1,00",-
+"1.000.000",-
+
+// gt
+or(<0>,concat(<num1-9>,concat(repeatrange(<num>,0,2),or(repeatatleast(repeat(<num>,3),1),repeatatleast(concat(<,>,repeat(<num>,3)),1)))))

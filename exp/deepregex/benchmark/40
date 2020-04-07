@@ -1,0 +1,23 @@
+// natural language
+items terminating with vowel preceding a numeral .
+
+// examples
+"a1",+
+"ba2",+
+"!e31",+
+"zZi2",+
+"o3123",+
+"U2",+
+"u01234",+
+"B1",-
+"a",-
+"e",-
+"u!",-
+"z34",-
+"m;",-
+"!b12",-
+
+
+
+// gt
+endwith(concat(<vow>,contain(<num>)))

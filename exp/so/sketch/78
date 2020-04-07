@@ -1,0 +1,25 @@
+1 ?{<_>}
+2 ?{< >,<_>}
+3 ?{<alphanum>,<_>}
+4 ?{<any>,<_>}
+5 ?{< >,<any>,<_>}
+6 ?{<alphanum>,< >,<_>}
+7 ?{< >}
+8 ?{<let>,<_>}
+9 ?{<alphanum>,<any>,<_>}
+10 ?{< >,<let>,<_>}
+11 ?{<alphanum>}
+12 ?{<any>}
+13 ?{<alphanum>,< >,<any>,<_>}
+14 ?{<alphanum>,< >}
+15 ?{< >,<any>}
+16 ?{repeatatleast(<alphanum>,1),<_>}
+17 ?{<alphanum>,<let>,<_>}
+18 ?{<let>}
+19 ?{repeatatleast(<alphanum>,1),< >,<_>}
+20 ?{<alphanum>,< >,<let>,<_>}
+21 ?{<alphanum>,<any>}
+22 ?{< >,<let>}
+23 ?{<alphanum>,< >,<any>}
+24 ?{repeatatleast(<alphanum>,1),<any>,<_>}
+25 ?{repeatatleast(<alphanum>,1)}

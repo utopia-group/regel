@@ -1,0 +1,23 @@
+// natural language
+lines that have a vowel and a character
+
+// examples
+"a",+
+"a c",+
+"c a",+
+"VOWEL",+
+"AEIOU 123",+
+"# start",+
+"! i",+
+"r",-
+"123",-
+"##",-
+"N",-
+"ch @ 456",-
+"!!",-
+"",-
+
+
+
+// gt
+contain(and(<vow>,<any>))

@@ -1,0 +1,30 @@
+// natural language
+R1: there is at least one digit. (could be zero)
+R2: can not begin with more than one ""0""
+R3: the number has precisely two decimal places
+
+// visual format
+concat(and(R1,R2),R3)
+
+// example
+"0.01",+
+"0.12",+
+"111.23",+
+"1234.56",+
+"012345.67",+
+"123.00",+
+"0.00",+
+".12",-
+"1.1",-
+"0.0",-
+"00.00",-
+"1234.",-
+"1234.567",-
+"1234",-
+"00123.45",-
+"abcd.12",-
+"12a4.56",-
+"1234.5A",-
+
+// gt
+and(not(startwith(repeatatleast(<0>,2))),concat(repeatatleast(<num>,1),concat(<.>,repeat(<num>,2))))

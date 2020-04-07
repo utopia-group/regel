@@ -1,0 +1,15 @@
+// natural language
+I need a regular expression that will test the input bulletpoint Should start with only one "+" symbol or optional ( + should not come in between ) bulletpoint should not contain alphabets and any other special character bulletpoint Should not contain consecutive "+" symbols
+
+// examples
+"+91",+
+"91",+
+"++91",-
+"+9+1",-
+"91+",-
+"+91&*&",-
+
+
+
+// gt
+concat(optional(<+>),repeatatleast(<num>,1))

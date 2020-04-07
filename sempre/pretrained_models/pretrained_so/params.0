@@ -1,0 +1,717 @@
+rulegram :: a=$Intermediate24 -> $Intermediate23 $INT1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$CC -> $CC1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$Intermediate15 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$MAKRKER_CONSTSETUNION1 -> $Intermediate12 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion)	1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $Intermediate21 $INT (sketch.RepeatFn 0 (pos 2))	1.0
+rulegram :: a=$CC -> $CC1 (IdentityFn),b=$MARKER_LENGTH -> $MARKER_LENGTH1 $Skip (SelectFn 0)	1.0
+rule :: $MARKER_STARTWITH -> $MARKER_STARTWITH1 (IdentityFn)	1.0
+rule :: $INT1 -> $LEMMA_PHRASE (NumberFn NUMBER)	1.0
+rule :: $MARKER_SEP1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.sep))	1.0
+rule :: $PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1))	1.0
+rule :: $CONST_SET -> $Intermediate14 $CONST_SET (sketch.ConstUnionFn 0 2)	1.0
+ruletree :: a=$Intermediate1 -> $SKETCH $PROGRAM (sketch.SepFn 0 1),b=$SKETCH -> $Intermediate44 (ConstantFn (name "sep(?{<num>},<.>)"))	1.0
+rulegram :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	1.0
+rule :: $Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0)	1.0
+ruletree :: a=$Intermediate20 -> $MARKER_ATMAX1 $INT (sketch.RepeatrangeFn 2 (arg 1) (pos 1)),b=$MARKER_ATMAX1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.atmax))	1.0
+ruletree :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$MARKER_BETWEEN -> $MARKER_BETWEEN1 (IdentityFn)	1.0
+ruletree :: a=$CC -> $CC1 (IdentityFn),b=$CC1 -> $CONST_SET (IdentityFn)	1.0
+rulegram :: a=$Intermediate26 -> $INT1 $MARKER_ORMORE1 (sketch.RepeatatleastFn 2 (pos 0)),b=$CC -> $CC1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1)),b=$MARKER_ONLY -> $MARKER_ONLY1 $Skip (SelectFn 0)	1.0
+rule :: $INT -> $INT1 (IdentityFn)	1.0
+rulegram :: a=$Intermediate15 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CONST1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.const))	1.0
+rulegram :: a=$INT1 -> $LEMMA_PHRASE (NumberFn NUMBER),b=$MARKER_OR1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.or))	1.0
+rule :: $MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate20 $CC (sketch.RepeatrangeFn 2 (arg 1) (pos 1)),b=$CC -> $CC1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$Intermediate15 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CONST1 -> $Intermediate19 (sketch.ConstFn)	1.0
+ruletree :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	1.0
+ruletree :: a=$CONST_SET -> $Intermediate15 $CONST1 (sketch.ConstUnionFn 0 2),b=$CONST1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.const))	1.0
+ruletree :: a=$Intermediate15 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$MAKRKER_CONSTSETUNION1 -> $Intermediate11 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion)	1.0
+ruletree :: a=$Intermediate14 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$MAKRKER_CONSTSETUNION1 -> , (ConstantFn fb:en.marker.constsetunion fb:type.marker.constsetunion)	1.0
+rule :: $Intermediate25 -> or more (ConstantFn null)	1.0
+rulegram :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	1.0
+rulegram :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+lemmarule :: target=$MARKER_NOTCONTAIN1,lemma_phrase=not allow	1.0
+rule :: $MARKER_LENGTH1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.length))	1.0
+ruletree :: a=$SKETCH -> $Intermediate5 $PROGRAM (sketch.SepFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+rulegram :: a=$CC1 -> $CCPHRASE1 (IdentityFn),b=$MARKER_ONLY -> $MARKER_ONLY1 $Skip (SelectFn 0)	1.0
+rule :: $SKETCH -> $Intermediate10 $PROGRAM (sketch.DecimalFn 0 2)	1.0
+ruletree :: a=$CC1 -> $CONST_SET (IdentityFn),b=$CONST_SET -> $Intermediate15 $CONST1 (sketch.ConstUnionFn 0 2)	1.0
+lemmarule :: target=$MARKER_ATMAX1,lemma_phrase=at max	1.0
+ruletree :: a=$MARKER_STARTWITH -> $MARKER_STARTWITH1 (IdentityFn),b=$MARKER_STARTWITH1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.startwith))	1.0
+rule :: $MARKER_DOUBLENUM1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.doublenum))	1.0
+ruletree :: a=$PROGRAM -> $MARKER_STARTWITH $PROGRAM (sketch.StartwithFn 1),b=$MARKER_STARTWITH -> $MARKER_STARTWITH1 (IdentityFn)	1.0
+rule :: $Intermediate19 -> $Intermediate18 rightquoatation (SelectFn 0)	1.0
+rulegram :: a=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0)),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	1.0
+rule :: $Intermediate11 -> or (ConstantFn null)	1.0
+ruletree :: a=$SKETCH -> $Intermediate1 $MARKER_SEP (sketch.SepFn 0 1),b=$MARKER_SEP -> $MARKER_SEP1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$SKETCH -> $Intermediate32 $MARKER_DECIMAL (sketch.DecimalFn 0 1),b=$MARKER_DECIMAL -> $MARKER_DECIMAL1 (IdentityFn)	1.0
+rule :: $PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	1.0
+rule :: $PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	1.0
+ruletree :: a=$Intermediate23 -> $INT1 $MARKER_OR1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$MARKER_OR1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.or))	1.0
+ruletree :: a=$MARKER_DECIMAL -> $MARKER_DECIMAL1 (IdentityFn),b=$MARKER_DECIMAL1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.decimal))	1.0
+ruletree :: a=$Intermediate26 -> $INT1 $MARKER_ORMORE1 (sketch.RepeatatleastFn 2 (pos 0)),b=$INT1 -> $LEMMA_PHRASE (NumberFn NUMBER)	1.0
+ruletree :: a=$Intermediate10 -> $PROGRAM $MARKER_DECIMAL (sketch.DecimalFn 0 2),b=$MARKER_DECIMAL -> $MARKER_DECIMAL1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$Intermediate33 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$SKETCH -> $Intermediate10 $PROGRAM (sketch.DecimalFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate21 $INT (sketch.RepeatFn 0 (pos 2)),b=$INT -> $INT1 $Skip (SelectFn 0)	1.0
+lemmarule :: target=$MARKER_FOLLOWBY1,lemma_phrase=follow by	1.0
+lemmarule :: target=$MARKER_DECIMAL1,lemma_phrase=decimal	1.0
+rule :: $MARKER_DECIMAL1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.decimal))	1.0
+rule :: $Intermediate21 -> $CC $MARKER_LENGTH (sketch.RepeatFn 0 (pos 2))	1.0
+rulegram :: a=$PROGRAM -> $CONST (IdentityFn),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	1.0
+rulegram :: a=$Intermediate24 -> $Intermediate23 $INT1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$CC -> $CC1 (IdentityFn)	1.0
+ruletree :: a=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn),b=$MARKER_FOLLOWBY1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.followby))	1.0
+ruletree :: a=$Intermediate26 -> $INT1 $MARKER_ORMORE1 (sketch.RepeatatleastFn 2 (pos 0)),b=$MARKER_ORMORE1 -> $Intermediate25 (ConstantFn fb:en.marker.ormore fb:type.marker.ormore)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0)),b=$Intermediate26 -> $INT1 $MARKER_ORMORE1 (sketch.RepeatatleastFn 2 (pos 0))	1.0
+lemmarule :: target=$MARKER_OR1,lemma_phrase=or	1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	1.0
+lemmarule :: target=$MARKER_NOTCONTAIN1,lemma_phrase=not contain	1.0
+ruletree :: a=$SKETCH -> $Intermediate10 $PROGRAM (sketch.DecimalFn 0 2),b=$Intermediate10 -> $PROGRAM $MARKER_DECIMAL (sketch.DecimalFn 0 2)	1.0
+ruletree :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	1.0
+rule :: $Intermediate26 -> $INT1 $MARKER_ORMORE1 (sketch.RepeatatleastFn 2 (pos 0))	1.0
+rule :: fire	1.0
+rule :: $MARKER_ATMAX1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.atmax))	1.0
+rule :: $MARKER_OR1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.or))	1.0
+ruletree :: a=$SKETCH -> $Intermediate44 (ConstantFn (name "sep(?{<num>},<.>)")),b=$Intermediate44 -> $MARKER_DOUBLENUM1 $Skip (SelectFn 0)	1.0
+rulegram :: a=$MARKER_STARTWITH -> $MARKER_STARTWITH1 (IdentityFn),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2)	1.0
+ruletree :: a=$Intermediate5 -> $SKETCH $MARKER_SPLITBY (sketch.SepFn 0 2),b=$MARKER_SPLITBY -> $MARKER_SPLITBY1 (IdentityFn)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0)),b=$CC -> $CC1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$Intermediate5 -> $SKETCH $MARKER_SPLITBY (sketch.SepFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	1.0
+rulegram :: a=$PROGRAM -> $CONST (IdentityFn),b=$MARKER_BETWEEN -> $MARKER_BETWEEN1 (IdentityFn)	1.0
+lemmarule :: target=$MARKER_FOLLOWBY1,lemma_phrase=then	1.0
+lemmarule :: target=$MARKER_ATMAX1,lemma_phrase=up to	1.0
+ruletree :: a=$Intermediate19 -> $Intermediate18 rightquoatation (SelectFn 0),b=$Intermediate18 -> leftquoatation $PHRASE (SelectFn 0)	1.0
+ruletree :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	1.0
+rulegram :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0)),b=$INT -> $INT1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$Intermediate33 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+rule :: $SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	1.0
+rulegram :: a=$Intermediate15 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CONST1 -> $Intermediate19 (sketch.ConstFn)	1.0
+ruletree :: a=$CONST_SET -> $Intermediate15 $CONST1 (sketch.ConstUnionFn 0 2),b=$Intermediate15 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	1.0
+rule :: $PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	1.0
+ruletree :: a=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1)),b=$CC1 -> $CCPHRASE1 (IdentityFn)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	1.0
+ruletree :: a=$Intermediate10 -> $PROGRAM $MARKER_DECIMAL (sketch.DecimalFn 0 2),b=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1))	1.0
+ruletree :: a=$CONST1 -> $Intermediate19 (sketch.ConstFn),b=$Intermediate19 -> $Intermediate18 rightquoatation (SelectFn 0)	1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $Intermediate33 $PROGRAM (sketch.ConcatFn 2 0)	1.0
+ruletree :: a=$CONST_SET -> $Intermediate14 $CONST_SET (sketch.ConstUnionFn 0 2),b=$CONST_SET -> $Intermediate15 $CONST1 (sketch.ConstUnionFn 0 2)	1.0
+rulegram :: a=$Intermediate1 -> $SKETCH $PROGRAM (sketch.SepFn 0 1),b=$MARKER_SEP -> $MARKER_SEP1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$CONST_SET -> $Intermediate14 $CONST_SET (sketch.ConstUnionFn 0 2),b=$Intermediate14 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	1.0
+rulegram :: a=$Intermediate23 -> $INT1 $MARKER_OR1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$INT1 -> $LEMMA_PHRASE (NumberFn NUMBER)	1.0
+ruletree :: a=$SKETCH -> $Intermediate1 $MARKER_SEP (sketch.SepFn 0 1),b=$Intermediate1 -> $SKETCH $PROGRAM (sketch.SepFn 0 1)	1.0
+ruletree :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+rulegram :: a=$Intermediate20 -> $MARKER_ATMAX1 $INT (sketch.RepeatrangeFn 2 (arg 1) (pos 1)),b=$CC -> $CC1 $Skip (SelectFn 0)	1.0
+rule :: $MAKRKER_CONSTSETUNION1 -> , (ConstantFn fb:en.marker.constsetunion fb:type.marker.constsetunion)	1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $CC (IdentityFn)	1.0
+rule :: $CONST1 -> $Intermediate19 (sketch.ConstFn)	1.0
+rulegram :: a=$PROGRAM -> $CONST (IdentityFn),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	1.0
+rule :: $PROGRAM -> $Intermediate20 $CC (sketch.RepeatrangeFn 2 (arg 1) (pos 1))	1.0
+rulegram :: a=$Intermediate21 -> $CC $MARKER_LENGTH (sketch.RepeatFn 0 (pos 2)),b=$INT -> $INT1 $Skip (SelectFn 0)	1.0
+rule :: $Intermediate15 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	1.0
+ruletree :: a=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0)),b=$INT -> $INT1 (IdentityFn)	1.0
+rule :: $PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	1.0
+rule :: $PROGRAM -> $Intermediate21 $INT (sketch.RepeatFn 0 (pos 2))	1.0
+rulegram :: a=$PROGRAM -> $CONST (IdentityFn),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	1.0
+rulegram :: a=$Intermediate14 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CONST_SET -> $Intermediate15 $CONST1 (sketch.ConstUnionFn 0 2)	1.0
+ruletree :: a=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1),b=$MARKER_NOTCONTAIN -> $MARKER_NOTCONTAIN1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate33 $PROGRAM (sketch.ConcatFn 2 0),b=$Intermediate33 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0)	1.0
+rule :: $Intermediate14 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	1.0
+rule :: $CONST_SET -> $Intermediate15 $CONST1 (sketch.ConstUnionFn 0 2)	1.0
+rule :: $SKETCH -> $Intermediate5 $PROGRAM (sketch.SepFn 0 2)	1.0
+rule :: $MARKER_STARTWITH1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.startwith))	1.0
+rule :: $Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2)	1.0
+rule :: $MARKER_SPLITBY -> $MARKER_SPLITBY1 (IdentityFn)	1.0
+ruletree :: a=$Intermediate5 -> $SKETCH $MARKER_SPLITBY (sketch.SepFn 0 2),b=$MARKER_SPLITBY -> $MARKER_SPLITBY1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$Intermediate21 -> $CC $MARKER_LENGTH (sketch.RepeatFn 0 (pos 2)),b=$MARKER_LENGTH -> $MARKER_LENGTH1 $Skip (SelectFn 0)	1.0
+rule :: $Intermediate20 -> $MARKER_ATMAX1 $INT (sketch.RepeatrangeFn 2 (arg 1) (pos 1))	1.0
+lemmarule :: target=$MARKER_SPLITBY1,lemma_phrase=divide by	1.0
+rulegram :: a=$CONST1 -> $Intermediate19 (sketch.ConstFn),b=$MAKRKER_CONSTSETUNION1 -> $Intermediate11 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion)	1.0
+rulegram :: a=$CONST1 -> $Intermediate19 (sketch.ConstFn),b=$MAKRKER_CONSTSETUNION1 -> $Intermediate12 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion)	1.0
+ruletree :: a=$MARKER_ORMORE1 -> $Intermediate25 (ConstantFn fb:en.marker.ormore fb:type.marker.ormore),b=$Intermediate25 -> or more (ConstantFn null)	1.0
+rulegram :: a=$CONST1 -> $Intermediate19 (sketch.ConstFn),b=$MAKRKER_CONSTSETUNION1 -> , (ConstantFn fb:en.marker.constsetunion fb:type.marker.constsetunion)	1.0
+rule :: $MARKER_SEP -> $MARKER_SEP1 (IdentityFn)	1.0
+ruletree :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	1.0
+rule :: $MARKER_NOTCONTAIN1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.notcontain))	1.0
+ruletree :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+rulegram :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$MARKER_SPLITBY -> $MARKER_SPLITBY1 (IdentityFn)	1.0
+rule :: $SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0)	1.0
+rule :: $MARKER_ORMORE1 -> $Intermediate25 (ConstantFn fb:en.marker.ormore fb:type.marker.ormore)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate20 $CC (sketch.RepeatrangeFn 2 (arg 1) (pos 1)),b=$Intermediate20 -> $MARKER_ATMAX1 $INT (sketch.RepeatrangeFn 2 (arg 1) (pos 1))	1.0
+ruletree :: a=$CC -> $CC1 (IdentityFn),b=$CC1 -> string (ConstantFn <any> fb:type.cc)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$Intermediate24 -> $Intermediate23 $INT1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	1.0
+lemmarule :: target=$MARKER_SEP1,lemma_phrase=separator	1.0
+rule :: $Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2)	1.0
+ruletree :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	1.0
+rule :: $CC1 -> $CONST_SET (IdentityFn)	1.0
+ruletree :: a=$MAKRKER_CONSTSETUNION1 -> $Intermediate11 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion),b=$Intermediate11 -> or (ConstantFn null)	1.0
+ruletree :: a=$PROGRAM -> $MARKER_STARTWITH $PROGRAM (sketch.StartwithFn 1),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+ruletree :: a=$INT -> $INT1 (IdentityFn),b=$INT1 -> $LEMMA_PHRASE (NumberFn NUMBER)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$CC -> $CC1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$MAKRKER_CONSTSETUNION1 -> $Intermediate12 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion),b=$Intermediate12 -> and (ConstantFn null)	1.0
+lemmarule :: target=$MARKER_LENGTH1,lemma_phrase=length	1.0
+ruletree :: a=$Intermediate20 -> $MARKER_ATMAX1 $INT (sketch.RepeatrangeFn 2 (arg 1) (pos 1)),b=$INT -> $INT1 (IdentityFn)	1.0
+rule :: $Intermediate23 -> $INT1 $MARKER_OR1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	1.0
+rulegram :: a=$PROGRAM -> $Intermediate22 $CC (sketch.RepeatFn 2 (pos 1)),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	1.0
+ruletree :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2)	1.0
+rule :: $Intermediate10 -> $PROGRAM $MARKER_DECIMAL (sketch.DecimalFn 0 2)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate21 $INT (sketch.RepeatFn 0 (pos 2)),b=$Intermediate21 -> $CC $MARKER_LENGTH (sketch.RepeatFn 0 (pos 2))	1.0
+rulegram :: a=$Intermediate32 -> $PROGRAM $PROGRAM (sketch.DecimalFn 0 1),b=$MARKER_DECIMAL -> $MARKER_DECIMAL1 (IdentityFn)	1.0
+ruletree :: a=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0)),b=$CC -> $CC1 $Skip (SelectFn 0)	1.0
+rulegram :: a=$SKETCH -> $Intermediate44 (ConstantFn (name "sep(?{<num>},<.>)")),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+rule :: $Intermediate1 -> $SKETCH $PROGRAM (sketch.SepFn 0 1)	1.0
+ruletree :: a=$CC1 -> $CONST_SET (IdentityFn),b=$CONST_SET -> $Intermediate14 $CONST_SET (sketch.ConstUnionFn 0 2)	1.0
+rule :: $SKETCH -> $Intermediate32 $MARKER_DECIMAL (sketch.DecimalFn 0 1)	1.0
+rule :: $MAKRKER_CONSTSETUNION1 -> $Intermediate11 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion)	1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$PROGRAM -> $CC (IdentityFn)	1.0
+ruletree :: a=$MARKER_SEP -> $MARKER_SEP1 (IdentityFn),b=$MARKER_SEP1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.sep))	1.0
+rule :: $Intermediate5 -> $SKETCH $MARKER_SPLITBY (sketch.SepFn 0 2)	1.0
+ruletree :: a=$CONST_SET -> $Intermediate15 $CONST1 (sketch.ConstUnionFn 0 2),b=$CONST1 -> $Intermediate19 (sketch.ConstFn)	1.0
+ruletree :: a=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$CC -> $CC1 (IdentityFn)	1.0
+rulegram :: a=$Intermediate10 -> $PROGRAM $MARKER_DECIMAL (sketch.DecimalFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	1.0
+rule :: $MARKER_SPLITBY1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.splitby))	1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $MARKER_STARTWITH $PROGRAM (sketch.StartwithFn 1)	1.0
+rule :: $MARKER_DECIMAL -> $MARKER_DECIMAL1 (IdentityFn)	1.0
+lemmarule :: target=$MARKER_SEP1,lemma_phrase=delimit	1.0
+rulegram :: a=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0)),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	1.0
+rulegram :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	1.0
+ruletree :: a=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0),b=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0)	1.0
+rulegram :: a=$Intermediate1 -> $SKETCH $PROGRAM (sketch.SepFn 0 1),b=$MARKER_SEP -> $MARKER_SEP1 (IdentityFn)	1.0
+rule :: $CONST1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.const))	1.0
+lemmarule :: target=$MARKER_SPLITBY1,lemma_phrase=split by	1.0
+ruletree :: a=$Intermediate1 -> $SKETCH $PROGRAM (sketch.SepFn 0 1),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	1.0
+ruletree :: a=$Intermediate24 -> $Intermediate23 $INT1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$INT1 -> $LEMMA_PHRASE (NumberFn NUMBER)	1.0
+rule :: $Intermediate12 -> and (ConstantFn null)	1.0
+rule :: $SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1)	1.0
+rulegram :: a=$INT1 -> $LEMMA_PHRASE (NumberFn NUMBER),b=$MARKER_ORMORE1 -> $Intermediate25 (ConstantFn fb:en.marker.ormore fb:type.marker.ormore)	1.0
+rule :: $MARKER_FOLLOWBY1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.followby))	1.0
+rule :: $Intermediate32 -> $PROGRAM $PROGRAM (sketch.DecimalFn 0 1)	1.0
+ruletree :: a=$Intermediate23 -> $INT1 $MARKER_OR1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$INT1 -> $LEMMA_PHRASE (NumberFn NUMBER)	1.0
+rule :: $MAKRKER_CONSTSETUNION1 -> $Intermediate12 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion)	1.0
+ruletree :: a=$MARKER_SPLITBY -> $MARKER_SPLITBY1 (IdentityFn),b=$MARKER_SPLITBY1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.splitby))	1.0
+ruletree :: a=$PROGRAM -> $Intermediate33 $PROGRAM (sketch.ConcatFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+ruletree :: a=$SKETCH -> $Intermediate32 $MARKER_DECIMAL (sketch.DecimalFn 0 1),b=$Intermediate32 -> $PROGRAM $PROGRAM (sketch.DecimalFn 0 1)	1.0
+rule :: $Intermediate33 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0)	1.0
+ruletree :: a=$Intermediate24 -> $Intermediate23 $INT1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$Intermediate23 -> $INT1 $MARKER_OR1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	1.0
+ruletree :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	1.0
+rule :: $PROGRAM -> $MARKER_STARTWITH $PROGRAM (sketch.StartwithFn 1)	1.0
+ruletree :: a=$SKETCH -> $Intermediate1 $MARKER_SEP (sketch.SepFn 0 1),b=$MARKER_SEP -> $MARKER_SEP1 (IdentityFn)	1.0
+rulegram :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$MARKER_SPLITBY -> $MARKER_SPLITBY1 $Skip (SelectFn 0)	1.0
+rulegram :: a=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0)),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	1.0
+rulegram :: a=$Intermediate5 -> $SKETCH $MARKER_SPLITBY (sketch.SepFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+rule :: $SKETCH -> $Intermediate1 $MARKER_SEP (sketch.SepFn 0 1)	1.0
+rule :: $Intermediate24 -> $Intermediate23 $INT1 (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	1.0
+rule :: $SKETCH -> $Intermediate44 (ConstantFn (name "sep(?{<num>},<.>)"))	1.0
+ruletree :: a=$Intermediate14 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CONST1 -> $Intermediate19 (sketch.ConstFn)	1.0
+rule :: $PROGRAM -> $Intermediate33 $PROGRAM (sketch.ConcatFn 2 0)	1.0
+ruletree :: a=$Intermediate32 -> $PROGRAM $PROGRAM (sketch.DecimalFn 0 1),b=$PROGRAM -> $CC (IdentityFn)	1.0
+rulegram :: a=$INT -> $INT1 $Skip (SelectFn 0),b=$CC -> $CC1 $Skip (SelectFn 0)	1.0
+rulegram :: a=$MARKER_ATMAX1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.atmax)),b=$INT -> $INT1 (IdentityFn)	1.0
+rule :: $Intermediate18 -> leftquoatation $PHRASE (SelectFn 0)	1.0
+lemmarule :: target=$MARKER_DOUBLENUM1,lemma_phrase=double number	1.0
+lemmarule :: target=$MARKER_STARTWITH1,lemma_phrase=start with	1.0
+ruletree :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	1.0
+rulegram :: a=$PROGRAM -> $CONST (IdentityFn),b=$MARKER_BETWEEN -> $MARKER_BETWEEN1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $Intermediate20 $CC (sketch.RepeatrangeFn 2 (arg 1) (pos 1))	1.0
+rulegram :: a=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1)),b=$MARKER_DECIMAL -> $MARKER_DECIMAL1 $Skip (SelectFn 0)	1.0
+ruletree :: a=$SKETCH -> $Intermediate5 $PROGRAM (sketch.SepFn 0 2),b=$Intermediate5 -> $SKETCH $MARKER_SPLITBY (sketch.SepFn 0 2)	1.0
+ruletree :: a=$Intermediate21 -> $CC $MARKER_LENGTH (sketch.RepeatFn 0 (pos 2)),b=$CC -> $CC1 (IdentityFn)	1.0
+rulegram :: a=$Intermediate33 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	1.0
+rulegram :: a=$MARKER_NOTCONTAIN -> $MARKER_NOTCONTAIN1 $Skip (SelectFn 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	0.9999999999999999
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	0.9999999999999999
+ruletree :: a=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	0.9999999999999999
+rule :: $MARKER_BETWEEN -> $MARKER_BETWEEN1 (IdentityFn)	0.9999999999999999
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	0.9999999999999999
+ruletree :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$MARKER_BETWEEN -> $MARKER_BETWEEN1 $Skip (SelectFn 0)	0.9999999999999999
+rulegram :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	0.9999999999999999
+rulegram :: a=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	0.9999999999999999
+ruletree :: a=$Intermediate1 -> $SKETCH $PROGRAM (sketch.SepFn 0 1),b=$PROGRAM -> $CONST (IdentityFn)	0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	0.9999999999999999
+ruletree :: a=$MARKER_BETWEEN -> $MARKER_BETWEEN1 (IdentityFn),b=$MARKER_BETWEEN1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.between))	0.9999999999999999
+lemmarule :: target=$MARKER_AND1,lemma_phrase=and	-0.9999999999999999
+rulegram :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-0.9999999999999999
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-0.9999999999999999
+rulegram :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-0.9999999999999999
+rule :: $Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2)	-0.9999999999999999
+rulegram :: a=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-0.9999999999999999
+rulegram :: a=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-0.9999999999999999
+rule :: $SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2)	-0.9999999999999999
+rulegram :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $CC (IdentityFn),b=$CC -> $CC1 $Skip (SelectFn 0)	-0.9999999999999999
+ruletree :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-0.9999999999999999
+rulegram :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-0.9999999999999999
+ruletree :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-0.9999999999999999
+ruletree :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-0.9999999999999999
+rulegram :: a=$MARKER_NOT -> $MARKER_NOT1 $Skip (SelectFn 0),b=$PROGRAM -> $Intermediate33 $PROGRAM (sketch.ConcatFn 2 0)	-0.9999999999999999
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $CONST (IdentityFn)	-0.9999999999999999
+ruletree :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-0.9999999999999999
+rulegram :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	-0.9999999999999999
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0)	-0.9999999999999999
+rulegram :: a=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1),b=$PROGRAM -> $CONST (IdentityFn)	-0.9999999999999999
+rulegram :: a=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-0.9999999999999999
+rulegram :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-0.9999999999999999
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0)	-0.9999999999999999
+rule :: $CC1 -> characters (ConstantFn <let> fb:type.cc)	-0.9999999999999999
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$MARKER_BETWEEN -> $MARKER_BETWEEN1 $Skip (SelectFn 0)	-0.9999999999999999
+rulegram :: a=$PROGRAM -> $Intermediate22 $CC (sketch.RepeatFn 2 (pos 1)),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-0.9999999999999999
+rulegram :: a=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-0.9999999999999999
+rule :: $MARKER_AND1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.and))	-0.9999999999999999
+rulegram :: a=$MARKER_NOTCONTAIN -> $MARKER_NOTCONTAIN1 $Skip (SelectFn 0),b=$PROGRAM -> $CONST (IdentityFn)	-0.9999999999999999
+rulegram :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-0.9999999999999999
+rulegram :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1)	-0.9999999999999999
+ruletree :: a=$CC -> $CC1 (IdentityFn),b=$CC1 -> $CCPHRASE1 (IdentityFn)	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-0.9999999999999999
+rulegram :: a=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0)),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-0.9999999999999999
+rulegram :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2)	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2)	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1)	-0.9999999999999999
+ruletree :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-0.9999999999999999
+ruletree :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-0.9999999999999999
+rulegram :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2)	-0.9999999999999999
+ruletree :: a=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	-0.9999999999999999
+ruletree :: a=$Intermediate2 -> $PROGRAM $PROGRAM (sketch.SepFn 0 1),b=$PROGRAM -> $CC (IdentityFn)	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0)),b=$CC -> $CC1 $Skip (SelectFn 0)	-0.9999999999999999
+rule :: $PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1))	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-0.9999999999999999
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-0.9999999999999999
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-0.9999999999999999
+ruletree :: a=$Intermediate33 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-0.9999999999999999
+rulegram :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1),b=$PROGRAM -> $Intermediate33 $PROGRAM (sketch.ConcatFn 2 0)	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0)),b=$INT -> $INT1 (IdentityFn)	-0.9999999999999999
+rulegram :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1)),b=$CC -> $CC1 $Skip (SelectFn 0)	-0.9999999999999999
+ruletree :: a=$PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1)),b=$MARKER_ONLY1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.only))	-0.9999999999999999
+rulegram :: a=$MARKER_ONLY1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.only)),b=$CC -> $CC1 $Skip (SelectFn 0)	-0.9999999999999999
+rulegram :: a=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-0.9999999999999999
+rulegram :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-0.9999999999999999
+ruletree :: a=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-0.9999999999999999
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	-1.0
+rulegram :: a=$CCPHRASE1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.cc)),b=$MAKRKER_CONSTSETUNION1 -> $Intermediate12 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion)	-1.0
+rulegram :: a=$PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1)),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+rulegram :: a=$PROGRAM -> $CONST (IdentityFn),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+ruletree :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1)	-1.0
+rulegram :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rule :: $CC1 -> string (ConstantFn <any> fb:type.cc)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate21 $INT (sketch.RepeatFn 0 (pos 2)),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+rule :: $MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+rule :: $Intermediate36 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$CC -> $CC1 (IdentityFn),b=$CC1 -> characters (ConstantFn <let> fb:type.cc)	-1.0
+ruletree :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+ruletree :: a=$Intermediate17 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CCPHRASE1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.cc))	-1.0
+ruletree :: a=$Intermediate13 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CCPHRASE1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.cc))	-1.0
+ruletree :: a=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1),b=$SKETCH -> $Intermediate36 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$Intermediate16 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CCPHRASE1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.cc))	-1.0
+ruletree :: a=$Intermediate36 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$MARKER_LENGTH -> $MARKER_LENGTH1 $Skip (SelectFn 0),b=$INT -> $INT1 (IdentityFn)	-1.0
+rulegram :: a=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	-1.0
+rule :: $Intermediate13 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate22 $CC (sketch.RepeatFn 2 (pos 1)),b=$CC -> $CC1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$Intermediate26 -> $INT1 $MARKER_ORMORE1 (sketch.RepeatatleastFn 2 (pos 0)),b=$CC -> $CC1 (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+rulegram :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1)),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+rulegram :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1)	-1.0
+rulegram :: a=$PROGRAM -> $CONST (IdentityFn),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+rule :: $SKETCH -> $Intermediate36 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+rule :: $PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+ruletree :: a=$Intermediate2 -> $PROGRAM $PROGRAM (sketch.SepFn 0 1),b=$PROGRAM -> $Intermediate20 $CC (sketch.RepeatrangeFn 2 (arg 1) (pos 1))	-1.0
+rule :: $Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0)	-1.0
+ruletree :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+ruletree :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$Intermediate31 -> $MARKER_DECIMAL $PROGRAM (sketch.DecimalFn 1 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$Intermediate34 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+rulegram :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0),b=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$Intermediate2 -> $PROGRAM $PROGRAM (sketch.SepFn 0 1),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $Intermediate20 $CC (sketch.RepeatrangeFn 2 (arg 1) (pos 1))	-1.0
+rulegram :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	-1.0
+rulegram :: a=$Intermediate2 -> $PROGRAM $PROGRAM (sketch.SepFn 0 1),b=$MARKER_SEP -> $MARKER_SEP1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate33 $PROGRAM (sketch.ConcatFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$MARKER_NOT -> $MARKER_NOT1 $Skip (SelectFn 0),b=$SKETCH -> $Intermediate36 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+rule :: $SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+ruletree :: a=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0)),b=$CC -> $CC1 (IdentityFn)	-1.0
+rule :: $Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2)	-1.0
+rule :: $PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1)	-1.0
+rulegram :: a=$INT -> $INT1 (IdentityFn),b=$CC -> $CC1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rule :: $Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$Intermediate22 -> $MARKER_LENGTH $INT (sketch.RepeatFn 2 (pos 1)),b=$MARKER_LENGTH -> $MARKER_LENGTH1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-1.0
+rule :: $CONST_SET -> $Intermediate13 $CONST_SET (sketch.ConstUnionFn 0 2)	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$CONST_SET -> $Intermediate13 $CONST_SET (sketch.ConstUnionFn 0 2),b=$CONST_SET -> $Intermediate17 $CONST1 (sketch.ConstUnionFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate36 $SKETCH (sketch.ConcatFn 2 0),b=$Intermediate36 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $Intermediate2 $MARKER_SEP (sketch.SepFn 0 1)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+ruletree :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$Intermediate34 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$MARKER_NOTCONTAIN -> $MARKER_NOTCONTAIN1 $Skip (SelectFn 0),b=$SKETCH -> $Intermediate36 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+rule :: $MARKER_FOLLOWS1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.follows))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1))	-1.0
+rulegram :: a=$Intermediate22 -> $MARKER_LENGTH $INT (sketch.RepeatFn 2 (pos 1)),b=$CC -> $CC1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate22 $CC (sketch.RepeatFn 2 (pos 1)),b=$Intermediate22 -> $MARKER_LENGTH $INT (sketch.RepeatFn 2 (pos 1))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rule :: $MARKER_NOT1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.not))	-1.0
+ruletree :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$MARKER_NOT -> $MARKER_NOT1 $Skip (SelectFn 0),b=$SKETCH -> $Intermediate34 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+rulegram :: a=$Intermediate2 -> $PROGRAM $PROGRAM (sketch.SepFn 0 1),b=$MARKER_SEP -> $MARKER_SEP1 (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1)),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1),b=$SKETCH -> $Intermediate36 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$Intermediate31 -> $MARKER_DECIMAL $PROGRAM (sketch.DecimalFn 1 2),b=$MARKER_DECIMAL -> $MARKER_DECIMAL1 $Skip (SelectFn 0)	-1.0
+rule :: $Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$Intermediate36 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate20 $CC (sketch.RepeatrangeFn 2 (arg 1) (pos 1)),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+rule :: $CC1 -> $CCPHRASE1 (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate2 $MARKER_SEP (sketch.SepFn 0 1),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+ruletree :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0)	-1.0
+rulegram :: a=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0)),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate10 $PROGRAM (sketch.DecimalFn 0 2),b=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1))	-1.0
+rule :: $Intermediate16 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	-1.0
+rulegram :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $CONST (IdentityFn),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$Intermediate36 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0),b=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1))	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate35 $PROGRAM (sketch.ConcatFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rule :: $SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$Intermediate17 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CONST1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.const))	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$Intermediate17 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$MAKRKER_CONSTSETUNION1 -> $Intermediate12 (ConstantFn fb:en.marker.constsetunion fn.type.marker.constsetunion)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$CC1 -> $CONST_SET (IdentityFn),b=$CONST_SET -> $Intermediate16 $CCPHRASE1 (sketch.ConstUnionFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$MARKER_DECIMAL -> $MARKER_DECIMAL1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$MARKER_BETWEEN -> $MARKER_BETWEEN1 (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1)),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+rule :: $Intermediate34 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0)	-1.0
+rulegram :: a=$Intermediate35 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate34 $SKETCH (sketch.ConcatFn 2 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$PROGRAM -> $CC (IdentityFn),b=$CC -> $CC1 (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+ruletree :: a=$CC -> $CC1 (IdentityFn),b=$CC1 -> character (ConstantFn <let> fb:type.cc)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $Intermediate22 $CC (sketch.RepeatFn 2 (pos 1))	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1))	-1.0
+rule :: $Intermediate35 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$CONST_SET -> $Intermediate17 $CONST1 (sketch.ConstUnionFn 0 2),b=$CONST1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.const))	-1.0
+ruletree :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0)),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$Intermediate10 -> $PROGRAM $MARKER_DECIMAL (sketch.DecimalFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-1.0
+ruletree :: a=$Intermediate15 -> $CONST1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$MAKRKER_CONSTSETUNION1 -> , (ConstantFn fb:en.marker.constsetunion fb:type.marker.constsetunion)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1))	-1.0
+rule :: $SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$CONST_SET -> $Intermediate13 $CONST_SET (sketch.ConstUnionFn 0 2),b=$Intermediate13 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	-1.0
+ruletree :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+rule :: $PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+ruletree :: a=$Intermediate33 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1)	-1.0
+ruletree :: a=$Intermediate35 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$CCPHRASE1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.cc)),b=$MAKRKER_CONSTSETUNION1 -> , (ConstantFn fb:en.marker.constsetunion fb:type.marker.constsetunion)	-1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+rulegram :: a=$MARKER_NOT -> $MARKER_NOT1 $Skip (SelectFn 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+rulegram :: a=$Intermediate33 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$Intermediate31 -> $MARKER_DECIMAL $PROGRAM (sketch.DecimalFn 1 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate31 $PROGRAM (sketch.DecimalFn 1 2),b=$Intermediate31 -> $MARKER_DECIMAL $PROGRAM (sketch.DecimalFn 1 2)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	-1.0
+rule :: $CC -> $CC1 (IdentityFn)	-1.0
+ruletree :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2)	-1.0
+rule :: $LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $Intermediate2 $MARKER_SEP (sketch.SepFn 0 1)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0),b=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0)	-1.0
+rulegram :: a=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+ruletree :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rule :: $SKETCH -> $Intermediate34 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate2 $MARKER_SEP (sketch.SepFn 0 1),b=$Intermediate2 -> $PROGRAM $PROGRAM (sketch.SepFn 0 1)	-1.0
+rule :: $CONST -> $CONST1 (IdentityFn)	-1.0
+ruletree :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	-1.0
+rulegram :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	-1.0
+rule :: $Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$CC1 -> $CONST_SET (IdentityFn),b=$CONST_SET -> $Intermediate17 $CONST1 (sketch.ConstUnionFn 0 2)	-1.0
+ruletree :: a=$CONST_SET -> $Intermediate17 $CONST1 (sketch.ConstUnionFn 0 2),b=$Intermediate17 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	-1.0
+rulegram :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0),b=$MARKER_BETWEEN -> $MARKER_BETWEEN1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$Intermediate13 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$MAKRKER_CONSTSETUNION1 -> , (ConstantFn fb:en.marker.constsetunion fb:type.marker.constsetunion)	-1.0
+rule :: $Intermediate31 -> $MARKER_DECIMAL $PROGRAM (sketch.DecimalFn 1 2)	-1.0
+ruletree :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0
+rule :: $MARKER_BETWEEN1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.between))	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	-1.0
+rule :: $Intermediate2 -> $PROGRAM $PROGRAM (sketch.SepFn 0 1)	-1.0
+ruletree :: a=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1),b=$MARKER_NOTCONTAIN -> $MARKER_NOTCONTAIN1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0)),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate35 $PROGRAM (sketch.ConcatFn 2 0),b=$Intermediate35 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0)),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$MARKER_NOTCONTAIN -> $MARKER_NOTCONTAIN1 $Skip (SelectFn 0),b=$SKETCH -> $Intermediate34 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+rulegram :: a=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$Intermediate10 -> $PROGRAM $MARKER_DECIMAL (sketch.DecimalFn 0 2),b=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1))	-1.0
+rulegram :: a=$CC1 -> $CONST_SET (IdentityFn),b=$MARKER_ONLY -> $MARKER_ONLY1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+rulegram :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+ruletree :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-1.0
+rulegram :: a=$INT -> $INT1 (IdentityFn),b=$CC -> $CC1 (IdentityFn)	-1.0
+rulegram :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0
+lemmarule :: target=$MARKER_FOLLOWS1,lemma_phrase=after	-1.0
+ruletree :: a=$Intermediate34 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1)	-1.0
+rulegram :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+rulegram :: a=$MARKER_NOTCONTAIN -> $MARKER_NOTCONTAIN1 $Skip (SelectFn 0),b=$SKETCH -> $Intermediate35 $PROGRAM (sketch.ConcatFn 2 0)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+ruletree :: a=$Intermediate16 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$MAKRKER_CONSTSETUNION1 -> , (ConstantFn fb:en.marker.constsetunion fb:type.marker.constsetunion)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate36 $SKETCH (sketch.ConcatFn 2 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+ruletree :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	-1.0
+ruletree :: a=$Intermediate33 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rule :: $SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1)	-1.0
+rulegram :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1)	-1.0
+rulegram :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+ruletree :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$Intermediate35 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rule :: $MARKER_ONLY1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.only))	-1.0
+rule :: $CC1 -> character (ConstantFn <let> fb:type.cc)	-1.0
+ruletree :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2),b=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-1.0
+rule :: $PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-1.0
+rulegram :: a=$MARKER_DECIMAL -> $MARKER_DECIMAL1 $Skip (SelectFn 0),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$PROGRAM -> $CONST (IdentityFn),b=$CONST -> $CONST1 (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+rule :: $PROGRAM -> $Intermediate22 $CC (sketch.RepeatFn 2 (pos 1))	-1.0
+ruletree :: a=$CONST -> $CONST1 (IdentityFn),b=$CONST1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.const))	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	-1.0
+ruletree :: a=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2),b=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1)),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+ruletree :: a=$Intermediate35 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+ruletree :: a=$CONST -> $CONST1 (IdentityFn),b=$CONST1 -> $Intermediate19 (sketch.ConstFn)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate2 $MARKER_SEP (sketch.SepFn 0 1),b=$MARKER_SEP -> $MARKER_SEP1 (IdentityFn)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1)	-1.0
+rulegram :: a=$Intermediate13 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CONST_SET -> $Intermediate17 $CONST1 (sketch.ConstUnionFn 0 2)	-1.0
+ruletree :: a=$CC1 -> $CONST_SET (IdentityFn),b=$CONST_SET -> $Intermediate13 $CONST_SET (sketch.ConstUnionFn 0 2)	-1.0
+ruletree :: a=$Intermediate1 -> $SKETCH $PROGRAM (sketch.SepFn 0 1),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rule :: $CONST_SET -> $Intermediate17 $CONST1 (sketch.ConstUnionFn 0 2)	-1.0
+ruletree :: a=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+rule :: $LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+rulegram :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1)	-1.0
+rulegram :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0
+rulegram :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate10 $PROGRAM (sketch.DecimalFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$Intermediate34 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+rule :: $Intermediate22 -> $MARKER_LENGTH $INT (sketch.RepeatFn 2 (pos 1))	-1.0
+ruletree :: a=$CC1 -> $CCPHRASE1 (IdentityFn),b=$CCPHRASE1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.cc))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0),b=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2)	-1.0
+lemmarule :: target=$MARKER_BETWEEN1,lemma_phrase=between	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0)),b=$CC -> $CC1 (IdentityFn)	-1.0
+ruletree :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0)	-1.0
+rulegram :: a=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	-1.0
+rulegram :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0))	-1.0
+ruletree :: a=$Intermediate2 -> $PROGRAM $PROGRAM (sketch.SepFn 0 1),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rule :: $PROGRAM -> $Intermediate2 $MARKER_SEP (sketch.SepFn 0 1)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1),b=$SKETCH -> $Intermediate34 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate20 $CC (sketch.RepeatrangeFn 2 (arg 1) (pos 1)),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+rule :: $SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$Intermediate36 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1)	-1.0
+ruletree :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1),b=$MARKER_NOT -> $MARKER_NOT1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1))	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-1.0
+rule :: $CONST_SET -> $Intermediate16 $CCPHRASE1 (sketch.ConstUnionFn 0 2)	-1.0
+rulegram :: a=$MARKER_NOT -> $MARKER_NOT1 $Skip (SelectFn 0),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $MARKER_ONLY1 $CC (sketch.RepeatatleastFn 1 (arg 1))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+rulegram :: a=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0)),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+rulegram :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1)	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-1.0
+ruletree :: a=$CONST_SET -> $Intermediate16 $CCPHRASE1 (sketch.ConstUnionFn 0 2),b=$CCPHRASE1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.cc))	-1.0
+rulegram :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+rule :: $SKETCH -> $Intermediate35 $PROGRAM (sketch.ConcatFn 2 0)	-1.0
+rulegram :: a=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1)	-1.0
+ruletree :: a=$Intermediate22 -> $MARKER_LENGTH $INT (sketch.RepeatFn 2 (pos 1)),b=$INT -> $INT1 (IdentityFn)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $Intermediate21 $INT (sketch.RepeatFn 0 (pos 2))	-1.0
+ruletree :: a=$SKETCH -> $Intermediate34 $SKETCH (sketch.ConcatFn 2 0),b=$Intermediate34 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0)	-1.0
+lemmarule :: target=$MARKER_NOT1,lemma_phrase=not	-1.0
+rule :: $PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-1.0
+ruletree :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$MARKER_NOT -> $MARKER_NOT1 $Skip (SelectFn 0),b=$SKETCH -> $Intermediate35 $PROGRAM (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-1.0
+ruletree :: a=$Intermediate32 -> $PROGRAM $PROGRAM (sketch.DecimalFn 0 1),b=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1)	-1.0
+rulegram :: a=$Intermediate37 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1),b=$SKETCH -> $Intermediate34 $SKETCH (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$CONST_SET -> $Intermediate16 $CCPHRASE1 (sketch.ConstUnionFn 0 2),b=$Intermediate16 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate35 $PROGRAM (sketch.ConcatFn 2 0),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 (IdentityFn)	-1.0
+ruletree :: a=$Intermediate3 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $CONST (IdentityFn),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2),b=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+ruletree :: a=$Intermediate36 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0)	-1.0
+ruletree :: a=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$MARKER_BETWEEN -> $MARKER_BETWEEN1 (IdentityFn)	-1.0
+rule :: $PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM (IdentityFn),b=$PROGRAM -> $Intermediate37 $PROGRAM (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$PROGRAM -> $Intermediate2 $MARKER_SEP (sketch.SepFn 0 1),b=$MARKER_SEP -> $MARKER_SEP1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+rule :: $Intermediate17 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$Intermediate9 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0),b=$SKETCH -> $Intermediate39 $PROGRAM (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1)	-1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$MARKER_FOLLOWBY -> $MARKER_FOLLOWBY1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$Intermediate34 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$PROGRAM -> $CC (IdentityFn),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$PROGRAM -> $MARKER_NOT $PROGRAM (sketch.NotFn 1),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1),b=$MARKER_NOT -> $MARKER_NOT1 $Skip (SelectFn 0)	-1.0
+rule :: $Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-1.0
+ruletree :: a=$Intermediate40 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0)	-1.0
+ruletree :: a=$MARKER_AND -> $MARKER_AND1 (IdentityFn),b=$MARKER_AND1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.marker.and))	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-1.0
+rulegram :: a=$SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+rulegram :: a=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn),b=$MARKER_FOLLOWS -> $MARKER_FOLLOWS1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0)	-1.0
+rulegram :: a=$MARKER_NOTCONTAIN -> $MARKER_NOTCONTAIN1 $Skip (SelectFn 0),b=$PROGRAM -> $Intermediate33 $PROGRAM (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+ruletree :: a=$Intermediate35 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1)	-1.0
+rulegram :: a=$Intermediate34 -> $PROGRAM $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0
+rulegram :: a=$Intermediate35 -> $SKETCH $MARKER_FOLLOWS (sketch.ConcatFn 2 0),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+rulegram :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate38 $SKETCH (sketch.AndFn 0 2)	-1.0
+rulegram :: a=$INT -> $INT1 $Skip (SelectFn 0),b=$CC -> $CC1 (IdentityFn)	-1.0
+ruletree :: a=$PROGRAM -> $CC1 $MARKER_ONLY (sketch.RepeatatleastFn 0 (arg 1)),b=$CC1 -> $CONST_SET (IdentityFn)	-1.0
+rulegram :: a=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0)	-1.0
+ruletree :: a=$PROGRAM -> $MARKER_NOTCONTAIN $PROGRAM (sketch.NotContainFn 1),b=$PROGRAM -> $Intermediate33 $PROGRAM (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$Intermediate6 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0
+rule :: $PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate7 $SKETCH (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0)),b=$CC -> $CC1 (IdentityFn)	-1.0
+rulegram :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0))	-1.0
+ruletree :: a=$Intermediate39 -> $SKETCH $MARKER_AND (sketch.AndFn 0 2),b=$MARKER_AND -> $MARKER_AND1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$PROGRAM -> $INT $CC (sketch.RepeatrangeFn 1 (arg 1) (pos 0)),b=$INT -> $INT1 $Skip (SelectFn 0)	-1.0
+ruletree :: a=$SKETCH -> $MARKER_NOT $SKETCH (sketch.NotFn 1),b=$SKETCH -> $Intermediate35 $PROGRAM (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0
+rulegram :: a=$Intermediate16 -> $CCPHRASE1 $MAKRKER_CONSTSETUNION1 (sketch.ConstUnionFn 0 2),b=$CCPHRASE1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.cc))	-1.0
+ruletree :: a=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1),b=$SKETCH -> $Intermediate35 $PROGRAM (sketch.ConcatFn 2 0)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2),b=$PROGRAM -> $INT $CC (sketch.RepeatFn 1 (pos 0))	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$MARKER_AND -> $MARKER_AND1 (IdentityFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2)),b=$LIST_PROGRAM -> $PROGRAM (IdentityFn)	-1.0
+rulegram :: a=$MARKER_NOT -> $MARKER_NOT1 $Skip (SelectFn 0),b=$PROGRAM -> $CC (IdentityFn)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0),b=$SKETCH -> $Intermediate3 $SKETCH (sketch.SepFn 2 0)	-1.0
+rulegram :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $MARKER_NOTCONTAIN $SKETCH (sketch.NotContainFn 1)	-1.0
+rule :: $CCPHRASE1 -> $LEMMA_PHRASE (SimpleLexiconFn (type fb:type.cc))	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate4 $PROGRAM (sketch.SepFn 2 0),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+rulegram :: a=$PROGRAM -> $Intermediate26 $CC (sketch.RepeatatleastFn 2 (pos 0)),b=$LIST_PROGRAM -> $PROGRAM $LIST_PROGRAM (sketch.SketchJoinFn)	-1.0
+rulegram :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $Intermediate8 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+rulegram :: a=$Intermediate10 -> $PROGRAM $MARKER_DECIMAL (sketch.DecimalFn 0 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+rulegram :: a=$Intermediate7 -> $PROGRAM $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$SKETCH -> $Intermediate40 $SKETCH (sketch.AndFn 0 2)	-1.0
+ruletree :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$PROGRAM -> $Intermediate6 $PROGRAM (sketch.ConcatFn 0 2)	-1.0
+rule :: $SKETCH -> $Intermediate9 $SKETCH (sketch.ConcatFn 0 2)	-1.0
+ruletree :: a=$SKETCH -> $Intermediate31 $PROGRAM (sketch.DecimalFn 1 2),b=$PROGRAM -> $CONST (IdentityFn)	-1.0
+lemmarule :: target=$MARKER_ONLY1,lemma_phrase=only	-1.0
+ruletree :: a=$PROGRAM -> $CONST (IdentityFn),b=$CONST -> $CONST1 $Skip (SelectFn 0)	-1.0
+rule :: $SKETCH -> $Intermediate31 $PROGRAM (sketch.DecimalFn 1 2)	-1.0
+ruletree :: a=$Intermediate4 -> $PROGRAM $MARKER_BETWEEN (sketch.SepFn 2 0),b=$MARKER_BETWEEN -> $MARKER_BETWEEN1 $Skip (SelectFn 0)	-1.0
+rulegram :: a=$Intermediate38 -> $PROGRAM $MARKER_AND (sketch.AndFn 0 2),b=$SKETCH -> $LIST_PROGRAM (sketch.UnarySketchFn)	-1.0
+rulegram :: a=$Intermediate8 -> $SKETCH $MARKER_FOLLOWBY (sketch.ConcatFn 0 2),b=$PROGRAM -> $Intermediate24 $CC (sketch.RepeatintorintFn 3 (pos 0) (pos 2))	-1.0

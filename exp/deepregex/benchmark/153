@@ -1,0 +1,23 @@
+// natural language
+lines with string "!" or character before vowel
+
+// examples
+"!a",+
+"12A",+
+"dsge",+
+"dI",+
+"@o",+
+"!jgU",+
+"$#!fO",+
+"!q",-
+"aR",-
+"12n",-
+"23",-
+"t3d",-
+"w2",-
+"qwb",-
+
+
+
+// gt
+concat(or(<m0>,<any>),contain(<vow>))

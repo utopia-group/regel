@@ -1,0 +1,16 @@
+// natural language
+I would like regex to be a whole number with thousands separated with a comma. No decimal. No ""$""
+
+// example
+"0",+
+"100",+
+"1,000",+
+"10,000",+
+"01",-
+"100.50",-
+"1000",-
+"$10,000",-
+"-10,000",-
+
+// gt
+concat(or(<0>,repeatrange(concat(<num1-9>,<num>),0,2)),star(concat(<,>,repeat(<num>,3))))

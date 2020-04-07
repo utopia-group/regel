@@ -1,0 +1,18 @@
+// natural language
+How can i write valid regular expression for Oracle's Number(2,2), Also digits after decimal should be either, "1" or "2" but not more than "2", also it can be optional. The number should never start with [1-9] but can start with "0".
+
+// examples
+"0",+
+"0.00",+
+"0.12",+
+"0.14",+
+"0.",-
+"1",-
+"1.00",-
+"2.00",-
+"0.000",-
+
+
+
+// gt
+concat(<0>,optional(concat(<.>,repeatrange(<num>,1,2))))

@@ -1,0 +1,23 @@
+// natural language
+lines with no character before lower-case letter
+
+// examples
+"a",+
+"aA",+
+"aaaB",+
+"a1",+
+"a;",+
+"a>?",+
+"b///",+
+"A",-
+"AA",-
+"A!",-
+"AMC",-
+"BBC",-
+"CNN",-
+"ZZZ!",-
+
+
+
+// gt
+concat(not(<any>),contain(endwith(<low>)))

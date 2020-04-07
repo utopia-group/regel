@@ -1,0 +1,15 @@
+// natural language
+regular expression which validates only number and min length should be 11 and maximum 16
+
+// examples
+"12345678901",+
+"+1234567890",+
+"+1234567890+",-
+"+123456789trtr",-
+"+trtr",-
+"+3435435435u",-
+
+
+
+// gt
+or(concat(optional(<+>),repeatrange(<num>,10,15)),repeatrange(<num>,11,16))

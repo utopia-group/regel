@@ -1,0 +1,11 @@
+1 ?{or(repeat(<num>,7),repeat(<num>,10))}
+2 ?{<num>,or(repeat(<num>,7),repeat(<num>,10))}
+3 ?{repeat(<num>,10)}
+4 ?{repeatrange(<num>,1,10)}
+5 ?{repeat(<num>,7)}
+6 ?{<num>,repeat(<num>,10)}
+7 ?{<num>}
+8 ?{repeatrange(<num>,1,7)}
+9 ?{<num>,repeatrange(<num>,1,10)}
+10 ?{<num>,repeat(<num>,7)}
+11 ?{<num>,repeatrange(<num>,1,7)}

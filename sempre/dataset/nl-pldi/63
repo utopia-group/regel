@@ -1,0 +1,2 @@
+Sketch,"concat(R1,repeatatleast(concat(<.>,R1),1))"
+R1,"It is a version number","?{<num>}"

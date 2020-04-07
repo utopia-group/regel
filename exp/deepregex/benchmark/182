@@ -1,0 +1,23 @@
+// natural language
+lines containing a character before a letter or "!"
+
+// examples
+"aa",+
+"ab",+
+"a!",+
+"b!",+
+"1!",+
+"1ab",+
+"1!1",+
+"",-
+" ",-
+" 1",-
+"a2",-
+"a",-
+"A",-
+"123",-
+
+
+
+// gt
+contain(or(concat(<any>,contain(<let>)),<m0>))

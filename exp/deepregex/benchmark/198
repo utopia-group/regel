@@ -1,0 +1,23 @@
+// natural language
+lines which are not containing the string "!" or the string "@"
+
+// examples
+"",+
+" ",+
+"1",+
+"a",+
+"b",+
+"#",+
+",",+
+"!",-
+"@",-
+"!@",-
+"a!",-
+"!a",-
+"!b",-
+"@b",-
+
+
+
+// gt
+not(contain(or(<m0>,<m1>)))

@@ -1,0 +1,23 @@
+// natural language
+lines with a lower-case letter before character
+
+// examples
+"aa",+
+"ab",+
+"aA",+
+"a1",+
+"a!",+
+"b ",+
+"b1dfefe",+
+"",-
+" ",-
+"a",-
+"A",-
+"A ",-
+"AB",-
+"A1",-
+
+
+
+// gt
+concat(and(<let>,<low>),contain(<any>))

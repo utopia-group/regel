@@ -1,0 +1,23 @@
+// natural language
+lines beginning with the string "!" 4 or more times
+
+// examples
+"!!!!bumber",+
+"!!!!!123",+
+"!!!!!!!",+
+"!!!!",+
+"!!!!a",+
+"!!asd!!!!",+
+"!any!any!a!!asd",+
+"!wow",-
+"!!wow",-
+"77!!!ok",-
+"",-
+"four!s",-
+"fi!!v",-
+"Sid!sd!sd1!",-
+
+
+
+// gt
+repeatatleast(startwith(<m0>),4)

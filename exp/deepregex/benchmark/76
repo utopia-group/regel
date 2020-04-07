@@ -1,0 +1,23 @@
+// natural language
+lines with a letter 3 times before a character
+
+// examples
+"aaab",+
+"abab",+
+"aCc?",+
+"acc,",+
+"zzga",+
+"abc!",+
+"lol~",+
+"",-
+"a?a?",-
+"???",-
+"aaa",-
+"lo?l",-
+"ya!y",-
+"   ",-
+
+
+
+// gt
+concat(repeatatleast(<let>,3),contain(<any>))

@@ -1,0 +1,23 @@
+// natural language
+lines that contain a number , a lower-case letter , or the string "!" followed by a character
+
+// examples
+"1a",+
+"aa",+
+"!a",+
+"2,,,",+
+"2    ",+
+"d$$$",+
+"!###",+
+"",-
+" ",-
+"1",-
+"a",-
+"!",-
+"A",-
+"A2",-
+
+
+
+// gt
+concat(or(or(<num>,<low>),<m0>),contain(<any>))

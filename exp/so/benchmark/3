@@ -1,0 +1,14 @@
+// natural language
+write regular expression that allows only digits, characters like "&" "|" "." "(" ")" and spaces
+
+// examples
+"(0.4545 && 0.567) || 456",+
+"0.456 && 0.567",+
+"9876-5-4321",-
+"9876-5-4321 (attack)",-
+"(0.4545 && 0.567) || 456 && (me)",-
+
+
+
+// gt
+repeatatleast(or(<num>,or(<&>,or(<|>,or(<.>,or(<(>,or(<)>,< >)))))),1)

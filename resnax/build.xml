@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="resnax">
+    <property file="ant.settings"/>
+
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <property name="classes.dir" value="classes"/>
+    <property name="src.dir" value="src"/>
+
+    <path id="build.classpath">
+        <pathelement location="${antlr.jar}"/>
+        <pathelement location="${javatuples.jar}"/>
+        <pathelement location="${automaton.jar}"/>
+        <pathelement location="${z3.jar}"/>
+    </path>
+
+    <target name="clean">
+        <delete dir="${classes.dir}"/>
+    </target>
+
+    <target name="build">
+        <mkdir dir="${classes.dir}"/>
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false" source="${source}" target="${target}">
+            <classpath refid="build.classpath"/>
+        </javac>
+    </target>
+
+    <target name="resnax" depends="build" description="Build the matrix application jar.">
+        <mkdir dir="META-INF"/>
+        <manifest file="META-INF/MANIFEST.MF">
+            <attribute name="Main-Class" value="resnax/Main"/>
+        </manifest>
+        <jar destfile="jars/resnax.jar" manifest="META-INF/MANIFEST.MF">
+            <fileset dir="classes"/>
+        </jar>
+        <delete dir="META-INF"/>
+    </target>
+
+</project>

@@ -1,0 +1,10 @@
+// natural language
+Here are the conditions for my regular expression: must start with ""09"". total length is 9.
+
+// example
+"091123456",+
+"0991234567",-
+"09912345",-
+
+// gt
+and(repeat(<num>,9),startwith(concat(<0>,<9>)))

@@ -1,0 +1,15 @@
+1 ?{not(contain(<_>)),concat(<_>,<_>)}
+2 not(contain(?{<_>,concat(<_>,<_>)}))
+3 ?{<_>,concat(<_>,<_>)}
+4 not(contain(?{concat(<_>,<_>)}))
+5 ?{concat(<_>,<_>)}
+6 ?{not(contain(concat(<_>,<_>)))}
+7 not(?{<_>,concat(<_>,<_>)})
+8 not(contain(?{<_>}))
+9 ?{not(<_>),concat(<_>,<_>)}
+10 ?{<_>}
+11 ?{not(concat(<_>,<_>))}
+12 not(?{concat(<_>,<_>)})
+13 ?{not(contain(<_>))}
+14 ?{not(<_>)}
+15 not(?{<_>})

@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" at least once not being the string "@"
+
+// examples
+"!",+
+"a!bc",+
+"1!3b",+
+"Dddd!!!!123",+
+"!!!",+
+"2!eE!jde",+
+"1!76!!de!",+
+"@",-
+"@",-
+"@",-
+"@",-
+"@",-
+"@",-
+"@",-
+
+
+
+// gt
+or(repeatatleast(<m0>,1),not(<m1>))

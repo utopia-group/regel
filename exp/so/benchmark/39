@@ -1,0 +1,22 @@
+// natural language
+I am trying to use a regular expression to validate decimal values. Rules : It should allow positive numbers. It should allow max 13 numbers before decimal point. It should allow max two number after decimal. It should allow .(dot) with number like a "".5"". It should not allow the "".0""
+
+// example
+".5",+
+".6",+
+".1",+
+"0",+
+"0.5",+
+"1.55",+
+"1234567890123",+
+"1234567890123.5",+
+"1234567890123.00",+
+".",-
+".0",-
+"1.234",-
+"5.",-
+"12345678901234",-
+"12345678901234.56",-
+
+// gt
+and(concat(repeatrange(<num>,1,13),optional(concat(<.>,repeatrange(<num>,1,2)))),not(contain(concat(<.>,<0>))))

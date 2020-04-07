@@ -1,0 +1,17 @@
+// natural language
+I'm looking for a regular expression that will match text given the following requirements: contains only 10 digits (only numbers); starts with "9".
+
+// examples
+"9999999999",+
+"9876543210",+
+"999999999",-
+"1234567890",-
+"8912456789",-
+"qwe3456&ert",-
+"0123456789",-
+
+
+
+
+// gt
+and(repeat(<num>,10),startwith(<9>))

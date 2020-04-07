@@ -1,0 +1,23 @@
+// natural language
+lines starting in 4 or more of the string "!" or letter
+
+// examples
+"!!!!",+
+"aaaa",+
+"bbbb",+
+"!!!!!",+
+"bbbbb",+
+"!!!!123",+
+"abcd123",+
+"",-
+" ",-
+"!",-
+"!!",-
+"!!!",-
+"abc",-
+"ab",-
+
+
+
+// gt
+repeatatleast(startwith(or(<m0>,<let>)),4)

@@ -1,0 +1,12 @@
+// natural language
+I need a regular expression that has the following constraints. contains only [A-Z0-9.*]. 1 - 15 characters in length. Must contain a ""*""but only once
+
+// example
+"ABC.123*",+
+"*ABC.123",+
+"ABC.*123",+
+"ABC.123",-
+"*ABC.123*",-
+
+// gt
+and(repeatrange(<any>,1,15),concat(star(or(<cap>,or(<num>,<.>))),concat(<*>,star(or(<cap>,or(<num>,<.>))))))

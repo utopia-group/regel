@@ -1,0 +1,23 @@
+// natural language
+lines with letter , 7 or more times before number
+
+// examples
+"bBcaDDaff1223f",+
+"BBcdswf!942",+
+"zfZdkaCOgg23A",+
+"XfdaPPweA231cc",+
+"KKsdaCVSSD9923",+
+"APPCweQCC831",+
+"kasowAVKLL12931",+
+"",-
+"avowDZ",-
+"EfwkeUUUald",-
+"Gwieuaks!!@",-
+"J",-
+"c",-
+"csjhd2",-
+
+
+
+// gt
+concat(repeatatleast(<let>,7),contain(<num>))

@@ -1,0 +1,12 @@
+1 ?{or(<num>,<vow>)}
+2 ?{<num>,<vow>}
+3 ?{<vow>}
+4 ?{repeat(or(<num>,<vow>),6)}
+5 ?{repeatrange(or(<num>,<vow>),1,6)}
+6 ?{repeat(<num>,6),<vow>}
+7 ?{repeatrange(<num>,1,6),<vow>}
+8 ?{<num>}
+9 ?{repeat(<vow>,6)}
+10 ?{repeatrange(<vow>,1,6)}
+11 ?{repeat(<num>,6)}
+12 ?{repeatrange(<num>,1,6)}

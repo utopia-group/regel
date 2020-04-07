@@ -1,0 +1,16 @@
+// natural language
+The first character should be a designated character like "A", "B" or "C" only. and the next 3 characters should be numbers.
+
+// examples
+"A123",+
+"B345",+
+"C234",+
+"B986",+
+"D123",-
+"A12",-
+"A123 hello",-
+
+
+
+// gt
+concat(or(<A>,or(<B>,<C>)),repeat(<num>,3))

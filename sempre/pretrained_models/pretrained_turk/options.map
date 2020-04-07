@@ -1,0 +1,170 @@
+FeatureVector.ignoreZeroWeight	false
+FeatureVector.logFeaturesLimit	2147483647
+FloatingParser.defaultIsFloating	true
+FloatingParser.maxDepth	10
+FloatingParser.useSizeInsteadOfDepth	false
+FloatingParser.consecutiveRules	true
+FloatingParser.initialFloatingHasZeroDepth	false
+FloatingParser.filterChildDerivations	true
+FloatingParser.useAnchorsOnce	false
+FloatingParser.useMaxAnchors	-1
+FloatingParser.executeAllDerivations	false
+FloatingParser.printPredictedUtterances	false
+FloatingParser.trainBeamSize	-1
+FloatingParser.betaReduce	false
+FloatingParser.summarizeRuleTime	false
+FloatingParser.maxFloatingParsingTime	2147483647
+ParserState.customExpectedCounts	NONE
+ParserState.contrastiveMargin	1000000.0
+ParserState.pruneByProbDiff	false
+ParserState.probDiffPruningThresh	100.0
+ParserState.throwFeaturesAway	false
+Server.port	8400
+Server.numThreads	4
+Server.title	SEMPRE Demo
+Server.headerPath	
+Server.basePath	demo-www
+Server.verbose	1
+Server.htmlVerbose	1
+log.maxIndLevel	2147483647
+log.msPerLine	0
+log.file	models/turk_demo/log
+log.stdout	true
+log.note	
+log.maxPrintErrors	10000
+log.maxPrintWarnings	10000
+Builder.inParamsPath	
+Builder.executor	JavaExecutor
+Builder.valueEvaluator	ExactValueEvaluator
+Builder.parser	SketchParser
+CatSizeBound.verbose	0
+Derivation.showValues	true
+Derivation.showFirstValue	false
+Derivation.showTypes	true
+Derivation.showRules	false
+Derivation.showUtterance	false
+Derivation.showCat	false
+Derivation.showExecutions	false
+Derivation.derivComparator	ScoredDerivationComparator
+Derivation.anchoredBonus	0.0
+MergeFn.hardTypeCheck	true
+MergeFn.showTypeCheckFailures	false
+MergeFn.verbose	0
+ReinforcementParser.efficientCoarsePrune	true
+ReinforcementParser.multiplicativeBonus	1000.0
+ReinforcementParser.numOfSamplesPerExample	1
+ReinforcementParser.updateGradientForCorrectMovesOnly	true
+ReinforcementParser.lowProb	0.01
+ReinforcementParser.simulateNonRlObjective	false
+ReinforcementParser.alwaysUnroll	false
+TypeInference.verbose	1
+TypeInference.typeLookup	NullTypeLookup
+FeatureExtractor.featureDomains	rule span context bigram phrase-category
+FeatureExtractor.featureComputers	[DerivOpCountFeatureComputer]
+FeatureExtractor.disableDenotationFeatures	false
+FeatureExtractor.useAllFeatures	false
+FeatureExtractor.maxBigramDistance	3
+FeatureExtractor.lexicalBigramParaphrase	true
+BeamParser.maxNewTreesPerSpan	2147483647
+MixParser.verbose	1
+MixParser.parsers	
+FuzzyMatchFn.verbose	0
+DerivOpCountFeatureComputer.countBasicOnly	true
+LanguageAnalyzer.languageAnalyzer	corenlp.CoreNLPAnalyzer
+LanguageAnalyzer.lowerCaseTokens	true
+SketchParser.maxNewTreesPerSpan	2147483647
+DefaultDerivationPruningComputer.allowCountOne	false
+JavaExecutor.convertNumberValues	true
+JavaExecutor.printStackTrace	false
+JavaExecutor.contextPrefix	context:
+JavaExecutor.classPathPrefix	
+SelectFn.verbose	0
+Dataset.inPaths	train:regex/data/turk.train/regex.examples
+Dataset.maxExamples	
+Dataset.trainFrac	1.0
+Dataset.devFrac	0.0
+Dataset.splitRandom	1
+Dataset.splitDevFromTrain	true
+Dataset.maxTokens	2147483647
+Dataset.globalGraphPath	
+JoinFn.verbose	0
+JoinFn.showTypeCheckFailures	false
+JoinFn.typeInference	true
+JoinFn.specializedTypeCheck	false
+TargetValuePreprocessor.targetValuePreprocessor	
+SimpleLexicon.inPaths	dataset/regex.lexicon
+SimpleLexicon.matchSuffixTypes	
+Params.defaultWeight	0.0
+Params.initWeightsRandomly	false
+Params.initRandom	1
+Params.initStepSize	1.0
+Params.stepSizeReduction	0.0
+Params.adaptiveStepSize	true
+Params.dualAveraging	false
+Params.l1Reg	none
+Params.l1RegCoeff	0.0
+Params.lazyL1FullUpdateFreq	5000
+Grammar.inPaths	dataset/turk.grammar
+Grammar.tags	
+Grammar.binarizeRules	true
+Grammar.useApplyFn	
+SemTypeHierarchy.failOnUnknownTypes	false
+Learner.maxTrainIters	5
+Learner.batchSize	100
+Learner.outputPredDerivations	false
+Learner.outputPredValues	false
+Learner.dumpFeaturesAndCompatibility	false
+Learner.addFeedback	false
+Learner.sortOnFeedback	true
+Learner.verbose	0
+Learner.initialization	
+Learner.updateWeights	true
+Learner.checkGradient	false
+Learner.skipUnnecessaryGroups	false
+Learner.numParallelThreads	1
+Parser.printAllPredictions	false
+Parser.maxPrintedPredictions	2147483647
+Parser.maxPrintedTrue	2147483647
+Parser.coarsePrune	false
+Parser.verbose	0
+Parser.executeTopFormulaOnly	false
+Parser.visualizeChartFilling	false
+Parser.beamSize	200
+Parser.partialReward	true
+Parser.unrollStream	false
+Parser.derivationScoreNoise	0.0
+Parser.derivationScoreRandom	1
+Parser.pruneErrorValues	false
+Parser.dumpAllFeatures	true
+Parser.callSetEvaluation	true
+Master.scriptPaths	
+Master.commands	
+Master.logPath	
+Master.printHelp	true
+Master.contextMaxExchanges	0
+Master.onlineLearnExamples	true
+Master.newExamplesPath	
+Master.newParamsPath	
+Master.newGrammarPath	
+SimpleLexiconFn.maxEntityEntries	100
+SimpleLexiconFn.verbose	0
+NumberFn.unitless	false
+NumberFn.alsoTestByConversion	false
+NumberFn.alsoTestByIsolatedNER	false
+NumberFn.allowedRange	
+SemanticFn.trackLocalChoices	false
+DerivationPruner.pruningStrategies	
+DerivationPruner.pruningComputers	
+DerivationPruner.pruningVerbosity	0
+DerivationPruner.maxNumValues	10
+exec.monitor	true
+exec.execDir	models/turk_demo
+exec.execPoolDir	
+exec.overwriteExecDir	false
+exec.printOptionsAndExit	false
+exec.miscOptions	
+exec.addToView	
+exec.charEncoding	
+exec.jarFiles	
+exec.startMainTrack	true
+Session.inParamsPath	

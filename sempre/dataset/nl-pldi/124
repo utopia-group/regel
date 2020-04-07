@@ -1,0 +1,5 @@
+Sketch,"and(R1,and(R2,and(R3,R4)))"
+R1,"at least one number","?{repeatatleast(<num>,1)}"
+R2,"at least one upper case and one lower case character","?{contain(<low>),contatin(<cap>)}"
+R3,"at least one special character","?{contain(<spec>)}"
+R4,"between 6 - 20 characters long","repeatrange(<any>,6,20)"

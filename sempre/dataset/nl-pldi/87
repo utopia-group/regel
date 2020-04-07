@@ -1,0 +1,1 @@
+R0,"Decimal numbers up to 3 decimal places which are greater than zero","?{sep(?{repeatrange(<num>,1,3)},<.>)}"

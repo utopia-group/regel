@@ -1,0 +1,23 @@
+// natural language
+lines with a character before the string "!" then capital letter
+
+// examples
+"a!C",+
+"#abc!234aU3",+
+"{!X",+
+"~!Z",+
+"*er!weMwe",+
+"(!V",+
+"K!W",+
+"Jon",-
+"!!!",-
+"a!a",-
+"a!>",-
+"b!0",-
+"a*C",-
+"",-
+
+
+
+// gt
+concat(concat(<any>,contain(<m0>)),contain(<cap>))

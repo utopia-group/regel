@@ -1,0 +1,23 @@
+// natural language
+lines which are containing a lower-case letter and a character before the string "!"
+
+// examples
+"a!",+
+"bh12!",+
+"2d1d!",+
+"la0s!",+
+"s7!",+
+"AsAs!",+
+"chenqiaochu123!",+
+"AAAA!",-
+"nonono",-
+"BIG!",-
+"UPPER!",-
+"asd",-
+"AnsS",-
+"ASch12",-
+
+
+
+// gt
+contain(concat(and(<low>,<any>),contain(<m0>)))

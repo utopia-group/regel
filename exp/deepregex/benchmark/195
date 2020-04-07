@@ -1,0 +1,23 @@
+// natural language
+lines not starting with a letter or string "!"
+
+// examples
+"1",+
+"@",+
+"1a",+
+"@!",+
+"@!a",+
+"123",+
+"",+
+"a",-
+"!",-
+"abc",-
+"a1",-
+"!a",-
+"!1",-
+"!!!!",-
+
+
+
+// gt
+not(startwith(or(<let>,<m0>)))

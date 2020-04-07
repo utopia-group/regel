@@ -1,0 +1,14 @@
+// natural language
+I want to limit mamimum total digit counts are 5. And decimal numbers are 2 positions for maximum, cannot exceed 2 digits, but need to valid total word count is not large than 5.
+
+// example
+"12345",+
+"1234.5",+
+"123.45",+
+"0.12",+
+"1.2345",-
+"1.234",-
+"12.345",-
+
+// gt
+and(repeat(or(<.>,<num>),5),and(not(startwith(<.>)),and(not(endwith(<.>)),concat(repeatrange(<num>,1,5),optional(concat(<.>,repeatrange(<num>,1,2)))))))

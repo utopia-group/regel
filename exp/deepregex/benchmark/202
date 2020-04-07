@@ -1,0 +1,23 @@
+// natural language
+a character appears before containing a lower-case letter in the lines
+
+// examples
+"1a",+
+"aa",+
+"aBaB",+
+"a1a1",+
+"!b",+
+"!BBBBb",+
+" b",+
+"",-
+" ",-
+"1",-
+"a",-
+"b",-
+"!",-
+"aA",-
+
+
+
+// gt
+concat(<any>,contain(contain(<low>)))

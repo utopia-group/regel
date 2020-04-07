@@ -1,0 +1,23 @@
+// natural language
+lines with a number , a lower-case letter , or the string "!"
+
+// examples
+"1",+
+"12",+
+"Aa",+
+"abA",+
+"!",+
+"!!",+
+"1A!b",+
+"",-
+" ",-
+"A",-
+"AB",-
+"@",-
+"$",-
+"DF",-
+
+
+
+// gt
+contain(or(or(<num>,<low>),<m0>))

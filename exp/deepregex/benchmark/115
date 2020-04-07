@@ -1,0 +1,23 @@
+// natural language
+lines with words with a number followed by a character at least once in them
+
+// examples
+"3a",+
+"4b 5c",+
+"5c and a word",+
+"0we plus plus",+
+"7m and another wor#d",+
+"6k 33",+
+"7u7 valid",+
+"no number",-
+"Nonumber",-
+"single number 5",-
+"word5",-
+"##5",-
+"",-
+"IO3 27",-
+
+
+
+// gt
+repeatatleast(concat(<num>,contain(<any>)),1)

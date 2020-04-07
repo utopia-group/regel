@@ -1,0 +1,23 @@
+// natural language
+lines with a lower case letter after 5 vowels
+
+// examples
+"aeioua",+
+"eeeeee",+
+"oeaoes",+
+"uoauuv",+
+"uaoiik",+
+"iiiiim",+
+"iouaew",+
+"this is a test to see what is happening if I just type stuff in",-
+"",-
+"aeios",-
+"tttttt",-
+"foesek",-
+"folksy",-
+"sat",-
+
+
+
+// gt
+concat(repeatatleast(<vow>,5),contain(<low>))

@@ -1,0 +1,23 @@
+// natural language
+items with "!" preceding a character .
+
+// examples
+"!a",+
+"!!",+
+"!kl",+
+"!;'",+
+"!Zz",+
+"!?.~",+
+"!!!",+
+"",-
+"a!",-
+"1!",-
+";!!",-
+"m!",-
+"z!",-
+"007",-
+
+
+
+// gt
+concat(<m0>,contain(contain(<any>)))

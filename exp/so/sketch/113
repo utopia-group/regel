@@ -1,0 +1,2 @@
+1 concat(concat(<P>,concat(<a>,concat(<g>,<e>))),concat(concat(< >,concat(sketch(?{repeatatleast(<num>,1)},1),< >)),concat(concat(concat(<o>,<f>),< >),sketch(?{repeatatleast(<num>,1)},1))))
+2 concat(concat(<P>,concat(<a>,concat(<g>,<e>))),concat(concat(< >,concat(sketch(?{<num>},1),< >)),concat(concat(concat(<o>,<f>),< >),sketch(?{<num>},1))))

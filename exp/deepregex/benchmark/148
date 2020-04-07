@@ -1,0 +1,23 @@
+// natural language
+lines with character before number followed by vowel
+
+// examples
+"abc1A",+
+"fr2e",+
+"143I",+
+"8h7Ud",+
+"g5Dre89V",+
+"!ds3Ef",+
+"a5e",+
+"2d",-
+"a5c",-
+"ae",-
+"hj7P",-
+"a",-
+"4",-
+"",-
+
+
+
+// gt
+concat(<any>,contain(concat(<num>,contain(<vow>))))

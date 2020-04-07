@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" , a letter , or number
+
+// examples
+"!",+
+"1@",+
+"a",+
+"!a",+
+"a!",+
+"!12",+
+"@!2",+
+"",-
+" ",-
+"@",-
+"@@@",-
+"$%^",-
+"####",-
+"##",-
+
+
+
+// gt
+contain(or(or(<m0>,<let>),<num>))

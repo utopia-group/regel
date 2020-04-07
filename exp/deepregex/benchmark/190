@@ -1,0 +1,23 @@
+// natural language
+lines ending with string "!" before containing a capital letter
+
+// examples
+"!A",+
+"!bA",+
+"!bAc",+
+"a!A",+
+"1!B",+
+"!Ab",+
+"!!!!B",+
+"",-
+" ",-
+"1",-
+"a",-
+"!",-
+"!a",-
+"!1",-
+
+
+
+// gt
+concat(endwith(<m0>),contain(contain(<cap>)))

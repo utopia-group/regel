@@ -1,0 +1,5 @@
+1 or(sketch(?{<1>,concat(<1>,<0>)},1),concat(sketch(?{<1>,concat(<1>,<0>)},1),concat(<+>,sketch(?{<1>,concat(<1>,<0>)},1))))
+2 or(sketch(?{<num>,<1>,concat(<1>,<0>)},1),concat(sketch(?{<num>,<1>,concat(<1>,<0>)},1),concat(<+>,sketch(?{<num>,<1>,concat(<1>,<0>)},1))))
+3 or(sketch(?{<num>,concat(<1>,<0>)},1),concat(sketch(?{<num>,concat(<1>,<0>)},1),concat(<+>,sketch(?{<num>,concat(<1>,<0>)},1))))
+4 or(sketch(?{<num>,<1>},1),concat(sketch(?{<num>,<1>},1),concat(<+>,sketch(?{<num>,<1>},1))))
+5 or(sketch(?{concat(<1>,<0>)},1),concat(sketch(?{concat(<1>,<0>)},1),concat(<+>,sketch(?{concat(<1>,<0>)},1))))

@@ -1,0 +1,6 @@
+Sketch,"concat(R1,concat(R2,concat(R3,concat(R4,R5))))"
+R1,"it is 1 - 3 letters","?{repeatrange(<let>,1,3)}"
+R2,"it is a ""-"" (i know the minus is now out of date, but the customer want it that way)","?{<->}"
+R3,"it is 1 - 2 letters","?{repeatrange(<let>,1,2)}"
+R4,"it is a space","?{< >}"
+R5,"it is 1 - 4 numbers","?{repeatrange(<num>,1,4)}"

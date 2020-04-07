@@ -1,0 +1,4 @@
+Sketch,"and(R1,and(R2,R3))"
+R1,"Must contain at least one alphanumeric character [A-Za-z0-9]","?{contain(repeatatleast(<alphanum>,1))}"
+R2,"Can contain allowed special character like [""@"" ""#""]. This is optional.","?{or(<@>,<#>)}"
+R3,"Text length should be less than 8","?{repeatrange(<any>,1,8)}"

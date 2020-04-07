@@ -1,0 +1,16 @@
+// natural language
+I want a regular expression that validates a string of length 1 which has either the characters "A" or "B" (case insensitive) at the Begin
+
+// examples
+"A",+
+"a",+
+"B",+
+"b",+
+"America",-
+"Bi",-
+"a door",-
+
+
+
+// gt
+or(or(<A>,<B>),or(<a>,<b>))

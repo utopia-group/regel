@@ -1,0 +1,1 @@
+R0,"write a regular expression for validating a organisation name which allows alphanumeric as the starting characters and only special characters like ""."", ""-"", ""#"" and ""&"".","?{<alphanum>,or(<.>,or(<->,or(<#>,<&>)))}"

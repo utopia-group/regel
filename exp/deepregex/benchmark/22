@@ -1,0 +1,23 @@
+// natural language
+lines that contain words with a lower-case letter , a vowel , or a number
+
+// examples
+"a",+
+"b",+
+"e",+
+"o",+
+"u",+
+"1",+
+"CABB1CCD",+
+"B",-
+"",-
+",",-
+"'",-
+"!",-
+"&",-
+"",-
+
+
+
+// gt
+contain(or(or(<low>,<vow>),<num>))

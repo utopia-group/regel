@@ -1,0 +1,16 @@
+// natural language
+Need a regular expression to validate number with comma separator.
+
+// examples
+"1,5,10,55",+
+"12,34",+
+"1",+
+"1,2,3",+
+",",-
+",34",-
+"1,,,,10",-
+
+
+
+// gt
+concat(repeatatleast(<num>,1),star(concat(<,>,repeatatleast(<num>,1))))

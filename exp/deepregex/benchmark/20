@@ -1,0 +1,23 @@
+// natural language
+items with a vowel preceding a numeral or "!" .
+
+// examples
+"a!",+
+"e!",+
+"i1",+
+"o2",+
+"u23",+
+"a12!",+
+"aeo2",+
+"a",-
+"e",-
+"1",-
+"2",-
+"aa",-
+"ABC",-
+"AB.",-
+
+
+
+// gt
+concat(<vow>,contain(or(<m0>,<num>)))

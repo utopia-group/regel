@@ -1,0 +1,23 @@
+// natural language
+lines with 4 or more vowels or starting in string "!"
+
+// examples
+"!u",+
+"!!ajflakdsjf",+
+"!dsaklfj",+
+"!ikk???",+
+"aeio",+
+"aeiou",+
+"!",+
+"200",-
+"-2",-
+"ae",-
+"aei",-
+"aeuk",-
+"ssssss",-
+"***",-
+
+
+
+// gt
+or(repeatatleast(<vow>,4),startwith(<m0>))

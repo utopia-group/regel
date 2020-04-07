@@ -1,0 +1,1 @@
+R0,"I'm trying to write a regular expression to validate a number that is either just a 0 OR at least 1000 and that also allows a comma for a thousand separator.","?{<,>}"

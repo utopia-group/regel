@@ -1,0 +1,19 @@
+// natural language
+I want a regular expression for decimal input, which can take 4 digits before decimal or comma and 2 digits after decimal/comma. 5 digit number without decimal is invalid.Validation show also include comma along with decimal.
+
+// examples
+"1",+
+"1111",+
+"2222.56",+
+"9999.55",+
+"0.99",+
+"9999.5",+
+"88888",-
+"8.888",-
+"99999 ",-
+"9.369",-
+
+
+
+// gt
+concat(repeatrange(<num>,1,4),optional(concat(or(<.>,<,>),repeatrange(<num>,1,2))))

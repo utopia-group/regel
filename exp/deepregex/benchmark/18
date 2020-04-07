@@ -1,0 +1,23 @@
+// natural language
+a line with a "!"  , a capital  , or a lower case before a character
+
+// examples
+"!a",+
+"Aa",+
+"aa",+
+"!,",+
+"B.",+
+"e'",+
+"! ",+
+"1",-
+"12",-
+",",-
+",,,  ",-
+"",-
+" d",-
+"   ",-
+
+
+
+// gt
+concat(or(or(<m0>,<cap>),<low>),contain(<any>))

@@ -1,0 +1,23 @@
+// natural language
+lines with number followed by lower-case letter , 5 or more times
+
+// examples
+"1a2b3c4d5e",+
+"5b3d2h7f2f5h",+
+"8g4h2k7l7c4h2d",+
+"1a4f9h9h6j0k0l3",+
+"67d2g4h2k22l",+
+"3h543j2l63j3k7b",+
+"23f4dg26hj8g0g6k",+
+"1a2b3c4d",-
+"9L3G7h9l0g",-
+"1a2b3C4d5e",-
+"123478",-
+"asdfgh",-
+"d4g4l0h7s2",-
+"g86hjk678kjh6",-
+
+
+
+// gt
+repeatatleast(concat(<num>,contain(<low>)),5)

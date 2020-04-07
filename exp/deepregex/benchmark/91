@@ -1,0 +1,23 @@
+// natural language
+lines having an upper-case letter numbering at least 6 times or greater
+
+// examples
+"DFGHJKJHGFD",+
+"OIUYTRE",+
+"LKJHGFDS",+
+"ZXCVBNM",+
+"SDFGHJK",+
+"POIUYTRE",+
+"WEDFGH",+
+"sdfghjk",-
+"oiuytre",-
+"cvbnm",-
+"ytrdcvbnjk",-
+"gkhgfghjkl.u,ymt",-
+"uhgyftcvbnm",-
+"",-
+
+
+
+// gt
+repeatatleast(<cap>,6)

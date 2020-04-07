@@ -1,0 +1,17 @@
+// natural language
+R1:can be only single numeric digit
+R2:should be only 3 or less numeric digits
+
+// visual format
+concat(concat(R1,<@>),concat(R2,<%>))
+
+// ex
+"1@100%",+
+"9@50%",+
+"5@10%",+
+"0@100%",-
+"a@50%",-
+"1@abc%",-
+
+// gt
+concat(<num1-9>,concat(<@>,concat(repeatrange(<num>,1,3),<%>)))

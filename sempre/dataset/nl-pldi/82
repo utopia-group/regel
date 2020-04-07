@@ -1,0 +1,1 @@
+R0,"I want to limit mamimum total digit counts are 5. And decimal numbers are 2 positions for maximum, cannot exceed 2 digits, but need to valid total word count is not large than 5.","?{repeatrange(<num>,1,2)}"

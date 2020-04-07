@@ -1,0 +1,23 @@
+// natural language
+lines starting with string "!" or character followed by number
+
+// examples
+"!",+
+"!0",+
+"a00",+
+"1b00",+
+"!01",+
+"!a00",+
+"!!111",+
+"0",-
+"",-
+"0a",-
+"0!",-
+"@a",-
+"@!",-
+"@@",-
+
+
+
+// gt
+or(startwith(<m0>),concat(<any>,contain(<num>)))

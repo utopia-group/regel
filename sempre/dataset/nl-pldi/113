@@ -1,0 +1,2 @@
+Sketch,"concat(concat(<P>,concat(<a>,concat(<g>,<e>))),concat(concat(< >,concat(R1,< >)),concat(concat(concat(<o>,<f>),< >),R1)))"
+R1,"one or more digits","?{repeatatleast(<num>,1)}"

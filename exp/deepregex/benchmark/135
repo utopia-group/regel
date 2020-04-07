@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" before a number and character
+
+// examples
+"!234",+
+"!4a",+
+"!6rbb",+
+"!8abcd",+
+"!9jjt",+
+"!076432",+
+"!5",+
+"1",-
+"q",-
+"abc",-
+"234",-
+"6rbb",-
+"%td",-
+"#er2",-
+
+
+
+// gt
+concat(<m0>,contain(and(<num>,<any>)))

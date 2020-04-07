@@ -1,0 +1,23 @@
+// natural language
+a letter or a numbre appears at the end of the lines
+
+// examples
+"a",+
+"0",+
+"!a0",+
+"aa@",+
+"0a",+
+"00",+
+"666",+
+"",-
+"@",-
+"!",-
+"#",-
+"@@",-
+"!!",-
+"!!!",-
+
+
+
+// gt
+contain(endwith(or(<let>,<num>)))

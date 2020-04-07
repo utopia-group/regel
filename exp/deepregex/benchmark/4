@@ -1,0 +1,23 @@
+// natural language
+lines with a lower case letter followed by capital letter , zero or more time
+
+// examples
+"aA",+
+"bA",+
+"bAA",+
+"bAB",+
+"aAAA",+
+"aBBB",+
+"bBB",+
+"a",-
+"b",-
+"1",-
+"2",-
+"aa",-
+"AA",-
+" ",-
+
+
+
+// gt
+star(concat(<low>,contain(<cap>)))

@@ -1,0 +1,20 @@
+// natural language
+optional number of digits followed by an "X" and an optional ("^" followed by one or more digits)
+
+// examples
+"2X",+
+"X",+
+"3123X",+
+"23X^6",+
+"23X^66",+
+"X^",-
+"4",-
+"foobar",-
+"4X^",-
+"4X44",-
+" X",-
+
+
+
+// gt
+concat(star(<num>),concat(<X>,optional(concat(<^>,repeatatleast(<num>,1)))))

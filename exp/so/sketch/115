@@ -1,0 +1,13 @@
+1 ?{<.>,startwith(concat(<a>,concat(<b>,<c>)))}
+2 ?{<.>,concat(<a>,concat(<b>,<c>))}
+3 ?{startwith(concat(<a>,concat(<b>,<c>)))}
+4 and(?{<.>},startwith(concat(<a>,concat(<b>,<c>))))
+5 ?{and(<.>,startwith(concat(<a>,concat(<b>,<c>))))}
+6 and(<.>,?{startwith(concat(<a>,concat(<b>,<c>)))})
+7 ?{concat(<a>,concat(<b>,<c>))}
+8 ?{<.>}
+9 and(<.>,?{concat(<a>,concat(<b>,<c>))})
+10 ?{and(<.>,concat(<a>,concat(<b>,<c>)))}
+11 and(?{<.>},concat(<a>,concat(<b>,<c>)))
+12 and(?{<.>},?{startwith(concat(<a>,concat(<b>,<c>)))})
+13 and(?{<.>},?{concat(<a>,concat(<b>,<c>))})

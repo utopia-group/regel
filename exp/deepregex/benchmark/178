@@ -1,0 +1,23 @@
+// natural language
+lines with words with letter and containing only a character
+
+// examples
+"a",+
+"b",+
+"A",+
+"e",+
+"p",+
+"m",+
+"t",+
+"",-
+" ",-
+"12",-
+"ab",-
+"Aeb",-
+"1",-
+"!",-
+
+
+
+// gt
+and(<let>,<any>)

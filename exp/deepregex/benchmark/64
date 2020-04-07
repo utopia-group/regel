@@ -1,0 +1,23 @@
+// natural language
+lines with 3 or more words that start in a capital letter
+
+// examples
+"Abc\Def\Ghi",+
+"Zfw\Fewfa\Kwer",+
+"Xreragsdgafawer\Cfasdwerdfsdf\Kapworfldsa",+
+"Hifowld\Asdfa\Ddfower\Casowerp\Aowerp\Gsdfa",+
+"Fsdower\Casdfr\DDaowe\Kaowerp",+
+"Ionosphere\Game\Theory\Sucks\Haha",+
+"Crpwpap\Howerp\Gsowerp\Toweripa",+
+"Abc",-
+"Abc\Def\hijkl",-
+"Tel\soapw\Gpfa",-
+"abcd\efwa\gowpzr\kldfkl",-
+"t",-
+"agowp\Aowerip\C023123",-
+"a2kf\Cworp\Tawoer",-
+
+
+
+// gt
+repeatatleast(startwith(<cap>),3)

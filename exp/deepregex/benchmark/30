@@ -1,0 +1,23 @@
+// natural language
+lines without the string "!" followsed by a character
+
+// examples
+"",+
+"a",+
+"A",+
+"@",+
+"0",+
+"aa",+
+"AAA",+
+"!a",-
+"!a",-
+"!!",-
+"!@",-
+"!0",-
+"!!!",-
+"!!a",-
+
+
+
+// gt
+not(concat(contain(<m0>),contain(<any>)))

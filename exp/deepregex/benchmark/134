@@ -1,0 +1,23 @@
+// natural language
+lines with a number followed by a capital letter , zero or more times in it
+
+// examples
+"1A",+
+"345F",+
+"1asRbr",+
+"",+
+"1dF4sD4fsdTgd3F",+
+"4g3F5f2H6d3E",+
+"6fE45",+
+"A",-
+"1",-
+"h",-
+"6fgj",-
+"8g6cg98gh",-
+"A3467",-
+"NBGFD13",-
+
+
+
+// gt
+star(concat(<num>,contain(<cap>)))

@@ -1,0 +1,17 @@
+// natural language
+I'm trying to validate a form using regular expressions, the conditions are: It has to be a numeric value. It CAN have up to three decimal places(0,1,2 are allowed too).It has to be divided by a comma(,).
+
+// examples
+"1,234",+
+"2,00",+
+"5",+
+"0,1",+
+"123545,123",+
+"1,2345",-
+"2.00",-
+"56a",-
+
+
+
+// gt
+concat(repeatatleast(<num>,1),optional(concat(<,>,repeatrange(<num>,1,3))))

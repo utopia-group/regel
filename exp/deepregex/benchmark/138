@@ -1,0 +1,23 @@
+// natural language
+lines ending with string "!" at least once before string "@"
+
+// examples
+"!@",+
+"a!d!@",+
+"111!2@",+
+"!!!@",+
+"gfd!gf34!@@",+
+"df!@",+
+"ws12!4d@",+
+"@",-
+"!",-
+"abc@",-
+"!bvcx34",-
+"123@",-
+"!093v",-
+"d!tr!tre!",-
+
+
+
+// gt
+concat(repeatatleast(endwith(<m0>),1),contain(<m1>))

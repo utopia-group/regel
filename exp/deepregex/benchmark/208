@@ -1,0 +1,23 @@
+// natural language
+lines with vowel or character , 6 or more times
+
+// examples
+"aaaaaa",+
+"aeioua",+
+"AEIOUa",+
+"111111",+
+"abcdef",+
+"abc123",+
+"abcdef123",+
+"",-
+" ",-
+"1",-
+"a",-
+"12",-
+"123",-
+"1345",-
+
+
+
+// gt
+repeatatleast(or(<vow>,<any>),6)

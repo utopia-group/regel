@@ -1,0 +1,23 @@
+// natural language
+lines with only 7 or more characters
+
+// examples
+"asdfgjkls",+
+"1234567",+
+"12345556",+
+"1232435345",+
+"afdfadsfasdfasd",+
+"adfasdfasfadsfasdf",+
+"afdsafsafadsfadsfasdfadse",+
+"a",-
+"aa",-
+"aaa",-
+"aaaa",-
+"aaaaa",-
+"aaaaaa",-
+"34234",-
+
+
+
+// gt
+repeatatleast(contain(<any>),7)

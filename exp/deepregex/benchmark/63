@@ -1,0 +1,23 @@
+// natural language
+lines without a capital letter before string "!"
+
+// examples
+"!",+
+" !",+
+"jfo123!AA",+
+"!aZfja",+
+"ac@@!Afai12",+
+"rw!!Jf23",+
+"9fj!ffAz",+
+"",-
+"A",-
+"123fasdA",-
+"jfZxZ",-
+"12Ufka",-
+"k123A2",-
+"4C",-
+
+
+
+// gt
+concat(not(<cap>),contain(<m0>))

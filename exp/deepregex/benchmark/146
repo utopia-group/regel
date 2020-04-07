@@ -1,0 +1,23 @@
+// natural language
+items with an upper class and vowel preceding "!" .
+
+// examples
+"A!",+
+"E!",+
+"Iq!",+
+"O3!",+
+"Ad!d",+
+"A1!e3",+
+"U2!d",+
+"AA",-
+"!",-
+"C",-
+"Ca!",-
+"CC",-
+"F2!",-
+"a!",-
+
+
+
+// gt
+concat(and(<vow>,<cap>),contain(<m0>))

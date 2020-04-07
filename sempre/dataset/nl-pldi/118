@@ -1,0 +1,1 @@
+R0,"I want to match a certain set of strings, such as: strings composed of exactly 6 digits","?{repeat(<num>,6)}"

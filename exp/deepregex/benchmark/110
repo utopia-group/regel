@@ -1,0 +1,23 @@
+// natural language
+lines with a character followed by "!"
+
+// examples
+"a!",+
+"a !",+
+"123 a !",+
+"Capital !",+
+"CC ! other",+
+"mix ! !",+
+"# is this valid !",+
+"nothing",-
+"123",-
+"!",-
+"! plus",-
+"",-
+"UI",-
+"! abc #",-
+
+
+
+// gt
+concat(<any>,contain(<m0>))

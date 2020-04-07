@@ -1,0 +1,22 @@
+// natural language
+What is the regular expression for validating a month with the leading zero?
+
+// example
+"01",+
+"02",+
+"03",+
+"04",+
+"05",+
+"06",+
+"07",+
+"08",+
+"09",+
+"10",+
+"11",+
+"12",+
+"1",-
+"00",-
+"13",-
+
+// gt
+or(concat(<0>,<num1-9>),concat(<1>,or(<0>,or(<1>,<2>))))

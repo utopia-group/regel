@@ -1,0 +1,3 @@
+1 ?{repeat(<num>,6)}
+2 ?{repeatrange(<num>,1,6)}
+3 ?{<num>}

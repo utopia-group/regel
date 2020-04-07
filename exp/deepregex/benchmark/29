@@ -1,0 +1,23 @@
+// natural language
+likes with the string "!" at least once before the string "@"
+
+// examples
+"!@",+
+"!!@",+
+"!!!a",+
+"!@b",+
+"!!@c",+
+"!!!d@",+
+"!!!@6@",+
+"@",-
+"a@",-
+"@@",-
+"@@@",-
+"1@",-
+"2@",-
+"@@@@",-
+
+
+
+// gt
+concat(repeatatleast(<m0>,1),contain(not(<m1>)))

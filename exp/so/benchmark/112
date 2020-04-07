@@ -1,0 +1,10 @@
+// natural language
+Starting with alphabet word and then followed by any alphabet or number
+
+// example
+"Abc 20 Jan to 15 Dec",+
+"hello world",+
+"123 abc",-
+
+// gt
+concat(<let>,repeatatleast(or(< >,<alphanum>),1))

@@ -1,0 +1,1 @@
+R0,"Here are the conditions for my regular expression: must start with ""09"". total length is 9.","?{startwith(concat(<0>,<9>))}"

@@ -1,0 +1,23 @@
+// natural language
+lines with 5 or more vowels or letters
+
+// examples
+"abcde",+
+"abcdef",+
+"aeiou",+
+"aeioua",+
+"AEIOU",+
+"ABcde",+
+"ABcdeF",+
+"",-
+" ",-
+"1",-
+"a",-
+"A",-
+"!",-
+"ab",-
+
+
+
+// gt
+repeatatleast(or(<vow>,<let>),5)

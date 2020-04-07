@@ -1,0 +1,5 @@
+1 not(contain(?{concat(<h>,concat(<e>,concat(<d>,<e>)))}))
+2 ?{concat(<h>,concat(<e>,concat(<d>,<e>)))}
+3 ?{not(contain(concat(<h>,concat(<e>,concat(<d>,<e>)))))}
+4 ?{not(concat(<h>,concat(<e>,concat(<d>,<e>))))}
+5 not(?{concat(<h>,concat(<e>,concat(<d>,<e>)))})

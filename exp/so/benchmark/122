@@ -1,0 +1,10 @@
+// natural language
+Given a string, write a Python program to check whether the given string is starting with Vowel or Not.
+
+// example
+"ankit",+
+"Feeks",-
+"sandeep",-
+
+// gt
+startwith(<vow>)

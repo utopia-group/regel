@@ -1,0 +1,23 @@
+// natural language
+lines containing the string "!" with a letter before it
+
+// examples
+"it!",+
+"fjkdal;f!dsfasf",+
+"dafsj!sdajkl;fj!sdf",+
+"a!!!!",+
+"lines containing the string "!" with a letter before it",+
+"ok??ok!!",+
+"pikachu!!",+
+"!!!",-
+"?%!",-
+"?",-
+"afdkls;?",-
+"",-
+"!!ak",-
+"--!--",-
+
+
+
+// gt
+concat(<let>,contain(contain(<m0>)))

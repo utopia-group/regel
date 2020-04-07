@@ -1,0 +1,23 @@
+// natural language
+lines with words with ending with character , 7 or more times
+
+// examples
+"ssjwiwo",+
+"yy asudfo oaf",+
+"ZHFj!!sh",+
+"hdI@@(#KF",+
+"!!!AAABBcd",+
+"!!!sd9fs89d8f98sdf",+
+"FFF!!!!CCC",+
+"a!sa",-
+"",-
+"Z!@d13",-
+"13aCs",-
+"Aa",-
+"C3F",-
+"!!w2B",-
+
+
+
+// gt
+repeatatleast(endwith(<any>),7)

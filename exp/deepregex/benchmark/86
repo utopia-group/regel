@@ -1,0 +1,23 @@
+// natural language
+lines with a lower-case letter before vowel and character
+
+// examples
+"aaa",+
+"aAa",+
+"aA!",+
+"bA!n",+
+"lol!",+
+"ooo",+
+"nof~",+
+"Aa",-
+"",-
+"Aba",-
+"Bb",-
+"No",-
+"N~",-
+"X,",-
+
+
+
+// gt
+concat(<low>,contain(and(<vow>,<any>)))

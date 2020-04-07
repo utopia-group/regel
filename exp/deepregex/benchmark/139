@@ -1,0 +1,23 @@
+// natural language
+lines starting with string "!" before number
+
+// examples
+"!abc1",+
+"!2",+
+"!f3d",+
+"!kD2",+
+"!fd%2",+
+"!tEr5",+
+"!45gE",+
+"1",-
+"abc1",-
+"dF3s",-
+"nBv",-
+"fdR!",-
+"576",-
+"sd!2",-
+
+
+
+// gt
+concat(startwith(<m0>),contain(<num>))

@@ -1,0 +1,2 @@
+Sketch,"concat(concat(repeat(R1,3),<->),concat(repeat(R1,3),concat(<->,repeat(R1,4))))"
+R1,"should be digits","?{<num>}"

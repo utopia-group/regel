@@ -1,0 +1,23 @@
+// natural language
+lines in which a character appears no less than zero times before a "!" string occurs
+
+// examples
+"!",+
+"! is ok",+
+"char !",+
+"!!",+
+"## !",+
+"789 !",+
+"! 234",+
+"",-
+"char",-
+"number 1",-
+"456",-
+"special 12",-
+"special ##",-
+"invalid@ before",-
+
+
+
+// gt
+concat(star(<any>),contain(<m0>))

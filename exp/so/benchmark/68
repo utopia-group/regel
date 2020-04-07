@@ -1,0 +1,13 @@
+// natural language
+The name must only consist of letters, numbers and one or more single spaces (not in the beginning or end). The minimum length is 3 characters.
+
+// examples
+"Name",+
+"My Name Is OK",+
+"My     Name",-
+" My Name ",-
+
+
+
+// gt
+and(not(contain(repeatatleast(< >,2))),concat(<alphanum>,concat(repeatatleast(<alphanum>,1),<alphanum>)))

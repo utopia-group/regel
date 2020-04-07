@@ -1,0 +1,14 @@
+// natural language
+I need some help in finding how to write a validation expression to validate a string representing addition of digits.
+
+// example
+"2",+
+"2 + 3",+
+"2 + 3 + 4",+
+"2+3",-
+"2 +3",-
+"2 + 3 +",-
+"2 + 3+ 4",-
+
+// gt
+concat(<num>,star(concat(concat(< >,concat(<+>,< >)),<num>)))

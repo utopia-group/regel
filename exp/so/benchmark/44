@@ -1,0 +1,15 @@
+// natural language
+I need a regular expression that satisfy these rules: The maximum number of decimal point is 3 but a number with no decimal point (e.g 12) should be accepted too. the value must be at least 0. the value must be less or equal to 99999999999.999. the radix point is DOT (e.g 2.5, not 2,5)
+
+//example
+"0",+
+"2",+
+"0.4",+
+"78784764.23",+
+"45.232",+
+"-2",-
+"123456789522144",-
+"84.2564",-
+
+// gt
+concat(repeatrange(<num>,1,11),optional(concat(<.>,repeatrange(<num>,1,3))))

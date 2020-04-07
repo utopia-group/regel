@@ -1,0 +1,23 @@
+// natural language
+lines starting with words with a character or letter
+
+// examples
+"a",+
+"asd",+
+"aedtf",+
+"7as",+
+"875!s",+
+"goo",+
+"doog",+
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+
+
+
+// gt
+startwith(or(or(<any>,<cap>),<let>))

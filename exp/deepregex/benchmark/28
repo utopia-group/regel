@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" , lower-case letter , or character before a capital letter
+
+// examples
+"!A",+
+"1B",+
+"aA",+
+"aaA",+
+"1aAA",+
+"aaaAAA",+
+"aAAA",+
+"0a",-
+"a",-
+"!",-
+"B",-
+"@",-
+"A@",-
+"a@",-
+
+
+
+// gt
+concat(or(or(<m0>,<low>),<any>),contain(<cap>))

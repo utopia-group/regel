@@ -1,0 +1,13 @@
+// natural language
+I want to use a Regular expression validator in my line edit that doesn't allow to write dot(".") right after dot(".")
+
+// examples
+"camp.new.",+
+"ca.mp.n.e.w",+
+"camp..new",-
+"..",-
+
+
+
+// gt
+not(contain(concat(<.>,<.>)))

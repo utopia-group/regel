@@ -1,0 +1,23 @@
+// natural language
+lines with a vowel , number , or letter
+
+// examples
+"a",+
+"e",+
+"1",+
+"!2!",+
+"@A",+
+"B",+
+"a1",+
+"",-
+" ",-
+"!",-
+",",-
+";;",-
+"!!",-
+"  !  ",-
+
+
+
+// gt
+contain(or(or(<vow>,<num>),<let>))

@@ -1,0 +1,12 @@
+1 ?{endwith(<any>)}
+2 ?{<any>}
+3 ?{repeat(<any>,3)}
+4 ?{repeatrange(<any>,1,3)}
+5 ?{endwith(repeat(<any>,3))}
+6 ?{endwith(repeatrange(<any>,1,3))}
+7 ?{endwith(<let>)}
+8 ?{<let>}
+9 ?{repeat(<let>,3)}
+10 ?{repeatrange(<let>,1,3)}
+11 ?{endwith(repeat(<let>,3))}
+12 ?{endwith(repeatrange(<let>,1,3))}

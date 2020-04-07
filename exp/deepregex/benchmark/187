@@ -1,0 +1,23 @@
+// natural language
+lines with vowel before string "!" or starting with string "@"
+
+// examples
+"@",+
+"a!",+
+"@1",+
+"@a",+
+"e!a",+
+"e!@",+
+"@gggg",+
+"",-
+" ",-
+"1",-
+"b",-
+"a",-
+"a2",-
+"ab",-
+
+
+
+// gt
+or(concat(<vow>,contain(<m0>)),startwith(<m1>))

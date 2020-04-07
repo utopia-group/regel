@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" or "@" or lower-case letter before a vowel
+
+// examples
+"!a",+
+"@a",+
+"ba",+
+"!@e",+
+"@@ee",+
+"!iou",+
+"!aee",+
+"Ae",-
+"!",-
+"@",-
+"e",-
+",",-
+",a",-
+",be",-
+
+
+
+// gt
+concat(or(or(<m0>,<low>),<m1>),contain(<vow>))

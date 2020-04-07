@@ -1,0 +1,23 @@
+// natural language
+a regular expression for validating a string with alphanumeric characters and dashes, while also not allowing leading or trailing dashes
+
+// examples
+"safename",+
+"123",+
+"there-is-something-here",+
+"your-name-goes-here",+
+"a-b",+
+"a-bc-d",+
+"ab-cd-e",+
+"a-bc-de",+
+"this-is-a-test",+
+"a-b-c",+
+"1-2-3",+
+"1-2-",-
+"-something-is-up",-
+"say-what-",-
+
+
+
+// gt
+and(and(repeatatleast(or(or(<let>,<num>),<->),1),not(startwith(<->))),not(endwith(<->)))

@@ -1,0 +1,23 @@
+// natural language
+lines without a character , a vowel , or a capital letter
+
+// examples
+"",+
+"",+
+"",+
+"",+
+"",+
+"",+
+"",+
+"a",-
+"e",-
+"b",-
+"A",-
+"W",-
+"1",-
+"@",-
+
+
+
+// gt
+not(or(or(<any>,<vow>),<cap>))

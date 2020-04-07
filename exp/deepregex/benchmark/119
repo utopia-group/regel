@@ -1,0 +1,23 @@
+// natural language
+lines with words with a lower-case letter before a character or the string "!" in them
+
+// examples
+"aC",+
+"tZWa",+
+"a!",+
+"aC!",+
+"aC",+
+"ed!sd",+
+"oJs!",+
+"B",-
+"BA",-
+"21",-
+"B61",-
+"B64S",-
+"BMB!s",-
+"B!B12",-
+
+
+
+// gt
+concat(<low>,contain(or(<any>,<m0>)))

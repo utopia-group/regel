@@ -1,0 +1,23 @@
+// natural language
+lines with lower-case letter and a character
+
+// examples
+"fa",+
+"c1d1",+
+"z2fa111!!!",+
+"v22vsd2",+
+"xfas33",+
+"cBSDF231!!",+
+"qabFF22111",+
+"1ffddd",-
+"ABBcc",-
+"",-
+"11@@@afnsdf",-
+"222VVV!!!",-
+"P123ffff",-
+"!!so23",-
+
+
+
+// gt
+repeatatleast(concat(<low>,contain(<any>)),1)

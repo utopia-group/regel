@@ -1,0 +1,23 @@
+// natural language
+lines with 4 or more capital letters followed by the string "!"
+
+// examples
+"ABCD!",+
+"BCDF!",+
+"BCDFF!",+
+"ABCDE!!",+
+"PPPP!12",+
+"QQQQQ!!1",+
+"QQQQ!abc",+
+"",-
+" ",-
+"a",-
+"ABCD",-
+"b",-
+"AB",-
+"ABC",-
+
+
+
+// gt
+concat(repeatatleast(<cap>,4),contain(<m0>))

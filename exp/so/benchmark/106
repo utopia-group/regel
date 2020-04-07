@@ -1,0 +1,17 @@
+// natural language
+R1: The string alphabet is limited to ""A"", ""T"", ""C"",""G"", ""N"" and its length must be at least 1 and at most 64 long
+R2: The integer must be within 0 to 9, i.e. length must be 1
+
+// visual format
+concat(R1,R2)
+
+// example
+"ACCCGTTNNGTCCGGA3",+
+"ACCCGTTNNGTCCGGATTGAANNGT9",+
+"TTGGACCNAC0",+
+"BACGGTA0",-
+"ACGGTA0",+
+"TTGGACCNACACCCGTTNNGTCCGGATTGAANNGTTTGGACCNACACCCGTTNNGTCCGGATTGAANNGTTTGGACCNACACCCGTTNNGTCCGGATTGAANNGT2",-
+
+// gt
+concat(repeatrange(or(<A>,or(<C>,or(<G>,or(<T>,<N>)))),1,64),<num>)

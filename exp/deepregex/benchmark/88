@@ -1,0 +1,23 @@
+// natural language
+lines in which a number comes prior to a lower-case letter , and followed by a letter
+
+// examples
+"1aA",+
+"1aa",+
+"2bB",+
+"3bC",+
+"1999bC",+
+"20oO",+
+"13rS",+
+"1",-
+"",-
+"1Aa",-
+"blah",-
+"Aa1",-
+",,,",-
+"hello!",-
+
+
+
+// gt
+concat(<num>,contain(concat(<low>,contain(<let>))))

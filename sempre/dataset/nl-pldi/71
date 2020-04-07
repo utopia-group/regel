@@ -1,0 +1,1 @@
+R0,"I need a regular expression validation expression that will allow positive number (0-9), "","" and ""."". It will not allow letter (a - z) or any other letter or symbol except ""."" and "",""","?{or(<num>,or(<,>,<.>))}"

@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" or "@" or a number before a vowel
+
+// examples
+"!a",+
+"@e",+
+"1i",+
+"!A",+
+"!ddda",+
+"3ddde",+
+"@1E",+
+"",-
+" ",-
+" ",-
+"a",-
+"1",-
+"!",-
+"@",-
+
+
+
+// gt
+concat(or(or(<m0>,<num>),<m1>),contain(<vow>))

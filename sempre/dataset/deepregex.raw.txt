@@ -1,0 +1,201 @@
+#	NL	Sketch
+1	items with an upper case letter preceding either "!" , a small letter , or a character .	?{<cap>,contain(or(or(<any>,<low>),<m0>))}
+2	lines with a letter or a lower-case letter , 6 or more times in them	?{or(<let>,<low>)}
+3	lines that end with a character or a vowel	?{or(<any>,<vow>)}
+4	lines with a lower case letter followed by capital letter , zero or more time	?{concat(<low>,contain(<cap>))}
+5	lines ending with 3 or more words with a character .	?{repeatatleast(<any>,3)}
+6	lines that do not contain a character , a vowel , or a letter	?{or(or(<vow>,<any>),<let>)}
+7	lines ending with a capital letter preceding a vowel	?{concat(<cap>,contain(<vow>))}
+8	lines with lower-case letter , before capital letter or character	?{<low>,contain(or(<cap>,<any>))}
+9	lines with a number or lower-case letter before character	?{or(<num>,<low>),contain(<any>)}
+10	lines with a lower case letter or character	?{or(<low>,<any>)}
+11	lines with the string "!" or "@" or lower-case letter before a vowel	?{or(or(<m0>,<low>),<m1>),contain(<vow>)}
+12	lines with the string "!" or lower-case letter before string "@"	?{or(<m0>,<low>),contain(<m1>)}
+13	lines with words that contain a character followed by a letter	?{<any>,contain(<let>)}
+14	lines with a number preceding a capital letter 2 or more times	?{concat(<num>,contain(<cap>))}
+15	items with "!" , vowel , or an upper case letter preceding a small letter .	?{or(or(<vow>,<m0>),<cap>),contain(<low>)}
+16	lines without a character , a vowel , or a capital letter	?{or(or(<any>,<vow>),<cap>)}
+17	lines with a lower-case or capital letter	?{or(<let>,<low>),<cap>}
+18	a line with a "!"  , a capital  , or a lower case before a character	?{or(or(<m0>,<cap>),<low>),contain(<any>)}
+19	lines with words with string "!" or vowel	?{<m0>,<vow>}
+20	items with a vowel preceding a numeral or "!" .	?{<vow>,contain(or(<m0>,<num>))}
+21	lines with 5 or more vowels or letters	?{or(<vow>,<let>)}
+22	lines that contain words with a lower-case letter , a vowel , or a number	?{or(or(<low>,<vow>),<num>)}
+23	lines with a number following a lower case letter	?{<low>,contain(<num>)}
+24	lines with characters or the string "!" followed by the string "@"	?{contain(<any>),concat(<m0>,contain(<m1>))}
+25	lines containing a lower-case letter preceding a letter , zero or more times	?{concat(<low>,contain(<let>))}
+26	lines containing a capital letter followed by a number	?{<cap>,contain(<num>)}
+27	lines ending with a lower-case letter followed by a number in them	?{concat(<low>,contain(<num>))}
+28	lines with the string "!" , lower-case letter , or character before a capital letter	?{or(or(<m0>,<low>),<any>),contain(<cap>)}
+29	likes with the string "!" at least once before the string "@"	?{repeatatleast(<m0>,1),contain(not(<m1>))}
+30	lines without the string "!" followsed by a character	?{concat(contain(<m0>),contain(<any>))}
+31	lines with at least 6 numbers or vowels	?{or(<num>,<vow>)}
+32	lines with the string "!" before a number with a character after	?{<m0>,contain(concat(<num>,contain(<any>)))}
+33	lines which are starting with a lower-case letter or a capital letter	?{or(<low>,<cap>)}
+34	lines starting with string "!" or character followed by number	?{startwith(<m0>),concat(<any>,contain(<num>))}
+35	lines with the string "!" , letter , or character before string "@"	?{or(or(<m0>,<let>),<any>),contain(<m1>)}
+36	lines that don't have a vowel , number , or letter .	?{or(or(<vow>,<num>),<let>)}
+37	a letter or a numbre appears at the end of the lines	?{endwith(or(<let>,<num>))}
+38	lines that have a letter and then a lower-case letter	?{<low>,contain(contain(<let>))}
+39	lines with a lower-case letter before the string "!" then a capital letter	?{concat(<low>,contain(<m0>)),contain(<cap>)}
+40	items terminating with vowel preceding a numeral .	?{concat(<vow>,contain(<num>))}
+41	lines with no character before lower-case letter	?{not(<any>),contain(endwith(<low>))}
+42	items with "!" preceding a character .	?{<m0>,contain(contain(<any>))}
+43	lines with a character before a letter and lower-case letter	?{<any>,contain(and(<let>,<low>))}
+44	lines with a character occuring before the string "!" , 5 or more times	?{<any>,contain(repeatatleast(<m0>,5))}
+45	lines with 7 or more letters before a vowel	?{repeatatleast(<let>,7),contain(<vow>)}
+46	lines in which a lower-case letter is present prior to the appearance of capital letters	?{contain(<low>),contain(<cap>)}
+47	lines which have a lower-case letter followed by a character before a capital letter	?{concat(<low>,contain(<any>)),contain(<cap>)}
+48	lines starting with a vowel before a character	?{startwith(concat(<vow>,contain(<any>)))}
+49	lines with a lower case letter after 5 vowels	?{repeatatleast(<vow>,5),contain(<low>)}
+50	lines ending in a letter and vowel or string "!"	?{or(and(<let>,<vow>),<m0>)}
+51	lines ending with a lower-case letter followed by the string "!" at least once in them	?{repeatatleast(concat(<low>,contain(<m0>)),1)}
+52	lines with words starting with string "!" , 6 or more times	?{repeatatleast(<m0>,6)}
+53	lines with a character before the string "!" then capital letter	?{concat(<any>,contain(<m0>)),contain(<cap>)}
+54	items with words containing a letter preceding a small letter .	?{<let>,contain(<low>)}
+55	lines that contain a lower-case letter followed by the strings "!" or "@" at least once	?{<low>,contain(repeatatleast(or(<m0>,<m1>),1))}
+56	lines with letter followed by vowel , 3 or more times	?{concat(<let>,contain(<vow>))}
+57	lines that contain a letter , 2 times or more before a vowel	?{repeatatleast(<let>,2),contain(<vow>)}
+58	lines starting in capital letter with a character	?{startwith(concat(<cap>,contain(<any>)))}
+59	lines that end with "!" or have just have a number	?{or(<m0>,<num>)}
+60	lines starting with a capital letter at least 1 time	?{startwith(<cap>)}
+61	lines containing a capital after a letter	?{<let>,contain(contain(<cap>))}
+62	lines with lower-case letter and a character	?{concat(<low>,contain(<any>))}
+63	lines without a capital letter before string "!"	?{not(<cap>),contain(<m0>)}
+64	lines with 3 or more words that start in a capital letter	?{startwith(<cap>)}
+65	lines end with the string "!" or a vowel	?{or(<m0>,<vow>)}
+66	lines with the string "!" before a non letter	?{<m0>,contain(not(<let>))}
+67	lines with string "!" followed by a character , 4 or more times	?{concat(<m0>,contain(<any>))}
+68	lines with letter , 7 or more times before number	?{repeatatleast(<let>,7),contain(<num>)}
+69	lines that don't begin with a capital letter or vowel	?{startwith(or(<cap>,<vow>))}
+70	lines starting with string "!" followed by vowel at least once	?{startwith(concat(<m0>,contain(<vow>)))}
+72	lines with a lower-case letter followed by a vowel at least once in them	?{concat(<low>,contain(<vow>))}
+73	lines with words with ending with character , 7 or more times	?{endwith(<any>)}
+74	lines which are not starting with the string "!" or a number	?{startwith(or(<m0>,<num>))}
+75	lines containing a vowel followed by a character	?{<vow>,contain(<any>)}
+76	lines with a letter 3 times before a character	?{repeatatleast(<let>,3),contain(<any>)}
+77	lines with words ending in string "!" or "@"	?{or(<m0>,<m1>)}
+78	lines that end with a number then after has a character	?{concat(<num>,contain(<any>))}
+79	lines containing words wherein the string "!" precedes a letter	?{<m0>,contain(<let>)}
+80	lines with at least capital letter followed by letter	?{concat(<cap>,contain(<let>))}
+81	items with a numeral preceding a letter , at least twice .	?{<num>,contain(repeatatleast(<let>,2))}
+82	lines with the string "!" containing only a lower-case letter	?{or(<m0>,<low>)}
+83	lines containing string "!" followed by string "@" or string "#"	?{or(concat(<m0>,contain(<m1>)),<m2>)}
+84	items terminating withe a vowel at least twice .	?{repeatatleast(<vow>,2)}
+86	lines with a lower-case letter before vowel and character	?{<low>,contain(and(<vow>,<any>))}
+87	lines with words and a letter or capital letter	?{or(<let>,<cap>)}
+88	lines in which a number comes prior to a lower-case letter , and followed by a letter	?{<num>,contain(concat(<low>,contain(<let>)))}
+89	lines with a vowel before a number	?{concat(<vow>,contain(<num>))}
+90	lines with words and ending in a number or lower-case letter	?{endwith(<num>),<low>}
+91	lines having an upper-case letter numbering at least 6 times or greater	?{<cap>}
+92	lines with only 7 or more characters	?{contain(<any>)}
+94	lines starting in words with a number or letter	?{or(<num>,<let>)}
+95	lines with words and a lower-case letter	?{contain(<low>)}
+96	lines containing the string "!" with a letter before it	?{<let>,contain(contain(<m0>))}
+97	lines that contain a vowel before a number	?{concat(<vow>,contain(<num>))}
+98	lines with 4 or more vowels or starting in string "!"	?{repeatatleast(<vow>,4),startwith(<m0>)}
+100	lines that contain the string "!" followed by a number , a letter , or the string "@"	?{<m0>,contain(or(or(<num>,<m1>),<let>))}
+101	lines without zero or more of a number and letter	?{not(<num>),star(<let>)}
+102	lines stating with 4 or more letters or the string "!"	?{or(repeatatleast(<let>,4),<m0>)}
+103	lines with words starting with 4 or more lower-case letters	?{repeatatleast(<low>,4)}
+104	lines with only the string "!" or "@" at least once	?{or(<m0>,<m1>)}
+105	items with a character and a letter preceding a numeral .	?{and(<let>,<any>),contain(<num>)}
+106	the lines that have a vowel coming before a character	?{concat(<vow>,contain(<any>))}
+107	lines not starting in string "!"	?{startwith(<m0>)}
+108	lines that have a vowel and a character	?{and(<vow>,<any>)}
+109	lines starting with a vowel or string "!"	?{or(<vow>,<m0>)}
+110	lines with a character followed by "!"	?{<any>,contain(<m0>)}
+112	lines in which a character appears no less than zero times before a "!" string occurs	?{star(<any>),contain(<m0>)}
+113	lines containing character or a capital	?{or(<any>,<cap>)}
+114	lines with a number before string "!" and a character	?{<num>,contain(and(<m0>,<any>))}
+115	lines with words with a number followed by a character at least once in them	?{concat(<num>,contain(<any>))}
+116	lines containing either lower-case letter , a letter , or character	?{or(or(<low>,<let>),<any>)}
+117	lines having either a vowel , character , or number	?{or(or(<vow>,<any>),<num>)}
+118	lines starting with a number before the string "!"	?{repeatatleast(startwith(<num>),1),contain(<m0>)}
+119	lines with words with a lower-case letter before a character or the string "!" in them	?{<low>,contain(or(<any>,<m0>))}
+120	lines with either the string "!" , the string "@" , or a capital letter followed by the string "#"	?{or(or(<m0>,<m1>),<cap>),contain(<m2>)}
+121	lines which are starting with a lower-case letter before the string "!" or a letter	?{or(concat(<low>,contain(<m0>)),<let>)}
+122	lines with 3 or more of the string "!" before a letter	?{concat(<m0>,contain(<let>)),repeatatleast(<low>,3)}
+123	items with a small letter preceding either "!" , a character , or an upper case letter .	?{<low>,contain(or(or(<cap>,<m0>),<any>))}
+125	lines starting with words with a character or letter	?{or(or(<any>,<cap>),<let>)}
+126	lines which are containing a lower-case letter and a character before the string "!"	?{concat(and(<low>,<any>),contain(<m0>))}
+127	lines with words with zero or more capital letters before the string "!"	?{star(<cap>),contain(<m0>)}
+128	the lines that contain a letter coming before the string "!" at least 2 times	?{<let>,contain(repeatatleast(<m0>,2))}
+129	lines beginning with the string "!" 4 or more times	?{startwith(<m0>)}
+130	lines that have words with a character or a capital letter	?{<cap>,<any>}
+131	lines with words that include a letter , the string "!" , or a lower-case letter	?{or(<m0>,<low>),<let>}
+132	lines with words with either vowel , lower-case letter , or character	?{or(<vow>,<low>),<any>}
+133	lines with a capital letter and a lower-case letter following it	?{concat(<cap>,contain(<low>))}
+134	lines with a number followed by a capital letter , zero or more times in it	?{concat(<num>,contain(<cap>))}
+135	lines with the string "!" before a number and character	?{<m0>,contain(and(<num>,<any>))}
+136	lines with a vowel before the string "!" and ending in a lower-case letter	?{concat(<vow>,contain(<m0>)),endwith(<low>)}
+137	words in lines that include a number or character	?{<num>,<any>}
+138	lines ending with string "!" at least once before string "@"	?{repeatatleast(endwith(<m0>),1),contain(<m1>)}
+139	lines starting with string "!" before number	?{startwith(<m0>),contain(<num>)}
+140	lines with number followed by lower-case letter , 5 or more times	?{concat(<num>,contain(<low>))}
+141	lines with the string "!" at least once not being the string "@"	?{repeatatleast(<m0>,1),not(<m1>)}
+142	lines with 7 times a letter	?{<let>}
+143	items with an upper case letter at least 1 time preceding a small letter .	?{repeatatleast(<cap>,1),contain(<low>)}
+144	lines with words without only a character	?{<any>}
+145	lines having a vowel followed by either the string "!" , a lower-case letter , or the string "@"	?{<vow>,contain(or(or(<m0>,<low>),<m1>))}
+146	items with an upper class and vowel preceding "!" .	?{and(<vow>,<cap>),contain(<m0>)}
+147	lines ending with a character or a number	?{or(repeatatleast(<any>,1),<num>)}
+148	lines with character before number followed by vowel	?{<any>,contain(concat(<num>,contain(<vow>)))}
+149	lines that have a character preceding a letter , or containing a number	?{concat(<any>,contain(<let>)),contain(<num>)}
+150	lines which are ending with a lower-case letter followed by the string "!" or a number	?{or(concat(<low>,contain(<m0>)),<num>)}
+152	lines with the string "!" before a lower case letter then by a capital letter .	?{<m0>,contain(concat(<low>,contain(<cap>)))}
+153	lines with string "!" or character before vowel	?{or(<m0>,<any>),contain(<vow>)}
+154	lines with a capital letter , 2 or more times before a character in them	?{repeatatleast(<cap>,2),contain(<any>)}
+155	lines containing lower-case letter and not string "!"	?{contain(<low>),not(<m0>)}
+156	lines with a number before the strings "!" or "@"	?{<num>,contain(or(<m0>,<m1>))}
+157	lines with words with string "!" before character or capital letter	?{<m0>,contain(or(<any>,<cap>))}
+158	lines with string "!" before either string "@" , capital letter , or letter	?{<m0>,contain(or(or(<m1>,<cap>),<let>))}
+159	lines ending with string "!" before either string "@" , string "#" , or number	?{endwith(<m0>),contain(or(or(<m1>,<m2>),<num>))}
+160	lines with character followed by vowel at least once	?{concat(<any>,contain(<vow>))}
+161	lines with zero or more characters before a number	?{contain(star(<any>)),contain(<num>)}
+162	lines that don't only contain a letter , once or more	?{repeatatleast(<let>,1)}
+163	lines with a lower-case letter before character	?{and(<let>,<low>),contain(<any>)}
+164	items with a character preceding a vowel preceding "!" .	?{concat(concat(<any>,contain(<vow>)),contain(<m0>))}
+165	lines starting with words ending with the string "!"	?{endwith(<m0>)}
+166	lines without only a character before string "!"	?{concat(<any>,contain(<m0>))}
+167	lines with words ending in zero or more letters	?{endwith(<let>)}
+168	lines which are having either a vowel , the string "!" , or a lower-case letter before the string "@"	?{or(or(<vow>,<m0>),<low>),contain(<m1>)}
+169	lines with a capital before ending with vowel	?{<cap>,contain(endwith(<vow>))}
+170	lines with a vowel , number , or letter	?{or(or(<vow>,<num>),<let>)}
+171	lines starting with a letter or a lower-case letter	?{or(<let>,<low>)}
+172	lines with zero or more of the string "!" before a vowel	?{star(<m0>),contain(contain(<vow>))}
+173	lines with 4 or more capital letters followed by the string "!"	?{repeatatleast(<cap>,4),contain(<m0>)}
+174	lines with the string "!" , a letter , or number	?{or(or(<m0>,<let>),<num>)}
+175	lines with a number followed by the string "!"	?{contain(<num>),contain(<m0>)}
+176	lines with a number , a lower-case letter , or the string "!"	?{or(or(<num>,<low>),<m0>)}
+177	lines that contain a number , a lower-case letter , or the string "!" followed by a character	?{or(or(<num>,<low>),<m0>),contain(<any>)}
+178	lines with words with letter and containing only a character	?{<let>,<any>}
+179	lines with 3 or more of a vowel or character	?{or(<vow>,<any>)}
+180	lines beginning with the string "!" followed by the string "@"	?{concat(<m0>,contain(<m1>))}
+181	lines with 5 or more of a letter before string "!"	?{repeatatleast(<let>,5),contain(<m0>)}
+182	lines containing a character before a letter or "!"	?{or(concat(<any>,contain(<let>)),<m0>)}
+183	lines with a capital letter either the string "!" , a number , or the string "@"	?{<cap>,contain(or(or(<m0>,<num>),<m1>))}
+184	lines that have either a character , the string "!" , or the string "@" before a number	?{or(or(<m0>,<any>),<m1>),contain(<num>)}
+185	lines containing the string "!" , "@" , or number	?{or(or(<m0>,<m1>),<num>)}
+187	lines with vowel before string "!" or starting with string "@"	?{concat(<vow>,contain(<m0>)),startwith(<m1>)}
+188	lines with at least 7 of  the string "!" or a vowel	?{or(<vow>,<m0>)}
+189	lines with a number before string "!" or "@" or a character	?{<num>,contain(or(or(<m0>,<any>),<m1>))}
+190	lines ending with string "!" before containing a capital letter	?{endwith(<m0>),contain(contain(<cap>))}
+191	lines containing the string "!" or a letter after a character	?{<any>,contain(or(<let>,<m0>))}
+192	lines starting with a lower-case letter or string "!" , 4 or more times	?{or(startwith(<low>),<m0>)}
+193	items beginning with a character preceding a letter .	?{startwith(<any>),contain(<let>)}
+194	lines with the string "!" or "@" or a number before a vowel	?{or(or(<m0>,<num>),<m1>),contain(<vow>)}
+195	lines not starting with a letter or string "!"	?{startwith(or(<let>,<m0>))}
+196	lines containing the string "!" preceding a character before a number	?{concat(<m0>,contain(<any>)),contain(<num>)}
+197	lines starting in 4 or more of the string "!" or letter	?{startwith(or(<m0>,<let>))}
+198	lines which are not containing the string "!" or the string "@"	?{contain(or(<m0>,<m1>))}
+199	lines with words with string "!" or string "@" , 4 or more times	?{or(<m0>,<m1>)}
+200	lines with lower-case letter or character , 5 or more times	?{or(<low>,<any>)}
+201	lines with 5 letters before a character	?{repeatatleast(<let>,5),contain(<any>)}
+202	a character appears before containing a lower-case letter in the lines	?{<any>,contain(contain(<low>))}
+203	lines containing  letter , 5 or more times	?{repeatatleast(<let>,5)}
+204	lines that feature a small letter no less than 5 times and any number more than 5	?{repeatatleast(<low>,5)}
+205	items with either a vowel , a numeral , or an upper case letter preceding "!" .	?{or(or(<cap>,<vow>),<num>),contain(<m0>)}
+206	lines containing 4 or more of the string "!" before a number	?{repeatatleast(contain(<m0>),4),contain(<num>)}
+207	lines with a capital letter , 5 or more times before a vowel in them	?{repeatatleast(<cap>,5),contain(<vow>)}
+208	lines with vowel or character , 6 or more times	?{or(<vow>,<any>)}

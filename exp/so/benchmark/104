@@ -1,0 +1,18 @@
+// natural language
+I have a field that should accept: bulletpoint letters [a-zA-Z] bulletpoint letters with numbers [a-zA-Z0-9] bulletpoint no special characters
+
+// examples
+"ADFad1334",+
+"43545SFDDFdf454fgf",+
+"asdadadASD",+
+"A8",+
+"8S",+
+"B",+
+"7",-
+"12312342",-
+"sdff23424#$",-
+
+
+
+// gt
+and(contain(<let>),repeatatleast(<alphanum>,1))

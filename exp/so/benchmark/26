@@ -1,0 +1,17 @@
+// natural language
+R1: can be either ""1"" or ""2""
+R2: can be either ""2"", ""4"" or ""6""
+R3: can be from 0 - 9
+
+// visual format
+concat(concat(concat(<0>,<4>),concat(R1,R2)),repeat(R3,7))
+
+// example
+"04140000000",+
+"04240000000",+
+"04340000000",-
+"14240000000",-
+"04170000000",-
+
+// gt
+concat(concat(<0>,<4>),concat(or(<1>,<2>),concat(or(<2>,or(<4>,<6>)),repeat(<num>,7))))

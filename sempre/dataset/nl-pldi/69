@@ -1,0 +1,3 @@
+Sketch,"concat(R1,R2)"
+R1,"the maximum number of digits is 5.","?{<num>}"
+R2,"Use comma or dot (""."") as decimal point. The maximum digits is 2","?{or(<,>,<.>),repeatrange(<num>,1,2)}"

@@ -1,0 +1,13 @@
+// natural language
+I would like to validate a string format that should only contain only numbers with also following conditions both satisfied:  If it is a integer number, the maximum number of digits is 5. If it is a number with decimal (or decimal fraction), the maximum digits after decimal mark is two. NOTE: value use comma or dot (""."") as decimal point. Please bear in mind that both of the two conditions have to be satisfied"
+
+// example
+"12345",+
+"10,23",+
+"123456",-
+"10,234",-
+"123456,12",-
+"3,345",-
+
+// gt
+concat(repeatrange(<num>,1,5),optional(concat(or(<.>,<,>),repeatrange(<num>,1,2))))

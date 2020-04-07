@@ -1,0 +1,23 @@
+// natural language
+lines with a letter or a lower-case letter , 6 or more times in them
+
+// examples
+"aaaaaa",+
+"AAAAAA",+
+"aaaaaaa",+
+"AAAAAAA",+
+"aaaAAA",+
+"aaaAAAA",+
+"bbbbbbb",+
+"1",-
+"a",-
+"b",-
+"@",-
+",",-
+"123",-
+"abc",-
+
+
+
+// gt
+repeatatleast(or(<let>,<low>),6)

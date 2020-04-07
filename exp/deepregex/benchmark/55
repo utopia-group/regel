@@ -1,0 +1,23 @@
+// natural language
+lines that contain a lower-case letter followed by the strings "!" or "@" at least once
+
+// examples
+"test!",+
+"testing !@",+
+"test@",+
+"test!Now!",+
+"test@here@",+
+"now!once@",+
+"plese!",+
+"forking",-
+"threads",-
+"",-
+"don't have any",-
+"no more",-
+"34324f#$@",-
+"core$%008",-
+
+
+
+// gt
+concat(<low>,contain(repeatatleast(or(<m0>,<m1>),1)))

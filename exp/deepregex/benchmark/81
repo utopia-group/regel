@@ -1,0 +1,23 @@
+// natural language
+items with a numeral preceding a letter , at least twice .
+
+// examples
+"2aa",+
+"2ab",+
+"1aaaaa",+
+"1cat",+
+"1fish",+
+"2fish",+
+"7hearts",+
+"redfish",-
+"blue fish",-
+",,,",-
+"",-
+"a1cat",-
+"yay!",-
+"numeral counts a number with more than one character",-
+
+
+
+// gt
+concat(<num>,contain(repeatatleast(<let>,2)))

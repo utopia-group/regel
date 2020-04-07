@@ -1,0 +1,23 @@
+// natural language
+lines containing a capital after a letter
+
+// examples
+"aC",+
+"zasDds",+
+"y123DAAAds",+
+"c2Gs23",+
+"pa12G23",+
+"rV",+
+"tZasZ",+
+"",-
+"abc",-
+"!!23abc",-
+"a#2! fff",-
+"g123f22",-
+"A",-
+"Z",-
+
+
+
+// gt
+concat(<let>,contain(contain(<cap>)))

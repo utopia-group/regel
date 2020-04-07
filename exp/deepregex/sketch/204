@@ -1,0 +1,11 @@
+1 ?{<low>,<num>}
+2 ?{<low>}
+3 ?{<low>,repeat(<num>,5)}
+4 ?{<low>,repeatrange(<num>,1,5)}
+5 ?{<num>}
+6 ?{<let>,<num>}
+7 ?{<let>}
+8 ?{<let>,repeat(<num>,5)}
+9 ?{<let>,repeatrange(<num>,1,5)}
+10 ?{repeat(<num>,5)}
+11 ?{repeatrange(<num>,1,5)}

@@ -1,0 +1,11 @@
+// natural language
+the first letter of each string is in upper case
+
+// examples
+"My Name Is Jass",+
+"My name is Jass",-
+
+
+
+// gt
+concat(concat(<cap>,star(<let>)),star(concat(< >,concat(<cap>,star(<let>)))))

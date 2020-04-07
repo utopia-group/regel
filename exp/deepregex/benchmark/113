@@ -1,0 +1,23 @@
+// natural language
+lines containing character or a capital
+
+// examples
+"A",+
+"Capital",+
+"!C",+
+"#i#",+
+"some thing",+
+"12 has c 3##",+
+"!@ T",+
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+
+
+
+// gt
+contain(or(<any>,<cap>))

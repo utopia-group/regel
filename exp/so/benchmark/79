@@ -1,0 +1,15 @@
+// natural language
+I'm trying to use regular expressions to match a string that does not contain the sequence of characters of a less than symbol "<" followed by a non space.
+
+// examples
+"A new description.",+
+"A < new description.",+
+"it< doesn't match",+
+"A <new description.",-
+"it <matches",-
+"<n",-
+
+
+
+// gt
+not(contain(concat(<<>,notcc(< >))))

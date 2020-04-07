@@ -1,0 +1,5 @@
+1 concat(?{<let>,repeat(or(<A>,or(<T>,or(<C>,or(<G>,<N>)))),64)},?{<num>})
+2 concat(?{repeat(or(<A>,or(<T>,or(<C>,or(<G>,<N>)))),64)},?{<num>})
+3 concat(?{<any>,repeat(or(<A>,or(<T>,or(<C>,or(<G>,<N>)))),64)},?{<num>})
+4 concat(?{<any>,<let>,repeat(or(<A>,or(<T>,or(<C>,or(<G>,<N>)))),64)},?{<num>})
+5 concat(?{<let>,or(<A>,or(<T>,or(<C>,or(<G>,<N>))))},?{<num>})

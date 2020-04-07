@@ -1,0 +1,1 @@
+R0,"An identifier must begin with either an alphabet or underscore (""_""), it can not begin with a digit or any other special character, moreover, digits can come after.","?{startwith(or(<let>,<_>)),<num>,not(contain(<spec>))}"

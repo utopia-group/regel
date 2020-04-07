@@ -1,0 +1,23 @@
+// natural language
+lines starting with words ending with the string "!"
+
+// examples
+"a!",+
+"a1!",+
+"ab!",+
+"ab,,,  !!",+
+"df!",+
+"df   !",+
+"Alice!",+
+"",-
+" ",-
+"1",-
+"ab",-
+"df",-
+"@@@",-
+",Abd",-
+
+
+
+// gt
+startwith(endwith(<m0>))

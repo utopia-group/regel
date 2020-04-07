@@ -1,0 +1,5 @@
+1 concat(?{<*>},concat(?{repeat(<any>,2)},?{<*>}))
+2 concat(?{<*>},concat(?{repeatatleast(<any>,2)},?{<*>}))
+3 concat(?{<*>},concat(?{repeat(<let>,2)},?{<*>}))
+4 concat(?{<*>},concat(?{repeatatleast(<let>,2)},?{<*>}))
+5 concat(?{<*>},concat(?{repeatrange(<any>,1,2)},?{<*>}))

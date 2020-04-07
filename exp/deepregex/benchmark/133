@@ -1,0 +1,23 @@
+// natural language
+lines with a capital letter and a lower-case letter following it
+
+// examples
+"Ad",+
+"Vdfgd",+
+"Swerfds",+
+"asEf",+
+"1234Fsdf",+
+"sdf3dSdf",+
+"AsAsA1",+
+"a",-
+"A",-
+"w",-
+"werS",-
+"sd234ds",-
+"S1234",-
+"",-
+
+
+
+// gt
+contain(concat(<cap>,contain(<low>)))

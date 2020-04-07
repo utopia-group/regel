@@ -1,0 +1,23 @@
+// natural language
+items with "!" , vowel , or an upper case letter preceding a small letter .
+
+// examples
+"Aa",+
+"aa",+
+"Ba",+
+"!a",+
+"!aa",+
+"!a3",+
+"ae3",+
+"a",-
+"!",-
+"A",-
+"1",-
+"!A",-
+"aA",-
+"AA",-
+
+
+
+// gt
+concat(or(or(<vow>,<m0>),<cap>),contain(<low>))

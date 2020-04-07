@@ -1,0 +1,13 @@
+// natural language
+I want to validate if my input consists starting with 8 hexadecimal characters followed by a underscore, followed by any number of characters with any value.
+
+// examples
+"1A345678_add",+
+"1A345678",-
+"1234567890",-
+"ABSDBASDB",-
+
+
+
+// gt
+concat(repeat(<hex>,8),concat(<_>,star(<let>)))

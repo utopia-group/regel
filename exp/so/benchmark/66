@@ -1,0 +1,11 @@
+// natural language
+First Name and Last Name Only with only 2 words with only 1 Space.
+
+// example
+"Sunil Kumar",+
+"Sunil Kumar 123",-
+"SUnil Kumar",-
+"Sunil  Kumar",-
+
+// gt
+concat(concat(<cap>,repeatatleast(<low>,1)),concat(< >,concat(<cap>,repeatatleast(<low>,1))))

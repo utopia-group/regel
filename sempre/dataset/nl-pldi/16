@@ -1,0 +1,3 @@
+Sketch,"concat(concat(R1,<@>),concat(R2,<%>))"
+R1,"can be only single numeric digit","?{<num>}"
+R2,"should be only 3 or less numeric digits","?{repeatrange(<num>,1,3)}"

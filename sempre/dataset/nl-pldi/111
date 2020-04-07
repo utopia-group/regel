@@ -1,0 +1,3 @@
+Sketch,"and(R1,R2)"
+R1,"at least two characters","?{repeatatleast(<any>,2)}"
+R2,"Should have at least 1 letter as a prefix and end with a ""."" or have space or ""-"" and then have more letters",?{concat(?{repeatatleast(<let>,1)},?{or(<.>,or(< >,<->)),repeatatleast(<let>,1)})}

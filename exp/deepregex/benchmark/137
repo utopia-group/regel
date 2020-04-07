@@ -1,0 +1,23 @@
+// natural language
+words in lines that include a number or character
+
+// examples
+"a",+
+"1",+
+"2",+
+"f",+
+"S",+
+"$",+
+"V",+
+"12",-
+"ab",-
+"1a",-
+"b3",-
+"##",-
+"sdf",-
+"23ef4",-
+
+
+
+// gt
+or(<num>,<any>)

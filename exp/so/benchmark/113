@@ -1,0 +1,12 @@
+// natural language
+R1: one or more digits
+
+// visual format
+concat(concat(<P>,concat(<a>,concat(<g>,<e>))),concat(concat(< >,concat(R1,< >)),concat(concat(concat(<o>,<f>),< >),R1)))
+
+// example
+"Page 2 of 20",+
+"Page 2 of X",-
+
+// gt
+concat(concat(<P>,concat(<a>,concat(<g>,<e>))),concat(concat(< >,concat(repeatatleast(<num>,1),< >)),concat(concat(concat(<o>,<f>),< >),repeatatleast(<num>,1))))

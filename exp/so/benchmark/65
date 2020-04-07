@@ -1,0 +1,17 @@
+// natural language
+I'm trying to make a regular expression that validates positive natural numbers from three digits to 9 digits and separates the thousand unit and the million unit with a point
+
+// example
+"175",+
+"1.250",+
+"14.365",+
+"145.985",+
+"1.562.745",+
+"17.487.984",+
+"999.999.999",+
+"176.57.117",-
+"176.257.7",-
+"176.257.17",-
+
+// gt
+concat(repeatrange(<num>,1,3),repeatrange(concat(<.>,repeat(<num>,3)),0,2))

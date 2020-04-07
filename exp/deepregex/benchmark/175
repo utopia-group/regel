@@ -1,0 +1,23 @@
+// natural language
+lines with a number followed by the string "!"
+
+// examples
+"1!",+
+"2!",+
+"1!a",+
+"1!B",+
+"a1!",+
+"B1!",+
+" 1! d",+
+"",-
+" ",-
+"!",-
+"1",-
+"a",-
+"123",-
+"12a",-
+
+
+
+// gt
+concat(contain(<num>),contain(<m0>))

@@ -1,0 +1,12 @@
+// natural language
+write regular expression in C# to validate that the input does not contain double spaces
+
+// examples
+"white snake",+
+"white  snake",-
+"white snake valley",+
+
+
+
+// gt
+not(contain(concat(< >,< >)))

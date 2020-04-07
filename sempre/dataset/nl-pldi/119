@@ -1,0 +1,1 @@
+R0,"I want to match a certain set of string, such as: Strings composed of exactly 6 digits, a decimal, followed by exactly 3 more digits","?{repeat(<num>,6),concat(<.>,repeat(<num>,3))}"

@@ -1,0 +1,4 @@
+1 ?{repeat(<num>,11)}
+2 ?{repeat(<num>,16)}
+3 ?{<num>}
+4 ?{repeatatleast(<num>,1)}

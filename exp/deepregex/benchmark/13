@@ -1,0 +1,23 @@
+// natural language
+lines with words that contain a character followed by a letter
+
+// examples
+"ba",+
+"1ba",+
+"!ba",+
+"Aba",+
+"AB",+
+"Ab",+
+"aB",+
+"",-
+" ",-
+"1",-
+"!",-
+"a",-
+"B",-
+"   ",-
+
+
+
+// gt
+concat(<any>,contain(<let>))

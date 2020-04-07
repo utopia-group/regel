@@ -1,0 +1,23 @@
+// natural language
+lines starting with a capital letter at least 1 time
+
+// examples
+"A",+
+"ZaC",+
+"X!!",+
+"X@@123C",+
+"AA",+
+"CCDD",+
+"C1G3X5",+
+"",-
+"1CD",-
+"aA@C",-
+"!sacA",-
+"f!ACCGG",-
+"9914AAACC",-
+"29f21",-
+
+
+
+// gt
+repeatatleast(startwith(<cap>),1)

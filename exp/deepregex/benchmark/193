@@ -1,0 +1,23 @@
+// natural language
+items beginning with a character preceding a letter .
+
+// examples
+"1a",+
+"aa",+
+"ba",+
+"bb",+
+"bc1",+
+"!aa",+
+"!aab1",+
+"",-
+" ",-
+"!",-
+"a1",-
+"b!",-
+"c.",-
+"11",-
+
+
+
+// gt
+concat(startwith(<any>),contain(<let>))

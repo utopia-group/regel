@@ -1,0 +1,15 @@
+1 ?{repeat(<num>,4)}
+2 ?{< >}
+3 ?{repeat(<num>,4),< >}
+4 ?{repeatrange(<num>,1,4)}
+5 ?{<num>}
+6 ?{repeatrange(<num>,1,4),< >}
+7 ?{<num>,< >}
+8 ?{<any>}
+9 ?{<any>,repeat(<num>,4)}
+10 ?{<any>,< >}
+11 ?{<any>,repeat(<num>,4),< >}
+12 ?{<any>,repeatrange(<num>,1,4)}
+13 ?{<any>,<num>}
+14 ?{<any>,repeatrange(<num>,1,4),< >}
+15 ?{<any>,<num>,< >}

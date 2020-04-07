@@ -1,0 +1,19 @@
+// natural language
+start and finish with a percentage sign and can contain any number of characters in-between
+
+// examples
+"%%",+
+"% %",+
+"%a%",+
+"%1%",+
+"% a1a %",+
+"%%%",+
+" %%",-
+"%% ",-
+" % ",-
+" a%%b ",-
+
+
+
+// gt
+concat(<%>,concat(star(<any>),<%>))

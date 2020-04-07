@@ -1,0 +1,23 @@
+// natural language
+lines starting with a vowel before a character
+
+// examples
+"aq",+
+"e!",+
+"iZ",+
+"o[",+
+"u5",+
+"o;",+
+"u^",+
+"z",-
+"q3",-
+"p0",-
+"",-
+"m;;",-
+"z'''",-
+"q!",-
+
+
+
+// gt
+repeatatleast(startwith(concat(<vow>,contain(<any>))),1)

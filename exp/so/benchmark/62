@@ -1,0 +1,13 @@
+// natural language
+validate a set of double number with semi-colon delimited
+
+// examples
+"123.1234567890",+
+"123.1234567890;123.1234567890;123.1234567890",+
+"123.1234567890;",-
+"123.1234567890;123.1234567890;123.1234567890;",-
+
+
+
+// gt
+concat(concat(repeatatleast(<num>,1),concat(<.>,repeatatleast(<num>,1))),star(concat(<;>,concat(repeatatleast(<num>,1),concat(<.>,repeatatleast(<num>,1))))))

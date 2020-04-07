@@ -1,0 +1,23 @@
+// natural language
+lines ending with string "!" before either string "@" , string "#" , or number
+
+// examples
+"!@",+
+"!#",+
+"!1",+
+"a!@",+
+"b!#",+
+"c!2",+
+"  !@#",+
+"",-
+" ",-
+"@",-
+"#",-
+"1",-
+"@!b",-
+"!",-
+
+
+
+// gt
+concat(endwith(<m0>),contain(or(or(<m1>,<m2>),<num>)))

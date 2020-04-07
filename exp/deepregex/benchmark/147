@@ -1,0 +1,23 @@
+// natural language
+lines ending with a character or a number
+
+// examples
+"s",+
+"1",+
+"!",+
+"sd1",+
+"fd3",+
+"d!",+
+"s3a",+
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+
+
+
+// gt
+endwith(or(repeatatleast(<any>,1),<num>))

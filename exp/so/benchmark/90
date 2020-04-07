@@ -1,0 +1,13 @@
+// natural language
+I want regex that only validates that the field contains digits, but that does not care about how many.
+
+// examples
+"77",+
+"2377",+
+"77.43",-
+"xyz777",-
+
+
+
+// gt
+repeatatleast(<num>,1)

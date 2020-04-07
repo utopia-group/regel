@@ -1,0 +1,10 @@
+1 ?{concat(<a>,<a>),endwith(concat(<b>,<b>))}
+2 ?{startwith(concat(<a>,<a>)),endwith(concat(<b>,<b>))}
+3 ?{startwith(endwith(concat(<b>,<b>)))}
+4 ?{endwith(concat(<b>,<b>))}
+5 ?{concat(<a>,<a>),concat(<b>,<b>)}
+6 ?{startwith(concat(<a>,<a>)),concat(<b>,<b>)}
+7 ?{startwith(concat(<a>,<a>))}
+8 ?{startwith(concat(<b>,<b>))}
+9 ?{concat(<a>,<a>)}
+10 ?{concat(<b>,<b>)}

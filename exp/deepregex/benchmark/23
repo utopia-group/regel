@@ -1,0 +1,23 @@
+// natural language
+lines with a number following a lower case letter
+
+// examples
+"a1",+
+"b2",+
+"abc123",+
+"hgf5",+
+"g0",+
+"a8b",+
+"c10d",+
+"1",-
+"0",-
+"a",-
+"b",-
+"A",-
+",",-
+"11",-
+
+
+
+// gt
+concat(<low>,contain(<num>))

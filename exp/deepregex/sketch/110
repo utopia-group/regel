@@ -1,0 +1,17 @@
+1 ?{concat(<any>,contain(<m0>))}
+2 ?{<any>,<m0>}
+3 ?{concat(<any>,<m0>)}
+4 concat(<any>,?{<m0>})
+5 concat(?{<any>},?{<m0>})
+6 concat(?{<any>},contain(<m0>))
+7 concat(?{<any>},<m0>)
+8 ?{concat(<let>,contain(<m0>))}
+9 ?{<m0>}
+10 ?{<any>}
+11 ?{<let>,<m0>}
+12 ?{concat(<let>,<m0>)}
+13 concat(?{<let>},?{<m0>})
+14 concat(<let>,?{<m0>})
+15 concat(?{<let>},contain(<m0>))
+16 concat(?{<let>},<m0>)
+17 ?{<let>}

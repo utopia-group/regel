@@ -1,0 +1,13 @@
+// natural language
+Need a regular expression to check a string with 4 digit and the space in trail.
+
+// examples
+"0990 09253U108 BX",+
+"0990 02376R102 AAL",+
+"00000003610014112202013 2 5",-
+"00000003610014112192013 2 47",-
+
+
+
+// gt
+startwith(concat(repeat(<num>,4),< >))

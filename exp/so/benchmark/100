@@ -1,0 +1,17 @@
+// natural language
+The string must be 9 characters long, starting with "SO-" (case insensitive eg "So-", "so-", "sO-" and "SO-") followed by 6 numbers.
+
+// examples
+"SO-123456",+
+"So-123456",+
+"sO-123456",+
+"so-123456",+
+"SO-12d456",-
+"SO-1234567",-
+"QR-123456",-
+"SO-45k789",-
+
+
+
+// gt
+concat(concat(or(<S>,<s>),concat(or(<O>,<o>),<->)),repeat(<num>,6))

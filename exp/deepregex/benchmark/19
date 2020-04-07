@@ -1,0 +1,23 @@
+// natural language
+lines with words with string "!" or vowel
+
+// examples
+"!",+
+"a",+
+"A",+
+"E",+
+"e",+
+"i",+
+"o",+
+"ab",-
+"1",-
+",",-
+"!a",-
+"ae",-
+"",-
+" ",-
+
+
+
+// gt
+or(<m0>,<vow>)

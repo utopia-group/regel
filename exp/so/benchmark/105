@@ -1,0 +1,16 @@
+// natural language
+First part of the string can be; Min 1 Max 6 characters long. Upper case only. Second part of the string can be; Exactly two characters long but ""00"" is not accepted. So all together: It can be min 3 max 8 characters long
+
+// example
+"ABCDEF05",+
+"A21",+
+"C99",+
+"d12",-
+"1",-
+"A123",-
+"A1234",-
+"AB00",-
+"ABCDEFG01",-
+
+// gt
+and(concat(repeatrange(<cap>,1,6),and(repeat(<num>,2),not(contain(concat(<0>,<0>))))),repeatrange(<any>,3,8))

@@ -1,0 +1,23 @@
+// natural language
+items with a character preceding a vowel preceding "!" .
+
+// examples
+"1a!",+
+",e!",+
+"bi!",+
+" o!",+
+"     aeiou!",+
+"b1a1!",+
+"ba11!3",+
+"",-
+" ",-
+"a",-
+"b",-
+"be",-
+"bi",-
+"aT!",-
+
+
+
+// gt
+contain(concat(concat(<any>,contain(<vow>)),contain(<m0>)))

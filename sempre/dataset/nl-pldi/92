@@ -1,0 +1,1 @@
+R0,"I am now in need of a Reg Exp (for validation putsposes) that checks that the user enters a number according to the following rules: no alpha characters; can have decimal; can have commas for the thousands, but the commas must be correctly placed","?{<let>,<.>,<,>}"

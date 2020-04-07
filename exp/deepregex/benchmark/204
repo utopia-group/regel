@@ -1,0 +1,23 @@
+// natural language
+lines that feature a small letter no less than 5 times and any number more than 5
+
+// examples
+"aaaaa6",+
+"aaaaaa7",+
+"1bbbbb8",+
+"bbbbbb10",+
+"ccccccccccccc8",+
+"aaaaa9",+
+"bcdefg123456",+
+"",-
+" ",-
+"a",-
+"ab12",-
+"abc12",-
+"abcd666",-
+"abcd9999",-
+
+
+
+// gt
+contain(repeatatleast(<low>,5))

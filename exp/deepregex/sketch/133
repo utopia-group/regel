@@ -1,0 +1,8 @@
+1 ?{<cap>,<low>}
+2 ?{or(<cap>,<low>)}
+3 ?{<let>,<low>}
+4 ?{<low>}
+5 ?{<cap>,<let>}
+6 ?{or(<let>,<low>)}
+7 ?{<cap>}
+8 ?{<let>}

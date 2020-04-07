@@ -1,0 +1,4 @@
+1 ?{endwith(<let>)}
+2 ?{endwith(star(<let>))}
+3 ?{<let>}
+4 ?{star(<let>)}

@@ -1,0 +1,11 @@
+1 ?{concat(<m0>,contain(<let>))}
+2 ?{concat(<m0>,<let>)}
+3 concat(?{<m0>},?{<let>})
+4 concat(?{<m0>},contain(<let>))
+5 concat(?{<m0>},<let>)
+6 concat(<m0>,?{<let>})
+7 ?{<m0>,<let>}
+8 ?{<let>}
+9 ?{<m0>}
+10 ?{repeat(<let>,3)}
+11 ?{repeatrange(<let>,1,3)}

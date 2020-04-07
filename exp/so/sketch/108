@@ -1,0 +1,2 @@
+1 ?{startwith(concat(<0>,<9>))}
+2 ?{concat(<0>,<9>)}

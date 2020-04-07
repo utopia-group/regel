@@ -1,0 +1,15 @@
+1 ?{or(<vow>,<let>)}
+2 ?{<vow>,<let>}
+3 ?{repeatatleast(or(<vow>,<let>),5)}
+4 ?{repeatatleast(<vow>,5),<let>}
+5 ?{<let>}
+6 ?{<vow>}
+7 ?{repeatatleast(<vow>,5)}
+8 ?{repeat(or(<vow>,<let>),5)}
+9 ?{repeatrange(or(<vow>,<let>),1,5)}
+10 ?{repeat(<vow>,5),<let>}
+11 ?{repeatrange(<vow>,1,5),<let>}
+12 ?{repeat(<let>,5)}
+13 ?{repeatrange(<let>,1,5)}
+14 ?{repeat(<vow>,5)}
+15 ?{repeatrange(<vow>,1,5)}

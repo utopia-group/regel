@@ -1,0 +1,23 @@
+// natural language
+lines with words with either vowel , lower-case letter , or character
+
+// examples
+"a",+
+"A",+
+"1",+
+"@",+
+"e",+
+"I",+
+"0",+
+"aa",-
+"Ae",-
+"!as",-
+"",-
+"r3",-
+"Lkd",-
+"s3d",-
+
+
+
+// gt
+or(or(<vow>,<low>),<any>)

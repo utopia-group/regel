@@ -1,0 +1,23 @@
+// natural language
+lines which are starting with a lower-case letter before the string "!" or a letter
+
+// examples
+"z!",+
+"zZ",+
+"aZj",+
+"z!gjf",+
+"hCCd",+
+"jWa",+
+"mAeg42",+
+"",-
+"",-
+"!",-
+"!sd",-
+"",-
+"",-
+"",-
+
+
+
+// gt
+startwith(or(concat(<low>,contain(<m0>)),<let>))

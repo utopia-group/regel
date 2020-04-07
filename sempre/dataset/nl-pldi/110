@@ -1,0 +1,1 @@
+R0,"I want to find all strings starting with ""{"" but NOT with """\{"". I have only five words as input.","?{startwith(<{>)}"

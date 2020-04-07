@@ -1,0 +1,23 @@
+// natural language
+lines in which a lower-case letter is present prior to the appearance of capital letters
+
+// examples
+"aaaaaaAaa",+
+"m;;asdf;cjfdsFasdfF",+
+"k!0()sfasdhvyaQQQQAPasdfPPP",+
+"g~'"asdfoqpweru23$_AAaAaBcA",+
+"aB",+
+"aBa",+
+"1Zd3Z3",+
+"Aa",-
+"BB!z",-
+"CCCCCCCC",-
+"G",-
+"!Lm",-
+"~"Boo",-
+"!@#$%1234Moo",-
+
+
+
+// gt
+concat(contain(<low>),contain(<cap>))

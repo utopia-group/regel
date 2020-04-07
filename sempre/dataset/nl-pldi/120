@@ -1,0 +1,1 @@
+R0,"Is it possible to match lines that do not contain a specific word, e.g. ""hede"", using regular expression?","?{concat(<h>,concat(<e>,concat(<d>,<e>)))}"

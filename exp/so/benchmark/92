@@ -1,0 +1,18 @@
+// natural language
+I am now in need of a Reg Exp (for validation putsposes) that checks that the user enters a number according to the following rules. no alpha characters. can have decimal. can have commas for the thousands, but the commas must be correctly placed
+
+// example
+"1.23",+
+"100",+
+"1,234",+
+"1234",+
+"1,234.56",+
+"0.56",+
+"1,234,567.89",+
+"1.ab",-
+"1,2345.67",-
+"0,123.45",-
+"1.24,687",-
+
+// gt
+concat(or(concat(repeatrange(<num1-9>,0,2),repeatatleast(concat(<,>,repeat(<num>,3)),1)),or(concat(<num1-9>,star(<num>)),<0>)),optional(concat(<.>,repeatatleast(<num>,1))))

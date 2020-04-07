@@ -1,0 +1,23 @@
+// natural language
+items with either a vowel , a numeral , or an upper case letter preceding "!" .
+
+// examples
+"a!",+
+"123!",+
+"1!",+
+"A!",+
+"B!",+
+"2!",+
+"P!",+
+"",-
+" ",-
+"b!",-
+"!!",-
+" !",-
+"  ",-
+"ab",-
+
+
+
+// gt
+concat(or(or(<cap>,<vow>),<num>),contain(<m0>))

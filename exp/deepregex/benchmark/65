@@ -1,0 +1,23 @@
+// natural language
+lines end with the string "!" or a vowel
+
+// examples
+"A!f2a",+
+"!",+
+"a",+
+"C23!",+
+"zAzz3U",+
+"z!!32e",+
+"1553I",+
+"",-
+"!fj",-
+"!fJ2219",-
+"1ZfaV",-
+"39FF1C",-
+"i293AAc",-
+"U113AAJ",-
+
+
+
+// gt
+endwith(or(<m0>,<vow>))

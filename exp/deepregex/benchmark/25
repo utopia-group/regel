@@ -1,0 +1,23 @@
+// natural language
+lines containing a lower-case letter preceding a letter , zero or more times
+
+// examples
+"aa",+
+"aaa",+
+"aaaa",+
+"aaaaa",+
+"aaaaaa",+
+"aaaaaaa",+
+"aaaaaaaa",+
+"@a",-
+"@b",-
+"!a",-
+"Aa",-
+"0a",-
+"1a",-
+"A",-
+
+
+
+// gt
+star(concat(<low>,contain(<let>)))

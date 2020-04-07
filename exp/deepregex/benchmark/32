@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" before a number with a character after
+
+// examples
+"!0a",+
+"!100a",+
+"!1000b",+
+"!2c",+
+"!3a",+
+"!!4a",+
+"!!!1a",+
+"!0",-
+"!a",-
+"a!",-
+"a0",-
+"0",-
+"a",-
+"!a0",-
+
+
+
+// gt
+concat(<m0>,contain(concat(<num>,contain(<any>))))

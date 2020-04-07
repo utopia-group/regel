@@ -1,0 +1,23 @@
+// natural language
+lines starting with string "!" followed by vowel at least once
+
+// examples
+"!a",+
+"!e",+
+"!i",+
+"!o",+
+"!u",+
+"!a234absdfsdf",+
+"!yuZXFHSDjf19231923",+
+"!123",-
+"!ttrrpw",-
+"!zzccddbb",-
+"a",-
+"123",-
+"",-
+"f3fsdfwr",-
+
+
+
+// gt
+repeatatleast(startwith(concat(<m0>,contain(<vow>))),1)

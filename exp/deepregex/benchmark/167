@@ -1,0 +1,23 @@
+// natural language
+lines with words ending in zero or more letters
+
+// examples
+"a",+
+"b",+
+"ab",+
+"1a",+
+"1ab",+
+"!ab",+
+"!b",+
+" ",-
+"12",-
+"12a12",-
+"abc12",-
+"abc1",-
+"!,,",-
+"ab!!",-
+
+
+
+// gt
+star(endwith(<let>))

@@ -1,0 +1,15 @@
+// natural language
+I'm trying to write a regular expression to check whether or not a proposed name is valid in a gaming platform. Rules: Name must contain at least 3 and no more than 20 letters. Name must start with a upper case letter. Name must never have two uppercase letters in a row. Spaces are allowed, but must be preceded by a letter and be followed by an uppercase letter. Hyphens are allowed, but must be preceded by a letter and be followed by a lowercase letter. All uppercase letters must be followed by a lowercase letter unless they are followed by a space or hyphen.
+
+// example
+"Foo",+
+"Hello World",+
+"Hello-world",+
+"Bigsby Platt-slatt",+
+"foo",-
+"Hello world",-
+"Hello-World",-
+"33333333333",-
+
+// gt
+and(repeatrange(<any>,3,20),and(startwith(<cap>),and(not(contain(concat(<cap>,<cap>))),and(not(contain(concat(not(<let>),< >))),and(not(contain(concat(< >,not(<cap>)))),and(not(contain(concat(not(<let>),<->))),and(not(contain(concat(<->,not(<low>)))),not(contain(concat(<cap>,not(or(<low>,or(<->,< >)))))))))))))

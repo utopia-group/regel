@@ -1,0 +1,23 @@
+// natural language
+lines containing 4 or more of the string "!" before a number
+
+// examples
+"!!!!1",+
+"!!!!123",+
+"!!!!!4",+
+"a!!!!1",+
+"1!!!!1a",+
+"1!!!!1",+
+"!!!!!!2",+
+"",-
+" ",-
+"a",-
+"1",-
+"!",-
+"!!",-
+"!!!1",-
+
+
+
+// gt
+concat(repeatatleast(contain(<m0>),4),contain(<num>))

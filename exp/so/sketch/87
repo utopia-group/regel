@@ -1,0 +1,8 @@
+1 sep(?{<num>,repeatrange(<num>,1,3)},<.>)
+2 ?{repeatrange(<num>,1,3)}
+3 ?{<num>,repeatrange(<num>,1,3)}
+4 sep(?{<num>},<.>)
+5 ?{<num>,repeat(<num>,3)}
+6 ?{repeat(<num>,3)}
+7 sep(?{<num>,repeat(<num>,3)},<.>)
+8 ?{<num>}

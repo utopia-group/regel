@@ -1,0 +1,23 @@
+// natural language
+lines with only the string "!" or "@" at least once
+
+// examples
+"!",+
+"@",+
+"!!",+
+"@@",+
+"!@",+
+"!@!",+
+"@!!@",+
+"other",-
+"123",-
+"",-
+"character",-
+"##",-
+"# ! mixed",-
+"mix @ 66",-
+
+
+
+// gt
+repeatatleast(or(<m0>,<m1>),1)

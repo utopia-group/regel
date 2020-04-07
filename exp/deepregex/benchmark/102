@@ -1,0 +1,23 @@
+// natural language
+lines stating with 4 or more letters or the string "!"
+
+// examples
+"abcdk",+
+"!",+
+"!a",+
+"!fasf",+
+"jfkla;fj",+
+"afjkdlasfjs",+
+"afasdlk;fjkasd;jfkl",+
+"?asfd",-
+"?",-
+"a",-
+"aa",-
+"aaa",-
+"a",-
+"stk",-
+
+
+
+// gt
+startwith(or(repeatatleast(<let>,4),<m0>))

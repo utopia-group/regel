@@ -1,0 +1,23 @@
+// natural language
+lines with zero or more of the string "!" before a vowel
+
+// examples
+"!a",+
+"!!e",+
+"!A",+
+"!AEO",+
+"!aEi",+
+"!abbbb",+
+"!!!ae",+
+"",-
+" ",-
+"1",-
+"2",-
+"12",-
+"b",-
+"!b",-
+
+
+
+// gt
+concat(star(<m0>),contain(contain(<vow>)))

@@ -1,0 +1,7 @@
+Sketch,"and(R1,and(R2,and(R3,and(R4,and(R5,R6)))))"
+R1,"Name must contain at least 3 and no more than 20 letters","?{repeat(<any>,3,20)}"
+R2,"Name must start with a upper case letter","?{startwith(<cap>)}"
+R3,"Name must never have two upper case letters in a row","?{repeat(<cap>,2)}"
+R4,"Spaces are allowed, but must be preceded by a letter and be followed by an uppercase letter","?{concat(<let>,concat(< >,<cap>))}"
+R5,"Hyphens are allowed, but must be preceded by a letter and be followed by a lowercase letter","?{concat(<let>,concat(<->,<low>))}"
+R6,"All uppercase letters must be followed by a lowercase letter unless they are followed by a space or hyphen","?{concat(<cap>,<low>),concat(<cap>,or(< >,<->))}"

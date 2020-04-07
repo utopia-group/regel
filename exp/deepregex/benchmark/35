@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" , letter , or character before string "@"
+
+// examples
+"!@",+
+"a@",+
+"A@",+
+"0@",+
+"aa@",+
+"@@",+
+"a0@",+
+"",-
+"@",-
+"@a",-
+"@b",-
+"@c",-
+"@A",-
+"@!",-
+
+
+
+// gt
+concat(or(or(<m0>,<let>),<any>),contain(<m1>))

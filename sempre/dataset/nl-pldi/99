@@ -1,0 +1,4 @@
+Sketch,"and(R1,and(R2,R3))"
+R1,"contains only [A-Z0-9.*] (i.e. capital letters, numbers, ""."" and ""*"")","?{repeatatleast(or(<cap>,or(<num>,or(<.>,<*>))))}"
+R2,"1 - 15 characters in length","?{repeatrange(<any>,1,15)}"
+R3,"Must contain a ""*""but only once","?{contain(?{<*>})}"

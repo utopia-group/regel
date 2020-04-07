@@ -1,0 +1,23 @@
+// natural language
+lines with words and a letter or capital letter
+
+// examples
+"h",+
+"H",+
+"hello",+
+"Hello",+
+"hellO",+
+"words",+
+"cool",+
+"hello!",-
+"",-
+",,,",-
+"HELLO!",-
+"tre,llo",-
+"you're",-
+"012",-
+
+
+
+// gt
+repeatatleast(or(<let>,<cap>),1)

@@ -1,0 +1,23 @@
+// natural language
+lines with a capital letter , 5 or more times before a vowel in them
+
+// examples
+"AAAAAa",+
+"BBBBBa",+
+"BBBBBBe",+
+"BBBBBoui",+
+"ABCDEFGA",+
+"ABCDEe",+
+"ABCDEFGa",+
+"",-
+" ",-
+"A",-
+"a",-
+"1",-
+"AA",-
+"AAA",-
+
+
+
+// gt
+concat(repeatatleast(<cap>,5),contain(<vow>))

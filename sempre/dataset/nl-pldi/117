@@ -1,0 +1,1 @@
+R0,"I want a regular expression for a string This string can contain ""*"" and ""?"" in it. But should have at least 3 alphanumeric character in it","?{contain(or(<*>,<?>)),repeatatleast(<alphanum>,3)}"

@@ -1,0 +1,14 @@
+// natural language
+What is the regex that matches 6 characters, first is a letter, others are numbers
+
+// examples
+"u78945",+
+"s56123",+
+"456a12",-
+"78561d",-
+"1234567",-
+
+
+
+// gt
+concat(<let>,repeat(<num>,5))

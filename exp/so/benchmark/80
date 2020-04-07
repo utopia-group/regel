@@ -1,0 +1,13 @@
+// natural language
+the number with 10 or more digits and that number should not have "$" symbol in front of it.
+
+// examples
+"1234567890",+
+"$123456789012",-
+"a123456789",-
+"123456789",-
+
+
+
+// gt
+and(repeatatleast(<num>,10),not(startwith(<$>)))

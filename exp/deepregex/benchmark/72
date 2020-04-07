@@ -1,0 +1,23 @@
+// natural language
+lines with a lower-case letter followed by a vowel at least once in them
+
+// examples
+"ca",+
+"bec",+
+"bidf",+
+"zoggd",+
+"dutttfzxi",+
+"haffssa",+
+"ga234aa",+
+"",-
+"dddddd",-
+"cc234234",-
+"e",-
+"4234ffffddd",-
+"ccczzz",-
+"4234fff",-
+
+
+
+// gt
+repeatatleast(concat(<low>,contain(<vow>)),1)

@@ -1,0 +1,8 @@
+1 ?{repeatatleast(<any>,7)}
+2 ?{<any>}
+3 ?{repeatatleast(<let>,7)}
+4 ?{<let>}
+5 ?{repeat(<any>,7)}
+6 ?{repeatrange(<any>,1,7)}
+7 ?{repeat(<let>,7)}
+8 ?{repeatrange(<let>,1,7)}

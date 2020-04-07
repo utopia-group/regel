@@ -1,0 +1,23 @@
+// natural language
+lines ending with a lower-case letter followed by the string "!" at least once in them
+
+// examples
+"a!",+
+"this will work!",+
+"##$@234523adfFEAa!",+
+"b;lkjereadf!56",+
+"nothign here!fg7!",+
+"Why not!",+
+"WEREk!",+
+"!",-
+"",-
+"F32423!",-
+"%!",-
+"0!",-
+"K!",-
+"LKJ::LKJK:IO!",-
+
+
+
+// gt
+endwith(repeatatleast(concat(<low>,contain(<m0>)),1))

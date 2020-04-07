@@ -1,0 +1,11 @@
+// natural language
+Given a string, write a Python program to check whether the given string is ending with only alphanumeric character or Not.
+
+// example
+"ankitrai326",+
+"geeksforgeeks",+
+"ankirai@",-
+"ankit.",-
+
+// gt
+endwith(<alphanum>)

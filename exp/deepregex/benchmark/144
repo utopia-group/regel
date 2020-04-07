@@ -1,0 +1,23 @@
+// natural language
+lines with words without only a character
+
+// examples
+"qw",+
+"12",+
+"1d",+
+"g6",+
+"*6",+
+"",+
+"D4g#fh6m",+
+"a",-
+"1",-
+"#",-
+"!",-
+"M",-
+"0",-
+"@",-
+
+
+
+// gt
+not(<any>)

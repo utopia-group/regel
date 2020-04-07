@@ -1,0 +1,12 @@
+// natural language
+I am writing a regular expression to validate a zip code, where it should have exactly a length of 6 characters, the first 3 characters are digits, the last 2 also, but the character 4 should be a space.
+
+// examples
+"123 45",+
+"123456",-
+"123 4",-
+
+
+
+// gt
+concat(repeat(<num>,3),concat(< >,repeat(<num>,2)))

@@ -1,0 +1,23 @@
+// natural language
+lines with words ending in string "!" or "@"
+
+// examples
+"yay!",+
+"yay@",+
+"yay I'm happy!",+
+"yay I'm happy@",+
+"!@!",+
+"@!@",+
+"!",+
+"yay! I'm happy",-
+"",-
+"!aaa",-
+"@aaa",-
+"something with no symbols",-
+"!!!@@@ending",-
+"!@!a",-
+
+
+
+// gt
+endwith(or(<m0>,<m1>))

@@ -1,0 +1,2 @@
+Sketch,"concat(concat(R1,concat(<=>,R1)),star(concat(<;>,concat(R1,concat(<=>,R1)))))"
+R1,"contain anything except ""="" and "";"" and cannot be blank or empty with spaces","?{contain(or(<=>,<;>))}"

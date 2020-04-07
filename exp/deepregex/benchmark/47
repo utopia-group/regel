@@ -1,0 +1,23 @@
+// natural language
+lines which have a lower-case letter followed by a character before a capital letter
+
+// examples
+"aaA",+
+"a!B",+
+"b;G",+
+"k2$M",+
+"u,3N",+
+"p4A5N",+
+"asS",+
+"Asq",-
+"b;8",-
+"c`a",-
+"z!'",-
+"zZz",-
+"Zz<",-
+"`kk",-
+
+
+
+// gt
+concat(concat(<low>,contain(<any>)),contain(<cap>))

@@ -1,0 +1,7 @@
+1 sep(?{repeat(<any>,3)},<,>)
+2 ?{<,>}
+3 sep(?{<any>},<,>)
+4 ?{repeat(<any>,3)}
+5 ?{repeat(<any>,3),<,>}
+6 ?{<any>}
+7 ?{<any>,<,>}

@@ -1,0 +1,23 @@
+// natural language
+lines with either the string "!" , the string "@" , or a capital letter followed by the string "#"
+
+// examples
+"!#",+
+"@#",+
+"A#",+
+"!#",+
+"B#",+
+"C#",+
+"D#",+
+"!",-
+"#",-
+"c#",-
+"@",-
+"1@",-
+"2@",-
+"1#",-
+
+
+
+// gt
+concat(or(or(<m0>,<m1>),<cap>),contain(<m2>))

@@ -1,0 +1,1 @@
+R0,"I want to validate next formats: Decimal numbers with max 3 decimal places, but, user can write 5 digits. Exclude 0","?{repeatrange(<num>,1,3),repeat(<num>,5),not(<0>)}"

@@ -1,0 +1,23 @@
+// natural language
+items terminating withe a vowel at least twice .
+
+// examples
+"aa",+
+"somethingaa",+
+"something elsee",+
+",,aa",+
+"22twentytwooooo",+
+"uwuu",+
+"xii",+
+"yayy",-
+"y is not a vowel :'(",-
+",,,",-
+"",-
+"sadd",-
+"reaccs",-
+"only!",-
+
+
+
+// gt
+endwith(repeatatleast(<vow>,2))

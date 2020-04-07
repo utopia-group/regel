@@ -1,0 +1,23 @@
+// natural language
+lines which are ending with a lower-case letter followed by the string "!" or a number
+
+// examples
+"a!",+
+"a4",+
+"Gg5",+
+"Fh!",+
+"3Dg6",+
+"d3h#4!",+
+"23dT2!",+
+"QD!",-
+"1!",-
+"5678!",-
+"3a",-
+"!hyk",-
+"gfds",-
+"h",-
+
+
+
+// gt
+endwith(or(concat(<low>,contain(<m0>)),<num>))

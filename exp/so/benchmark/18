@@ -1,0 +1,16 @@
+// natural language
+accept numeric values that are seven or ten digits
+
+// examples
+"0123456",+
+"1234567",+
+"0123456789",+
+"1233467890",+
+"123456",-
+"12345678",-
+"123456789",-
+
+
+
+// gt
+or(repeat(<num>,7),repeat(<num>,10))

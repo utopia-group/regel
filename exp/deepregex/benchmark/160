@@ -1,0 +1,23 @@
+// natural language
+lines with character followed by vowel at least once
+
+// examples
+"1a",+
+"2a",+
+"ba",+
+"!a",+
+"1aaa",+
+"234aeiou",+
+"!23a",+
+"",-
+" ",-
+"a",-
+"1",-
+"at",-
+"1t",-
+"!t",-
+
+
+
+// gt
+repeatatleast(concat(<any>,contain(<vow>)),1)

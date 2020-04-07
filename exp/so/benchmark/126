@@ -1,0 +1,9 @@
+// natural language
+check if that string contains any ""g"" followed by one or more ""e"" ’s in it, otherwise, print No match
+
+// example
+"geeks for geeks",+
+"Graphic era",-
+
+// gt
+contain(concat(<g>,<e>))

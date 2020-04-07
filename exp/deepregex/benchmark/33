@@ -1,0 +1,23 @@
+// natural language
+lines which are starting with a lower-case letter or a capital letter
+
+// examples
+"a",+
+"A",+
+"aa",+
+"AA",+
+"aA",+
+"Aa",+
+"a0",+
+"0",-
+"00",-
+"0a",-
+"0!",-
+"!",-
+"!0",-
+"@",-
+
+
+
+// gt
+startwith(or(<low>,<cap>))

@@ -1,0 +1,23 @@
+// natural language
+lines not starting in string "!"
+
+// examples
+"normal",+
+"good",+
+"#other",+
+"123",+
+"not staring!",+
+"else !a",+
+"@",+
+"!",-
+"!some",-
+"!number123",-
+"!!",-
+"!#",-
+"!AE 123 W",-
+"!cc",-
+
+
+
+// gt
+not(startwith(<m0>))

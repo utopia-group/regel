@@ -1,0 +1,23 @@
+// natural language
+lines containing  letter , 5 or more times
+
+// examples
+"abcde",+
+"bbbbb",+
+"1bbbbb",+
+"1bbbbb2",+
+"1bbbbbb2",+
+"bbbbbb",+
+"bbbbbbbbb",+
+" ",-
+"",-
+"a",-
+"ab",-
+"abc",-
+"abcd",-
+"123",-
+
+
+
+// gt
+contain(repeatatleast(<let>,5))

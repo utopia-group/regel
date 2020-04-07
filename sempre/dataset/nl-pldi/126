@@ -1,0 +1,1 @@
+R0,"check if that string contains any ""g"" followed by one or more ""e"" ’s in it, otherwise, print No match","?{concat(<g>,<e>)}"

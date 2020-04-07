@@ -1,0 +1,16 @@
+// natural language
+I want to develop one regular expression which validates only strings which have "A", "B" or "C"
+
+// examples
+"ABBCCAABBC",+
+"ABCAAAAAA",+
+"A",+
+"ABBC",+
+"ABBDF",-
+"ASD",-
+"",-
+
+
+
+// gt
+repeatatleast(or(<A>,or(<B>,<C>)),1)

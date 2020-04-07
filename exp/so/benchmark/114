@@ -1,0 +1,12 @@
+// natural language
+It will always expect optional 2 numeric number with hyphen (""-"") after ""1566"".
+
+// example
+"1566",+
+"1566-02",+
+"1566-45",+
+"1566-AC",-
+"1566 ",-
+
+// gt
+concat(concat(<1>,concat(<5>,concat(<6>,<6>))),optional(concat(<->,repeat(<num>,2))))

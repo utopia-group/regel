@@ -1,0 +1,2 @@
+Sketch,"or(R1,concat(R1,concat(<+>,R1)))"
+R1,"whole number from ""1"" - ""10""","?{concat(<1>,<0>)}"

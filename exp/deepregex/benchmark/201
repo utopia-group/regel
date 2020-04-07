@@ -1,0 +1,23 @@
+// natural language
+lines with 5 letters before a character
+
+// examples
+"abcde1",+
+"abcde2",+
+"abcdeF",+
+"abcdef",+
+"abcde!",+
+"AAAAA1",+
+"BBBBBB",+
+"",-
+" ",-
+"1",-
+"a",-
+"aa",-
+"aaaa",-
+"aaaaa",-
+
+
+
+// gt
+concat(repeatatleast(<let>,5),contain(<any>))

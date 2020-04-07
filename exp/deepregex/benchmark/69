@@ -1,0 +1,23 @@
+// natural language
+lines that don't begin with a capital letter or vowel
+
+// examples
+"cAA1!",+
+"@AAA",+
+"2abAaZ",+
+"3ac!!",+
+"!347AA",+
+"555@@aa",+
+"",+
+"Ai2ZZFF23",-
+"e2GGasd",-
+"IIII",-
+"o",-
+"Udfa",-
+"Eaf",-
+"u92!!f",-
+
+
+
+// gt
+not(startwith(or(<cap>,<vow>)))

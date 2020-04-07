@@ -1,0 +1,23 @@
+// natural language
+lines that end with "!" or have just have a number
+
+// examples
+"!",+
+"1",+
+"askjdf!",+
+"@ifjsdfj2",+
+"A234fasdf3",+
+"23fjasdf!",+
+"429-1jf!",+
+"!a",-
+"",-
+"c!A",-
+"1f3Z",-
+"f23!!x",-
+"1dsasdf!F",-
+"C",-
+
+
+
+// gt
+endwith(or(<m0>,<num>))

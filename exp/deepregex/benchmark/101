@@ -1,0 +1,23 @@
+// natural language
+lines without zero or more of a number and letter
+
+// examples
+"a",+
+"aa",+
+"aaa",+
+"aaaa",+
+"aaaaa",+
+"aaaaaaa",+
+"aaaaaaaaaa",+
+"0",-
+"1",-
+"2",-
+"4k",-
+"56k",-
+"0z",-
+"0000",-
+
+
+
+// gt
+and(not(<num>),star(<let>))

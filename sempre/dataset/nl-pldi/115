@@ -1,0 +1,1 @@
+R0,"I only want the first one, which contains only one ""."" and starts with ""abc""","?{<.>concat(<a>,concat(<b>,<c>))}"

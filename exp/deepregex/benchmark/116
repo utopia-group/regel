@@ -1,0 +1,23 @@
+// natural language
+lines containing either lower-case letter , a letter , or character
+
+// examples
+"l",+
+"L",+
+"l and 1",+
+"Letter",+
+"33",+
+"!a!",+
+"##",+
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+
+
+
+// gt
+contain(or(or(<low>,<let>),<any>))

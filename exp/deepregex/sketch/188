@@ -1,0 +1,5 @@
+1 ?{<m0>,<vow>}
+2 ?{<m0>}
+3 ?{<vow>}
+4 ?{repeat(<vow>,7)}
+5 ?{repeatrange(<vow>,1,7)}

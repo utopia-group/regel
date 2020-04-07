@@ -1,0 +1,23 @@
+// natural language
+lines with a character occuring before the string "!" , 5 or more times
+
+// examples
+"a!!!!!",+
+"ab!!!!!!",+
+"~!!!!!!!!",+
+"a!!!!!!!!",+
+";!!!!!!!!!!!!!!",+
+"abc1~!3452!!!!!",+
+"!!!!!!",+
+"!!!!!",-
+"abcd",-
+"!qbc",-
+"a!!!!",-
+"b!!!",-
+"?!!",-
+"a!",-
+
+
+
+// gt
+concat(<any>,contain(repeatatleast(<m0>,5)))

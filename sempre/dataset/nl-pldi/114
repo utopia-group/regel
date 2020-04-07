@@ -1,0 +1,1 @@
+R0,"It will always expect optional 2 numeric number with hyphen (""-"") after ""1566"".","concat(?{concat(<1>,concat(<5>,concat(<6>,<6>)))},?{repeat(<num>,2),<->})"

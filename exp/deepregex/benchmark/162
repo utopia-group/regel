@@ -1,0 +1,23 @@
+// natural language
+lines that don't only contain a letter , once or more
+
+// examples
+"",+
+" ",+
+"1",+
+"!",+
+"@",+
+"2",+
+"1234",+
+"a",-
+"b",-
+"A",-
+"B",-
+"AB",-
+"a",-
+"B",-
+
+
+
+// gt
+not(repeatatleast(<let>,1))

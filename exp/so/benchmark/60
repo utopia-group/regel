@@ -1,0 +1,17 @@
+// natural language
+I want to write a regular expression using jQuery to validate input fields which will not allow special char at end and the string length should be in between 3 - 25
+
+// examples
+"abc#123",+
+"a%scsd",+
+"abc453&",-
+"ab",-
+"123%",-
+"abacvfrdfrgthgfrthgf22222",+
+"abacvfrdfrgthgfrthgf222222",-
+
+
+
+
+// gt
+"abacvfrdfrgthgfrthgf222222",-

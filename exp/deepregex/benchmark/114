@@ -1,0 +1,23 @@
+// natural language
+lines with a number before string "!" and a character
+
+// examples
+"1!1",+
+"23!a",+
+"45!abc",+
+"45! K",+
+"09! 23",+
+"8 !h",+
+"9 !12",+
+"noNumber!",-
+"onlyNumber123!",-
+"!has character",-
+"! abc!abc",-
+"##!",-
+"abc ! ##",-
+"no e",-
+
+
+
+// gt
+concat(<num>,contain(and(<m0>,<any>)))

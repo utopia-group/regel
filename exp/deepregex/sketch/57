@@ -1,0 +1,13 @@
+1 ?{concat(<let>,contain(<vow>))}
+2 concat(<let>,?{<vow>})
+3 ?{concat(<let>,<vow>)}
+4 concat(?{<let>},?{<vow>})
+5 concat(?{<let>},contain(<vow>))
+6 concat(?{<let>},<vow>)
+7 ?{<let>,<vow>}
+8 ?{<let>,repeat(<vow>,2)}
+9 ?{<let>,repeatrange(<vow>,1,2)}
+10 ?{<vow>}
+11 ?{<let>}
+12 ?{repeat(<vow>,2)}
+13 ?{repeatrange(<vow>,1,2)}

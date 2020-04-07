@@ -1,0 +1,14 @@
+1 ?{startwith(<low>)}
+2 ?{startwith(repeatatleast(<low>,4))}
+3 ?{<low>}
+4 ?{repeatatleast(<low>,4)}
+5 ?{startwith(<let>)}
+6 ?{<let>}
+7 ?{startwith(repeat(<low>,4))}
+8 ?{startwith(repeatrange(<low>,1,4))}
+9 ?{startwith(repeat(<let>,4))}
+10 ?{startwith(repeatrange(<let>,1,4))}
+11 ?{repeat(<low>,4)}
+12 ?{repeatrange(<low>,1,4)}
+13 ?{repeat(<let>,4)}
+14 ?{repeatrange(<let>,1,4)}

@@ -1,0 +1,18 @@
+// natural language
+I need to match only strings that include one character "/" between numbers or integer numbers.
+
+// examples
+"1",+
+"1/2",+
+"Some_text",-
+"some/test",-
+"Some",-
+"2///2",-
+"/12",-
+"1/2/",-
+"1.2/3",-
+
+
+
+// gt
+concat(<num>,optional(concat(</>,<num>)))

@@ -1,0 +1,13 @@
+// natural language
+The input box should accept alphanumeric with no space and it should also allow the user to use the characters like "~" "!" "@" "#" "$" "-" "_" any where in the string, except these characters non of the other characters should be allowed like ("%",  "&", "^" etc). It should not allow leading/trailing whitespace also.
+
+// examples
+"ab@4_w",+
+"sd!tye123",+
+"sd%tye123",-
+"sd*tye123",-
+
+
+
+// gt
+repeatatleast(or(or(<let>,<num>),or(<~>,or(<!>,or(<@>,or(<#>,or(<$>,or(<->,<_>))))))),1)

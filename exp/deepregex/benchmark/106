@@ -1,0 +1,23 @@
+// natural language
+the lines that have a vowel coming before a character
+
+// examples
+"aC",+
+"a C",+
+"a char 1",+
+"www a char",+
+"!!! e c",+
+"e c 123",+
+"2 @ i L",+
+"123",-
+"###",-
+"",-
+"B c",-
+"a",-
+"ch a",-
+"!! e",-
+
+
+
+// gt
+contain(concat(<vow>,contain(<any>)))

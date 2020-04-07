@@ -1,0 +1,23 @@
+// natural language
+lines with the string "!" containing only a lower-case letter
+
+// examples
+"!a",+
+"a!",+
+"a",+
+"!!a",+
+"!!!!a",+
+"!a!a",+
+"!a!b",+
+"!A",-
+"Anything with caps",-
+"",-
+"A!",-
+"1!",-
+"!1",-
+"a!A",-
+
+
+
+// gt
+repeatatleast(or(<m0>,<low>),1)

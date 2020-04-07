@@ -1,0 +1,23 @@
+// natural language
+lines with 3 or more of a vowel or character
+
+// examples
+"abc",+
+"aeiou",+
+"bcd",+
+"123",+
+"a12",+
+"!!!",+
+"abc123",+
+"",-
+" ",-
+"1",-
+"a",-
+"b",-
+"A",-
+"12",-
+
+
+
+// gt
+repeatatleast(or(<vow>,<any>),3)

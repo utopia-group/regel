@@ -1,0 +1,1 @@
+R0,"match strings which do not contain two consecutive underscores, i.e., ""__""",?{concat(<_>,<_>)}

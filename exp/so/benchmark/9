@@ -1,0 +1,16 @@
+// natural language
+I want this value to accept up to 18 digits before the decimal, and 1 digit after. With the decimal point and the digit after it being optional
+
+// examples
+"1.0",+
+"100.1",+
+"123456789123456789.2",+
+"123456789123456789",+
+"1.01",-
+"1234567891234567891",-
+"1234567891234567891.0",-
+
+
+
+// gt
+concat(repeatrange(<num>,1,18),optional(concat(<.>,<num>)))

@@ -1,0 +1,10 @@
+// natural language
+I only want the first one, which contains only one ""."" and starts with ""abc""
+
+// example
+"abc.def",+
+"abc.fgh.ijk",-
+"abc.m.nop.pqrs",-
+
+// gt
+concat(concat(<a>,concat(<b>,<c>)),concat(<.>,repeatatleast(<let>,1)))

@@ -1,0 +1,4 @@
+antlr.jar=lib/antlr-4.7.1-complete.jar
+javatuples.jar=lib/javatuples-1.2.jar
+automaton.jar=lib/automaton.jar
+z3.jar=lib/com.microsoft.z3.jar

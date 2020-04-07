@@ -1,0 +1,23 @@
+// natural language
+lines with letter followed by vowel , 3 or more times
+
+// examples
+"lalala",+
+"kekeke",+
+"oooooo",+
+"sososo",+
+"kukuku",+
+"fifififififififififif",+
+"what is happening right now will this work",+
+"kkkkkk",-
+"fofo",-
+"fffooo",-
+"kckckc",-
+"kukuk",-
+"888888",-
+"############",-
+
+
+
+// gt
+repeatatleast(concat(<let>,contain(<vow>)),3)

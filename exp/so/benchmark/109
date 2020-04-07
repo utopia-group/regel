@@ -1,0 +1,13 @@
+// natural language
+Here are the conditions for my regular expression: must start with ""09"". total length is 9.
+
+// example
+"aab",+
+"abb",+
+"aaba",+
+"Λ",-
+"ab",-
+"abaa",-
+
+// gt
+or(startwith(concat(<a>,<a>)),endwith(concat(<b>,<b>)))

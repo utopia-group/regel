@@ -1,0 +1,23 @@
+// natural language
+lines that contain the string "!" followed by a number , a letter , or the string "@"
+
+// examples
+"!5l",+
+"!@",+
+"!ltter",+
+"!a",+
+"!@@",+
+"!ak@",+
+"!fikg",+
+"asdflk",-
+"a!",-
+"5!",-
+"@!",-
+"letter",-
+"&",-
+"a!5l",-
+
+
+
+// gt
+concat(<m0>,contain(or(or(<num>,<m1>),<let>)))

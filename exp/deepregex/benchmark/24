@@ -1,0 +1,23 @@
+// natural language
+lines with characters or the string "!" followed by the string "@"
+
+// examples
+"!@",+
+"a@",+
+"ab@",+
+"12#",+
+"1",+
+"Ab@",+
+"Ab,!@",+
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+"",-
+
+
+
+// gt
+or(contain(<any>),concat(<m0>,contain(<m1>)))

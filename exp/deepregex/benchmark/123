@@ -1,0 +1,23 @@
+// natural language
+items with a small letter preceding either "!" , a character , or an upper case letter .
+
+// examples
+"a!",+
+"aB",+
+"aP",+
+"aBaB",+
+"cA",+
+"cuA",+
+"ccU",+
+"!a",-
+"BB",-
+"Nosmall",-
+"Veryvery",-
+"!B",-
+"B!",-
+"Bus",-
+
+
+
+// gt
+concat(<low>,contain(or(or(<cap>,<m0>),<any>)))
