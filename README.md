@@ -1,4 +1,4 @@
-# REGEL: Regular Expression Generation from Examples and Langauage
+# REGEL: Regular Expression Generation from Examples and Language
 
 This is the code repository for the paper ["Multi-modal Synthesis of Regular Expressions"](https://arxiv.org/abs/1908.03316).
 
