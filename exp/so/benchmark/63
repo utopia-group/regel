@@ -1,9 +1,6 @@
 // natural language
 R1: It is a version number
 
-// visual format
-concat(R1,repeatatleast(concat(<.>,R1),1))
-
 // example
 "1.1",+
 "1.1.3.4",+
@@ -16,5 +13,5 @@ concat(R1,repeatatleast(concat(<.>,R1),1))
 // gt
 concat(repeatatleast(<num>,1),repeatatleast(concat(<.>,repeatatleast(<num>,1)),1))
 
-// gt
-concat(repeatatleast(<num>,1),repeatatleast(concat(<.>,repeatatleast(<num>,1)),1))
+// visual format
+concat(R1,repeatatleast(concat(<.>,R1),1))

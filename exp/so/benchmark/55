@@ -3,9 +3,6 @@ R1: there is at least one digit. (could be zero)
 R2: can not begin with more than one ""0""
 R3: the number has precisely two decimal places
 
-// visual format
-concat(and(R1,R2),R3)
-
 // example
 "0.01",+
 "0.12",+
@@ -28,3 +25,6 @@ concat(and(R1,R2),R3)
 
 // gt
 and(not(startwith(repeatatleast(<0>,2))),concat(repeatatleast(<num>,1),concat(<.>,repeat(<num>,2))))
+
+// visual format
+concat(and(R1,R2),R3)

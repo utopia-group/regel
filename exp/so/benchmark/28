@@ -4,12 +4,12 @@ R2: compulsory, it is in range from ""1"" to ""6""
 R3: compulsory, it must be a natural number
 R4: optional, it is a natural number
 
-// visual format
-concat(concat(<A>,concat(R1,concat(<B>,concat(R2,<_>)))),concat(R3,concat(<_>,R4)))
-
 // example
 "A111B2_3_.exe",+
 "A111B2_3_0.exe",-
 
 // gt
 concat(concat(<A>, concat(<B>,concat(or(<1>,or(<2>,or(<3>,or(<4>,or(<5>,<6>))))),concat(<_>,concat(<num>,concat(<_>,concat(optional(<num1-9>),concat(<.>,concat(<e>,concat(<x>,<e>))))))))))
+
+// visual format
+concat(concat(<A>,concat(R1,concat(<B>,concat(R2,<_>)))),concat(R3,concat(<_>,R4)))

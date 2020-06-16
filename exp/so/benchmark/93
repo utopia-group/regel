@@ -1,9 +1,6 @@
 // natural language
 R1: whole number from ""1"" - ""10""
 
-// visual format
-or(R1,concat(R1,concat(<+>,R1)))
-
 // example
 "4",+
 "5+1",+
@@ -13,3 +10,6 @@ or(R1,concat(R1,concat(<+>,R1)))
 
 // gt
 concat(or(<num1-9>,concat(<1>,<0>)),optional(concat(<+>,or(<num1-9>,concat(<1>,<0>)))))
+
+// visual format
+or(R1,concat(R1,concat(<+>,R1)))
