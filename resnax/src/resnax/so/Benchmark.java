@@ -64,8 +64,8 @@ import java.util.*;
           for (; line.isEmpty() || line.startsWith("//"); line = br.readLine())
             ;
           for (; line != null && !line.isEmpty(); line = br.readLine()) {
-            if (line.startsWith("//")) continue;
-            break;
+            // if (line.startsWith("//")) continue;
+            ;
           }
         }
 

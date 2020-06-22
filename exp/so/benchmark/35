@@ -3,9 +3,6 @@ R1: ""*"" or nothing
 R2: at least two characters
 R3: ""*"" or nothing
 
-// visual format
-concat(R1,concat(R2,R3))
-
 // example
 "Mu*",+
 "*pa",+
@@ -17,3 +14,6 @@ concat(R1,concat(R2,R3))
 
 // gt
 concat(optional(<*>),concat(repeatatleast(<let>,2),optional(<*>)))
+
+// visual format
+concat(R1,concat(R2,R3))
