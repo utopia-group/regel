@@ -10,8 +10,5 @@ I want to write a regular expression using jQuery to validate input fields which
 "abacvfrdfrgthgfrthgf22222",+
 "abacvfrdfrgthgfrthgf222222",-
 
-
-
-
 // gt
-"abacvfrdfrgthgfrthgf222222",-
+and(not(endwith(<spec>)),repeatrange(<any>,3,25))

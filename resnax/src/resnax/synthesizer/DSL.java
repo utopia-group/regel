@@ -580,6 +580,26 @@ import resnax.synthesizer.solver.SolverNode;
           this.nameToSymbol.put(name, constant);
         }
 
+        {
+          String name = "<{>";
+          String pattern = "{";
+          double cost = Main.TERMINAL_COST;
+          NullaryTerminalSymbol constant = new NullaryTerminalSymbol(name, pattern, cost);
+
+          this.terminalSymbols.add(constant);
+          this.nameToSymbol.put(name, constant);
+        }
+
+        {
+          String name = "<}>";
+          String pattern = "}";
+          double cost = Main.TERMINAL_COST;
+          NullaryTerminalSymbol constant = new NullaryTerminalSymbol(name, pattern, cost);
+
+          this.terminalSymbols.add(constant);
+          this.nameToSymbol.put(name, constant);
+        }
+
 
       }
 
