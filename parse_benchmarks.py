@@ -195,7 +195,7 @@ def run_so_format2(args):
 def run(args):
     run_sempre(args)
     os.system("cp -r \"{}\"/* \"{}\"".format(args.sempre_sketch, args.sketch_path))
-    os.system("rm -r \"{}\"".format(args.sempre_sketch))
+    # os.system("rm -r \"{}\"".format(args.sempre_sketch))
 
 def main():
     args = _parse_args()

@@ -9,17 +9,19 @@ import time
 def _parse_args():
     parser = argparse.ArgumentParser(description="resnax")
     # ---- benchmark specific arguments ------
-    parser.add_argument("--benchmark", type=str, dest="benchmark", default="deepregex")
-    parser.add_argument("--log_name", type=str, dest="log_name", default="log")
-    parser.add_argument("--sketch", type=str, dest='sketch', default="sketch")
+    parser.add_argument("--benchmark", type=str, dest="benchmark", default="deepregex", help="benchmark set to run, can be so, deepregex, or any name as long as there exists a benchmark folder in exp")
+    parser.add_argument("--log_name", type=str, dest="log_name", default="log", help="the name of the log folder")
+    parser.add_argument("--sketch", type=str, dest='sketch', default="sketch", help="the name of the sketch folder")
     parser.add_argument("--dataset_mode", type=str, dest="dataset_mode", default="0")
     parser.add_argument("--mem_max", type=int, dest="mem_max", default=20)
+    parser.add_argument("--top", type=int, dest="top", default=25, help="the top n synthesized results to print")
     parser.add_argument("--allow_missing_sketch", type=bool, dest="allow_missing_sketch", default=True)
+    parser.add_argument("--benchmark_to_run", type=str, dest="benchmark_to_run", default="all", help="if specify to 'all' then it will run all the benchmark files in the folder, otherwise it should be a comma-separated string with benchmark id")
     # 1: normal
     # 2: prune
     # 4: pure-enumeration
     # 5: example-only
-    parser.add_argument("--synth_mode", type=int, dest="synth_mode", default=1)
+    parser.add_argument("--synth_mode", type=int, dest="synth_mode", default=1, help="set to 1 to synthesize with nl and example, set to 5 to synthesize with example only")
 
     # ----- benchmark independent arguments
     parser.add_argument("--java_path", type=str, dest="java_path", default="~/")
@@ -30,8 +32,7 @@ def _parse_args():
     parser.add_argument("--main", type=str, dest="main", default="resnax.Main")
 
     # ------ only apply to so
-    parser.add_argument("--benchmarknum", type=str, dest="benchmarknum", default="")
-    parser.add_argument("--processnum", type=int, dest="processnum", default=5)
+    parser.add_argument("--processnum", type=int, dest="processnum", default=5, help="the number of process to parallel run the synthesizer")
 
     args = parser.parse_args()
 
@@ -44,6 +45,11 @@ def _parse_args():
 
     if args.benchmark == "deepregex":
         args.dataset_mode = "1"
+    
+    if args.benchmark_to_run == "all":
+        args.benchmark_to_run = []
+    else:
+        args.benchmark_to_run = args.benchmark_to_run.split(",")
 
     return args
 
@@ -90,15 +96,53 @@ class Run:
 
         return java_command
 
+    def parse_normal(self, output, sketch):
+
+        op = output.rsplit("`")
+
+        record = {}
+        record["b"] = self.benchmark
+        record["rank"] = sketch[0]
+        record["sketch"] = sketch[1]
+        if "null" in op[0] or op[0] == "":
+            record["p"] = "null"
+            record["cost"] = 999999.0
+            record["time"] = 999999.0
+            record["regex"] = "null"
+            record["gt"] = "false"
+        else:
+            record["p"] = op[0]
+            record["cost"] = float(op[0].split(": ")[1])
+            if record["cost"] == 0.0:
+                record["time"] = 0.0
+            else:
+                record["time"] = float(op[2])
+            record["regex"] = op[1]
+            record["gt"] = op[3]
+
+
+        # print(record)
+        return record
+
     def run(self, sketch):
         print(sketch[0], "Started")
         cmd = self.parse_java_command(sketch, self.benchmark)
         try:
             output = str(subprocess.check_output(cmd, shell=True, timeout=self.args.timeout))
-            # print(output)
             print(sketch[0], "Finished")
+            return self.parse_normal(output[2:-3], sketch)
         except subprocess.TimeoutExpired:
             print(sketch[0], "Time out")
+            record = {}
+            record["b"] = self.benchmark
+            record["rank"] = sketch[0]
+            record["sketch"] = sketch[1]
+            record["p"] = "timeout"
+            record["cost"] = 999999.0
+            record["time"] = self.args.timeout
+            record["regex"] = "null"
+            record["gt"] = "false"
+            return record
 
 def main():
     # given a set of sketch, invoke several process
@@ -118,6 +162,9 @@ def main():
         for benchmark in files:
             # print(benchmark)
             if benchmark.startswith("."):
+                continue
+                
+            if len(args.benchmark_to_run) > 0 and benchmark not in args.benchmark_to_run:
                 continue
 
             # read sketch for the current benchmark
@@ -146,23 +193,36 @@ def main():
                 
             print("sketch:{}".format(sketches))
             
-            if args.parallel:
-                worker = Run(benchmark, args)
-                try:
-                    with Pool(args.processnum) as p:
-                        p.map(worker.run, sketches)
+            worker = Run(benchmark, args)
+            with Pool(args.processnum) as p:
+                results = p.map(worker.run, sketches)
+            
+            if args.benchmark == "so":
+                results = so_sort(results)
+            elif args.benchmark == "deepregex":
+                results = deepregex_sort(results)
 
-                except subprocess.CalledProcessError as e:
-                    print("timeout raised")
+            # find top-k
+            top = results[0:args.top]
+            print([item['p'] for item in top])
 
-            else:
-                for sk in sketches:
-                    print(sk)
-                    worker = Run(benchmark, args)
-                    worker.run(sk)
                     
         os.system('mv \"{0}\" \"{0}\"1'.format(args.log_path))
 
+def deepregex_sort(results):
+    # first sort by rank
+    results = sorted(results, key = lambda i: i["rank"])
+
+    # print(results)
+    results = sorted(results, key = lambda i: i["time"])
+
+    # print(results)
+
+    return results
+
+def so_sort(results):
+    results = sorted(results, key = lambda i: i["time"])
+    return results
 
 if __name__ == '__main__':
     os.system("ant -buildfile resnax/build.xml clean")

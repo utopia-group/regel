@@ -94,7 +94,7 @@ public class Learner {
 
 //    System.out.println("skProgram:" + skProgram.toString());
 
-    System.out.println("K_MAX:" + Main.K_MAX);
+    // System.out.println("K_MAX:" + Main.K_MAX);
 
     SolverNodes.IntegerSolverNode.updateIntegerSolverNode(Main.K_MAX);
 
@@ -272,16 +272,16 @@ public class Learner {
 
   }
 
-  public void learn_ablation(String sketch, List<Example> exs, String gt) {
+  public BenchmarkRes learn_ablation(String sketch, List<Example> exs, String gt) {
 
     Synthesizer syn = null;
 
     if (grammar == null) {
       syn = new Synthesizer(grammar_default);
-      this.learn(sketch, exs, gt, syn);
+      return this.learn(sketch, exs, gt, syn);
     } else {
       syn = new Synthesizer(grammar);
-      this.learn(sketch, exs, gt, syn);
+      return this.learn(sketch, exs, gt, syn);
     }
 
   }
