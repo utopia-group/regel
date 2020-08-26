@@ -21,6 +21,12 @@ This repository also requires the following:
 - `python3 ` 3.7
 - `java` 1.8.0
 
+Alternately you can use the included Dockerfile to build a Docker image:
+
+```shell
+docker build -t regel:v1 .
+```
+
 ## Benchmarks
 
 ### Existing Benchmarks
