@@ -1,5 +1,6 @@
 import argparse
 import os
+import re
 import csv
 import itertools
 import subprocess
@@ -197,8 +198,28 @@ def run(args):
     os.system("cp -r \"{}\"/* \"{}\"".format(args.sempre_sketch, args.sketch_path))
     # os.system("rm -r \"{}\"".format(args.sempre_sketch))
 
+
+# assumption: all nl is in one line and there is no label (so this is for test **only**)
+extract_text_pattern = re.compile("^//[ ]*natural language\n(.+)\n.*")
+def generate_new_sempre_input_file(args):
+    benchmark_path = "exp/{}/benchmark".format(args.benchmark)
+    with open(args.sempre_input_file, 'w+') as wf:
+        wf.write("#\tNL\tSketch\n")
+        for _, _, files in os.walk(benchmark_path):
+            for benchmark in files:
+                print("benchmark: {}".format(benchmark))
+                if benchmark.startswith("."):
+                    continue
+                with open('{}/{}'.format(benchmark_path, benchmark)) as fd:
+                    whole_text = fd.read()
+                    nl = re.search(extract_text_pattern, whole_text).group(1)
+                    wf.write("{}\t{}\t{}\n".format(benchmark, nl, "null"))
+
+
 def main():
     args = _parse_args()
+    if not os.path.exists(args.sempre_input_file):
+        generate_new_sempre_input_file(args)
     run(args)
     if args.benchmark == "so":
         run_so_format2(args)
