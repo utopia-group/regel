@@ -207,7 +207,7 @@ def generate_new_sempre_input_file(args):
         wf.write("#\tNL\tSketch\n")
         for _, _, files in os.walk(benchmark_path):
             for benchmark in files:
-                print("benchmark: {}".format(benchmark))
+                # print("benchmark: {}".format(benchmark))
                 if benchmark.startswith("."):
                     continue
                 with open('{}/{}'.format(benchmark_path, benchmark)) as fd:

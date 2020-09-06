@@ -29,7 +29,7 @@ def _parse_args():
     parser.add_argument("--processnum", type=int, dest="processnum", default=5)
     parser.add_argument("--mem_max", type=int, dest="mem_max", default=20)
     parser.add_argument("--top", type=int, dest="top", default=5)   # return top-k
-    parser.add_argument("--timeout", type=int, dest="timeout", default=3)
+    parser.add_argument("--timeout", type=int, dest="timeout", default=60)
     parser.add_argument("--max_iter", type=int, dest="max_iter", default=5)
 
 
@@ -178,8 +178,12 @@ class Parallel():
     def run(self, sketch):
 
         cmd = self.parse_java_command(sketch)
+
+        # print("cmd:", cmd)
         try:
             output = str(subprocess.check_output(cmd, shell=True, timeout=self.timeout))
+
+            # print("output:", output)
             
             if self.arguments.synth_mode == "5" :
                 return self.parse_five(output[2:-3], sketch)
@@ -233,9 +237,12 @@ class Run():
 
         return sketch
 
-    def write_new_example(self, b, example_lines, gt_lines):
+    def write_new_example(self, b, example_lines, gt_lines, nl=""):
 
         example = open('{}/{}'.format(self.args.example_path, b), 'w')
+
+        if not nl == "":
+            example.write('// natural language\n{}\n\n'.format(nl))
 
         for e in example_lines:
             if len(e) == 0:
@@ -413,7 +420,7 @@ class Run():
                     for item in new_example:
                         ex[0].append('\"{}\",{}'.format(item["ex"], item["sign"]))
                     
-                    self.write_new_example(b, ex[0], ex[1])
+                    self.write_new_example(b, ex[0], ex[1], nl=nl)
                     print(cache)
 
             else:
@@ -457,7 +464,8 @@ class Run():
                     for item in new_example:
                         ex[0].append('\"{}\",{}'.format(item["ex"], item["sign"]))
                     
-                    self.write_new_example(b, ex[0], ex[1])
+                    self.write_new_example(b, ex[0], ex[1], nl=nl)
+
                     # print(cache)
                 
 
@@ -491,7 +499,7 @@ class Run():
 
                 print("generating sketches...")
                 sketch = list(enumerate(parse_descriptions([nl], self.args.trained_model, self.args.sketch_num)[0],1))
-                # print("sketches:".format(sketch))
+                # print("sketches: {} ".format(sketch))
 
                 self.write_benchmark(file_name, nl, examples)
                 self.copy_benchmark_to_iteractive(file_name)

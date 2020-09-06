@@ -62,36 +62,18 @@ class Run:
 
         bpath = '{}/{}'.format(self.args.benchmark_path, benchmark)
 
-        if self.args.benchmark == "so":
-
-            java_command = 'exec java -Xmx{}G -Djava.library.path={} -cp {} -ea {} {} \"{}\" \"{}\" \"{}\" {} {} {}'.format(
-                        str(self.args.mem_max),
-                        self.args.z3libpath,
-                        self.args.cpath,
-                        self.args.main,
-                        self.args.dataset_mode,
-                        bpath,
-                        self.args.log_path,
-                        sketch[1],
-                        str(sketch[0]),
-                        str(self.args.synth_mode),
-                        1
-                )
-
-        elif self.args.benchmark == "deepregex":
-
-            java_command = 'exec java -Xmx{}G -Djava.library.path={} -cp {} -ea {} {} \"{}\" \"{}\" \"{}\" {} {} {}'.format(
-                        str(self.args.mem_max),
-                        self.args.z3libpath,
-                        self.args.cpath,
-                        self.args.main,
-                        self.args.dataset_mode,
-                        bpath,
-                        self.args.log_path,
-                        sketch[1],
-                        str(sketch[0]),
-                        str(self.args.synth_mode),
-                        1
+        java_command = 'exec java -Xmx{}G -Djava.library.path={} -cp {} -ea {} {} \"{}\" \"{}\" \"{}\" {} {} {}'.format(
+                    str(self.args.mem_max),
+                    self.args.z3libpath,
+                    self.args.cpath,
+                    self.args.main,
+                    self.args.dataset_mode,
+                    bpath,
+                    self.args.log_path,
+                    sketch[1],
+                    str(sketch[0]),
+                    str(self.args.synth_mode),
+                    1
             )
 
         return java_command
