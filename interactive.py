@@ -45,19 +45,19 @@ def _parse_args():
 
     args = parser.parse_args()
     args.dir = "{}/{}".format(os.getcwd(), args.dir) if not args.dir == "" else os.getcwd()
-    
+
     if args.run_mode == "0":
         args.benchmark = "customize"
 
     args.example_path = '{}/exp/{}/{}/example/{}'.format(args.dir, args.interact_dir, args.benchmark, args.synth_mode)
     args.example_cache_path = '{}/exp/{}/{}/examples_cache'.format(args.dir, args.interact_dir, args.benchmark)
     args.log_path = '{}/exp/{}/{}/logs/{}'.format(args.dir, args.interact_dir, args.benchmark, args.synth_mode)
-    
+
     args.benchmark_path = '{}/exp/{}/benchmark'.format(args.dir, args.benchmark)
     args.sketch_path = '{}/exp/{}/sketch'.format(args.dir, args.benchmark)
     if args.benchmark == "deepregex":
         args.dataset_mode = "1"
-    
+
     return args
 
 def evaluate_ex(regex, example, flag):
@@ -118,7 +118,7 @@ class Parallel():
                                 str(self.arguments.synth_mode),
                                 0
                     )
-                
+
             if self.arguments.benchmark == "so":
                 java_command = 'exec java -Xmx{}G -Djava.library.path={} -cp {} -ea {} {} \"{}\" \"{}\" \"{}\" {} {} {}'.format(
                     str(self.mem_max),
@@ -135,7 +135,7 @@ class Parallel():
                     )
 
         return java_command
-    
+
     def parse_normal(self, output, sketch):
 
         op = output.rsplit("`")
@@ -184,12 +184,12 @@ class Parallel():
             output = str(subprocess.check_output(cmd, shell=True, timeout=self.timeout))
 
             # print("output:", output)
-            
+
             if self.arguments.synth_mode == "5" :
                 return self.parse_five(output[2:-3], sketch)
             else:
                 return self.parse_normal(output[2:-3], sketch)
-             
+
         except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
             record = {}
             record["b"] = self.benchmark
@@ -200,7 +200,7 @@ class Parallel():
             record["time"] = self.timeout
             record["regex"] = "null"
             record["gt"] = "false"
-            
+
             if self.arguments.synth_mode == "5" :
                 return [record]
             else:
@@ -213,7 +213,7 @@ class Run():
         self.history_file = '{}/history'.format(self.args.log_path)
 
     def read_history_file(self):
-        
+
         if os.path.exists(self.history_file):
             history = [line.strip() for line in open(self.history_file).readlines()]
             return history
@@ -257,12 +257,12 @@ class Run():
         example.close()
 
     def read_benchmark(self, b):
-        
+
         read_b_path = '{}/{}'.format(self.args.benchmark_path, b)
 
         if not os.path.exists(read_b_path):
             return None
-        
+
         ex =[line.rstrip() for line in  open(read_b_path )]
 
         nl_idx = -1
@@ -286,7 +286,7 @@ class Run():
         gt = ex[gt_idx:]
 
         return nl, (example, gt)
-    
+
     def write_benchmark(self, b, nl, ex, gt=None):
         write_b_path = '{}/{}'.format(self.args.benchmark_path, b)
 
@@ -353,7 +353,7 @@ class Run():
         for i in range(self.args.max_iter):
             print("NL:{}".format(nl))
             print("Example:{}".format('\n'.join(ex[0])))
-            
+
             print("Running the synthesizer...")
 
             worker = Parallel(self.args, b)
@@ -364,7 +364,7 @@ class Run():
             if self.args.synth_mode == "5":
                 results = results[0]
             # print(results)
-            
+
             if self.args.benchmark == "so" or self.args.benchmark == "customize":
                 results = self.so_sort(results)
             elif self.args.benchmark == "deepregex":
@@ -380,7 +380,7 @@ class Run():
                     print("Regel times out. Cannot solve this problem.")
                     output.extend(top)
                     break
-                
+
                 print("Regel gives the following output:")
                 self.regex_print(top)
                 print()
@@ -411,7 +411,7 @@ class Run():
                             e = input("example: ")
                             sign = input("+/-: ")
                             confirm = input('Please enter \'y\' if this is the example: \"{}\",{}: '.format(e, sign))
-                            
+
                             if "y" in confirm:
                                 new_example.append({"ex": e, "sign": sign})
                                 break
@@ -419,12 +419,12 @@ class Run():
 
                     for item in new_example:
                         ex[0].append('\"{}\",{}'.format(item["ex"], item["sign"]))
-                    
+
                     self.write_new_example(b, ex[0], ex[1], nl=nl)
                     print(cache)
 
             else:
-            
+
                 print([item['p'] for item in top])
                 output.extend(top)
                 if 'true' in [item['gt'] for item in top]:
@@ -463,11 +463,11 @@ class Run():
 
                     for item in new_example:
                         ex[0].append('\"{}\",{}'.format(item["ex"], item["sign"]))
-                    
+
                     self.write_new_example(b, ex[0], ex[1], nl=nl)
 
                     # print(cache)
-                
+
 
         # write cache at the end
         if len(cache) > 0:
@@ -486,7 +486,7 @@ class Run():
                 if file_name == "":
                     break
                 nl = input("nl: ").rstrip()
-            
+
                 examples = []
                 print("Enter examples below. Press 'Enter' if finish. ")
                 while True:
@@ -512,17 +512,20 @@ class Run():
         except:
             self.write_output(overall_output)
             return
-        
+
         self.write_output(overall_output)
         return
 
     def run_exp(self, benchmarksnum):
-        
+
         history = self.read_history_file()
         overall_output = []
 
         try:
             for i in benchmarksnum:
+
+                if str(i).startswith('.'):
+                    continue
 
                 if str(i) in history:
                     continue
@@ -532,7 +535,7 @@ class Run():
                     sketch = self.read_sketch(i)
                 elif self.args.synth_mode == "5":
                     sketch = [("b","?")]
-                
+
                 binfo = self.read_benchmark(str(i))
                 if binfo is None:
                     continue
@@ -548,7 +551,7 @@ class Run():
                 overall_output.extend(self.test_benchmark(str(i), nl, sketch, initial_ex, cache))
 
                 history.append(str(i))
-            
+
         except:
             if self.args.save_history: self.write_history_file(history)
             self.write_output(overall_output)
@@ -593,12 +596,12 @@ def interactive():
         elif args.benchmark == "so":
             benchmarks = [f for f in os.listdir(args.benchmark_path) if os.path.isfile(os.path.join(args.benchmark_path, f))]
             run.run_exp(benchmarks)
-        
+
         else:
             benchmarks = [f for f in os.listdir(args.benchmark_path) if os.path.isfile(os.path.join(args.benchmark_path, f)) and not f.startswith(".")]
             run.run_exp(benchmarks)
 
-    
+
 
 if __name__ == "__main__":
     os.system("ant -buildfile resnax/build.xml clean")
