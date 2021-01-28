@@ -45,7 +45,7 @@ def _parse_args():
 
     if args.benchmark == "deepregex":
         args.dataset_mode = "1"
-    
+
     if args.benchmark_to_run == "all":
         args.benchmark_to_run = []
     else:
@@ -111,6 +111,7 @@ class Run:
         cmd = self.parse_java_command(sketch, self.benchmark)
         try:
             output = str(subprocess.check_output(cmd, shell=True, timeout=self.args.timeout))
+            #print(output)
             print(sketch[0], "Finished")
             return self.parse_normal(output[2:-3], sketch)
         except subprocess.TimeoutExpired:
@@ -145,7 +146,7 @@ def main():
             # print(benchmark)
             if benchmark.startswith("."):
                 continue
-                
+
             if len(args.benchmark_to_run) > 0 and benchmark not in args.benchmark_to_run:
                 continue
 
@@ -156,7 +157,7 @@ def main():
             else:
                 sketch_path = '{}/{}'.format(args.sketch_path, benchmark)
                 print("benchmark #: {}".format(benchmark))
-                
+
                 try:
                     sketch_file = open(sketch_path).readlines()
                 except Exception:
@@ -172,13 +173,13 @@ def main():
                     sketch = (line[(indx + 1):len(line)]).strip()
                     if not sketch == "null":
                             sketches.append((rank, sketch))
-                
+
             print("sketch:{}".format(sketches))
-            
+
             worker = Run(benchmark, args)
             with Pool(args.processnum) as p:
                 results = p.map(worker.run, sketches)
-            
+
             if args.benchmark == "so":
                 results = so_sort(results)
             elif args.benchmark == "deepregex":
@@ -188,7 +189,7 @@ def main():
             top = results[0:args.top]
             print([item['p'] for item in top])
 
-                    
+
         os.system('mv \"{0}\" \"{0}\"1'.format(args.log_path))
 
 def deepregex_sort(results):

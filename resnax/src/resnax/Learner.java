@@ -140,6 +140,9 @@ public class Learner {
       if (resAtn.equals(gtAtn)) Main.matchGT = true;
       else Main.matchGT = false;
 
+
+      return new BenchmarkRes(Main.succ, synProgram, synProgram.cost, Main.synthesizeTime, Main.matchGT, resRegex);
+
     }
 
     return new BenchmarkRes(Main.succ, synProgram, synProgram.cost, Main.synthesizeTime, Main.matchGT);
