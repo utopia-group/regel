@@ -218,11 +218,11 @@ public class Learner {
     //       Main.DEPTH_LIMIT = 3;
     //     }
     //   }
-
-
-      if (Main.DEBUG == 1) System.out.println(syn.grammar.nonterminalSymbols);
-
-    }
+    //
+    //
+    //  if (Main.DEBUG == 1) System.out.println(syn.grammar.nonterminalSymbols);
+    //
+    // }
 
 
     if (Main.DEBUG == 1) System.out.println("skProgram:" + skProgram);
