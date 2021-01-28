@@ -179,14 +179,15 @@ public class Benchmark {
     }
 
     public void run() {
-        System.out.println("Running " + name);
+//        System.out.println("Running " + name);
 
         logFirst();
 
         {
             try {
                 learner = new Learner(new DSL.CFG(""));
-                learner.learn_ablation(sketch, examples, gt);
+                BenchmarkRes bres = learner.learn_ablation(sketch, examples, gt);
+                output_interact(bres);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -224,7 +225,7 @@ public class Benchmark {
             if (Main.succ) {
 
                 bw.write("Sketch: " + sketch + "\n");
-                System.out.println("Number of examples used: " + this.examples.size());
+//                System.out.println("Number of examples used: " + this.examples.size());
 
                 bw.write("Learned program: " + Main.leanredProgram + "\n");
                 bw.write("GT program: " + this.gt + "\n");
