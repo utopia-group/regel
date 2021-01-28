@@ -4,6 +4,18 @@ from multiprocessing import Process, Pool
 from shlex import split
 import subprocess
 import time
+import csv
+import sys
+
+def save_dict_to_csv(path, records):
+    if len(records) == 0:
+        return
+
+    keys = records[0].keys()
+    with open(path, "w") as output_file:
+        dict_writer = csv.DictWriter(output_file, keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(records)
 
 
 def _parse_args():
@@ -140,6 +152,8 @@ def main():
     os.system("mkdir -p \"{}\"".format(args.log_path))
     print("directory_path:" + args.benchmark_path)
     exclude = ["benchmark"]
+
+    all_results = []
     for root, dirs, files in os.walk(args.benchmark_path, topdown=True):
         dirs[:] = [d for d in dirs if d not in exclude]
         for benchmark in files:
@@ -188,7 +202,11 @@ def main():
             # find top-k
             top = results[0:args.top]
             print([item['p'] for item in top])
-
+        
+            all_results.extend(top)
+        
+        # output all_results
+        save_dict_to_csv('{}/{}'.format(args.log_path, 'all_results.csv'), all_results)
 
         os.system('mv \"{0}\" \"{0}\"1'.format(args.log_path))
 
