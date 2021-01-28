@@ -57,22 +57,28 @@ public class Learner {
 
     List<BenchmarkRes> ret = new ArrayList<>();
 
+    String gtRegex = null;
+    if (gt != null) {
+      SketchProgram gtProgram = new SketchProgram(grammar);
+      SketchParser gtParser = new SketchParser(gtProgram);
+      gtParser.parse(gt);
 
-    SketchProgram gtProgram = new SketchProgram(grammar);
-    SketchParser gtParser = new SketchParser(gtProgram);
-    gtParser.parse(gt);
-
-    // get gt regex
-    String gtRegex = gtProgram.getRegex().toString();
+      // get gt regex
+      gtRegex = gtProgram.getRegex().toString();
+    }    
 
     for (State p : output) {
 
       String resRegex = p.pp.getRegex().toString();
 
-      Automaton resAtn = new RegExp(resRegex).toAutomaton();
-      Automaton gtAtn = new RegExp(gtRegex).toAutomaton();
+      boolean matchGT = false;
 
-      boolean matchGT = (resAtn.equals(gtAtn));
+      if (gt != null) {
+        Automaton resAtn = new RegExp(resRegex).toAutomaton();
+        Automaton gtAtn = new RegExp(gtRegex).toAutomaton();
+
+        matchGT = (resAtn.equals(gtAtn));
+      }
 
       ret.add(new BenchmarkRes(Main.succ, p, synProgram.cost, Main.synthesizeTime, matchGT, resRegex));
 
@@ -184,34 +190,34 @@ public class Learner {
       return null;
     }
 
-    if (Main.MODE != 0) {
+    // if (Main.MODE != 0) {
 
-      if (skProgram.startNode instanceof Nodes.SketchNode) {
-        int component_size = ((Nodes.SketchNode) skProgram.startNode).components.size();
+    //   if (skProgram.startNode instanceof Nodes.SketchNode) {
+    //     int component_size = ((Nodes.SketchNode) skProgram.startNode).components.size();
 
-        if (component_size == 1) {
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("concat"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("or"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("and"));
-          Main.DEPTH_LIMIT = 2;
-        } else if (component_size == 2) {
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("startwith"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("endwith"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("repeatatleast"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("star"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("contain"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("not"));
-          Main.DEPTH_LIMIT = 2;
-        } else if (component_size > 2) {
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("startwith"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("endwith"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("repeatatleast"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("star"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("contain"));
-          syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("not"));
-          Main.DEPTH_LIMIT = 3;
-        }
-      }
+    //     if (component_size == 1) {
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("concat"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("or"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("and"));
+    //       Main.DEPTH_LIMIT = 2;
+    //     } else if (component_size == 2) {
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("startwith"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("endwith"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("repeatatleast"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("star"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("contain"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("not"));
+    //       Main.DEPTH_LIMIT = 2;
+    //     } else if (component_size > 2) {
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("startwith"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("endwith"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("repeatatleast"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("star"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("contain"));
+    //       syn.grammar.nonterminalSymbols.remove(this.grammar.nameToSymbol.get("not"));
+    //       Main.DEPTH_LIMIT = 3;
+    //     }
+    //   }
 
 
       if (Main.DEBUG == 1) System.out.println(syn.grammar.nonterminalSymbols);

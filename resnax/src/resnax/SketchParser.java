@@ -59,6 +59,8 @@ public class SketchParser extends AbstractParseTreeVisitor<Object> implements Sk
   public SketchProgram parse(String sketch) {
     {
 
+      // System.out.println("sketch1:" + sketch);
+
       CharStream input = CharStreams.fromString(sketch);
 
       SketchGrammarLexer lexer = new SketchGrammarLexer(input);
