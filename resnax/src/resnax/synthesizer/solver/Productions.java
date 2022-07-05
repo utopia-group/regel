@@ -88,7 +88,7 @@ public class Productions {
     public SolverNode exec(SolverNodes.IntegerSolverNode a1, SolverNodes.IntegerSolverNode a2) {
       int res = ((DSL.IntTerminalSymbol) a1.sym).i + ((DSL.IntTerminalSymbol) a2.sym).i;
       SolverNode resNode = Expression.mkIntNode(res);
-      if (resNode == null) System.out.println("null production");
+      // if (resNode == null) System.out.println("null production");
       return resNode;
     }
   }
@@ -102,7 +102,7 @@ public class Productions {
     @Override public SolverNode exec(SolverNodes.IntegerSolverNode a1, SolverNodes.IntegerSolverNode a2) {
       int res = ((DSL.IntTerminalSymbol) a1.sym).i * ((DSL.IntTerminalSymbol) a2.sym).i;
       SolverNode resNode = Expression.mkIntNode(res);
-      if (resNode == null) System.out.println("null production");
+      // if (resNode == null) System.out.println("null production");
       return resNode;
     }
   }

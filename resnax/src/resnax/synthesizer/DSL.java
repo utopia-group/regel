@@ -93,7 +93,7 @@ import resnax.synthesizer.solver.SolverNode;
           tSym.cost = 0;
           this.appliedTerminalSymbols.add((TerminalSymbol) sym);
         } else {
-          System.out.println("symbol not found: " + s);
+          // System.out.println("symbol not found: " + s);
         }
       }
 
@@ -105,7 +105,7 @@ import resnax.synthesizer.solver.SolverNode;
           tSym.cost = Main.APPLIED_TERMINAL_COST;
           this.appliedTerminalSymbols.add(tSym);
         } else {
-          System.out.println("symbol not found: " + s);
+          // System.out.println("symbol not found: " + s);
         }
       }
 

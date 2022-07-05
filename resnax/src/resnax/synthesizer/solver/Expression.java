@@ -425,7 +425,7 @@ public class Expression {
 
     SolverNodes.IntegerSolverNode res = SolverNodes.IntegerSolverNode.getInstance(k);
 
-    if (res == null) System.out.println("null int: " + k);
+    // if (res == null) System.out.println("null int: " + k);
 
     return res;
   }
