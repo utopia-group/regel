@@ -6,7 +6,7 @@ import resnax.Main;
 import resnax.util.MultiMap;
 import resnax.util.SetMultiMap;
 import resnax.synthesizer.DSL;
-import resnax.synthesizer.Example;
+import resnax.Example;
 
 import java.io.*;
 import java.util.*;

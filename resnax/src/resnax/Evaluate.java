@@ -2,7 +2,6 @@ package resnax;
 
 import dk.brics.automaton.Automaton;
 import dk.brics.automaton.RegExp;
-import resnax.synthesizer.Example;
 import resnax.synthesizer.RegexProgram;
 
 import java.util.List;

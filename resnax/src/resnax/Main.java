@@ -22,6 +22,7 @@ public class Main {
   public static int NOT_PRUNED_SUBSUMPTION_ENABLED = 1;
   public static int PRUNING_ENABLED = 1;
   public static int SYMBOLOC_ENABLED = 1;
+  public static int FTA_ENABLED = 0;
   public static int REPEAT_OPTION = 0;      // 0 = NOTHING, 1 = EXCLUDE REPEAT
   public final static int DEBUG = 0;
   public final static int PRINT = 0;
@@ -158,9 +159,10 @@ public class Main {
       case "5":
         resnax.Main.PRUNING_ENABLED = 1;
         resnax.Main.SYMBOLOC_ENABLED = 1;
-
-          if (INTERACT == 0) OUTPUT_5 = 1;
-
+        if (INTERACT == 0) OUTPUT_5 = 1;
+        break;
+      case "6":
+        Main.FTA_ENABLED = 1;
         break;
       default:
         assert false : "Run mode not accepted";

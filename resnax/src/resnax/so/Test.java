@@ -6,7 +6,7 @@ import resnax.BenchmarkRes;
 import resnax.Learner;
 import resnax.Main;
 import resnax.synthesizer.DSL.CFG;
-import resnax.synthesizer.Example;
+import resnax.Example;
 import resnax.synthesizer.RegexProgram;
 
 import java.lang.reflect.Method;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @SuppressWarnings("Duplicates") public class Test {
 
-  public String benchmarkPath = "/Users/lycoris/Google Drive/Code/resnax/exp/so/benchmark-pldi/";
+  public String benchmarkPath = System.getProperty("user.dir") + "/exp/so/benchmark/";
 
   public Test() {
   }

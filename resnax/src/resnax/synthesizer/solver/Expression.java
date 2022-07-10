@@ -2,7 +2,7 @@ package resnax.synthesizer.solver;
 
 import com.microsoft.z3.*;
 import resnax.Main;
-import resnax.synthesizer.Example;
+import resnax.Example;
 
 import resnax.synthesizer.Nodes;
 

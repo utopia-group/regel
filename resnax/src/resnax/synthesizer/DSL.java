@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 
 import org.javatuples.Pair;
 
+import resnax.Example;
 import resnax.Main;
 import resnax.synthesizer.Productions.And;
 import resnax.synthesizer.Productions.Concat;

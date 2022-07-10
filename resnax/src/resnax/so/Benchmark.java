@@ -2,11 +2,12 @@ package resnax.so;
 
 import resnax.BenchmarkRes;
 import resnax.Learner;
+import resnax.LearnerFTA;
 import resnax.Main;
 import resnax.util.MultiMap;
 import resnax.util.SetMultiMap;
 import resnax.synthesizer.DSL;
-import resnax.synthesizer.Example;
+import resnax.Example;
 
 import java.io.*;
 import java.util.*;
@@ -16,6 +17,7 @@ import java.util.*;
   public static MultiMap<String, Character> appliedTerminalsMap = new SetMultiMap<>();
 
   private Learner learner;
+  private LearnerFTA learnerFTA;
 
   public String name;
   public String sketch;
@@ -258,8 +260,15 @@ import java.util.*;
 
     {
       try {
-        learner = new Learner(new DSL.CFG("", appliedTerminalsNoCost, appliedTerminalsCost));
-        BenchmarkRes bres = learner.learn_ablation(sketch, examples, gt);
+        BenchmarkRes bres;
+        if (resnax.Main.FTA_ENABLED == 0) {
+          learner = new Learner(new DSL.CFG("", appliedTerminalsNoCost, appliedTerminalsCost));
+          bres = learner.learn_ablation(sketch, examples, gt);
+        } else {
+          learnerFTA = new LearnerFTA(new resnax.fta.DSL.CFG("", appliedTerminalsNoCost, appliedTerminalsCost));
+          bres = learnerFTA.learn(sketch, examples);
+        }
+
         output_interact(bres);
 
       } catch (Exception e) {

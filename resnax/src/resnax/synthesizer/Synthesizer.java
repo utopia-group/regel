@@ -1,11 +1,11 @@
 package resnax.synthesizer;
 
-import java.io.BufferedWriter;
 import java.util.*;
 
 import com.microsoft.z3.BoolExpr;
 import resnax.EvalResult;
 import resnax.Evaluate;
+import resnax.Example;
 import resnax.Main;
 import resnax.synthesizer.DSL.CFG;
 import resnax.synthesizer.DSL.Symbol;

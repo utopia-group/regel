@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.javatuples.Pair;
 
+import resnax.Example;
 import resnax.Main;
 import resnax.synthesizer.DSL.NonterminalSymbol;
 import resnax.synthesizer.DSL.Production;

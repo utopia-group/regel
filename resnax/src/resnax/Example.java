@@ -1,4 +1,4 @@
-package resnax.synthesizer;
+package resnax;
 
 public class Example {
   
